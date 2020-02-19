@@ -2,6 +2,8 @@
 
 These are my free [Construct 3](https://www.construct.net) plugins.
 
+---
+
 ### Released
 
 |                    | Name                              | v.      | short description                                    |                                                   |
@@ -62,6 +64,7 @@ These are my free [Construct 3](https://www.construct.net) plugins.
   [r9c]: css/download/current/css.c3addon
   [r9s]: https://www.construct.net/en/make-games/addons/317/css
 
+---
 ### Drepecated
 
 |                    | Name             | v.    | short description                 |                                                   |
@@ -78,11 +81,15 @@ These are my free [Construct 3](https://www.construct.net) plugins.
 [d2c]: inject-css/download/current/inject-css.c3addon
 [d2s]: https://www.construct.net/en/make-games/addons/166/inject-css
 
+---
+
 ### In Development
 
 |    | Name | v. | short description |   |   |   |
 |----|------|----|-------------------|---|---|---|
 | i1 |      |    |                   |   |   |   |
+
+---
 
 ### Development stopped
 
@@ -98,6 +105,8 @@ These are my free [Construct 3](https://www.construct.net) plugins.
 [s2]: leaflet/icon64.svg
 [s2r]: leaflet
 [s2c]: leaflet/download/current/leaflet.c3addon
+
+---
 
 <style>
 img[alt=logo] { min-width: 64px; min-height: 64px }
