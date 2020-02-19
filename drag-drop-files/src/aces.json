@@ -1,0 +1,452 @@
+{
+  "appearance": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "set-text",
+        "scriptName": "SetText",
+        "params": [
+          {
+            "id": "text",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "set-visible",
+        "scriptName": "SetVisible",
+        "highlight": false,
+        "params": [
+          {
+            "id": "visibility",
+            "type": "combo",
+            "items": [
+              "invisible",
+              "visible"
+            ]
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "id": "text",
+        "expressionName": "Text",
+        "scriptName": "Text",
+        "returnType": "string"
+      }
+    ]
+  },
+  "css": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "set-css-style",
+        "scriptName": "SetCssStyle",
+        "highlight": false,
+        "params": [
+          {
+            "id": "property-name",
+            "type": "string",
+            "initialValue": "\"background-color\""
+          },
+          {
+            "id": "value",
+            "type": "string",
+            "initialValue": "\"yellow\""
+          }
+        ]
+      },
+      {
+        "id": "set-appaerance",
+        "scriptName": "SetAppaerance",
+        "highlight": false,
+        "params": [
+          {
+            "id": "background-color",
+            "type": "string",
+            "initialValue": "\"#F8F8F8\""
+          },
+          {
+            "id": "font-color",
+            "type": "string",
+            "initialValue": "\"#404040\""
+          },
+          {
+            "id": "border",
+            "type": "string",
+            "initialValue": "\"4px dashed #808080\""
+          }
+        ]
+      },
+      {
+        "id": "set-tooltip",
+        "scriptName": "SetTooltip",
+        "highlight": false,
+        "params": [
+          {
+            "id": "tooltip",
+            "type": "any",
+            "initialValue": "\"Tooltip\""
+          }
+        ]
+      },
+      {
+        "id": "set-font-face",
+        "scriptName": "SetFontFace",
+        "highlight": false,
+        "params": [
+          {
+            "id": "font-face",
+            "type": "string",
+            "initialValue": "\"Arial\""
+          },
+          {
+            "id": "style",
+            "type": "combo",
+            "initialValue": "normal",
+            "items": [
+              "normal",
+              "italic",
+              "oblique"
+            ]
+          },
+          {
+            "id": "weight",
+            "type": "combo",
+            "initialValue": "normal",
+            "items": [
+              "normal",
+              "bold",
+              "lighter",
+              "bolder"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "set-font-size",
+        "scriptName": "SetFontSize",
+        "highlight": false,
+        "params": [
+          {
+            "id": "size",
+            "type": "string",
+            "initialValue": "\"12pt\""
+          }
+        ]
+      },
+      {
+        "id": "set-font-size-to-layer",
+        "scriptName": "SetFontSizeToLayer",
+        "highlight": false,
+        "params": [
+          {
+            "id": "size",
+            "type": "number",
+            "initialValue": 12
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "id": "background-color",
+        "expressionName": "BackgroundColor",
+        "returnType": "string"
+      },
+      {
+        "id": "font-color",
+        "expressionName": "FontColor",
+        "returnType": "string"
+      },
+      {
+        "id": "border",
+        "expressionName": "Border",
+        "returnType": "string"
+      }
+    ]
+  },
+  "custom": {
+    "conditions": [
+      {
+        "id": "on-click",
+        "scriptName": "OnClick",
+        "isTrigger": true
+      },
+      {
+        "id": "on-drop",
+        "scriptName": "OnDrop",
+        "highlight": true,
+        "isTrigger": true,
+        "isInvertible": false
+      },
+      {
+        "id": "on-drag-over",
+        "scriptName": "OnDragOver",
+        "highlight": false,
+        "isTrigger": true,
+        "isInvertible": true
+      },
+      {
+        "id": "on-drag",
+        "scriptName": "OnDrag",
+        "highlight": false,
+        "isInvertible": false,
+        "isTrigger": true,
+        "isDeprecated": true
+      },
+      {
+        "id": "on-drag-enter",
+        "scriptName": "OnDragEnter",
+        "highlight": false,
+        "isTrigger": true,
+        "isInvertible": true
+      },
+      {
+        "id": "on-drag-exit",
+        "scriptName": "OnDragExit",
+        "highlight": false,
+        "isTrigger": true,
+        "isInvertible": false,
+        "isDeprecated": true
+      },
+      {
+        "id": "on-drag-leave",
+        "scriptName": "OnDragLeave",
+        "isTrigger": true,
+        "isInvertible": true,
+        "highlight": false
+      },
+      {
+        "id": "on-drag-start",
+        "scriptName": "OnDragStart",
+        "isTrigger": true,
+        "highlight": false,
+        "isDeprecated": true
+      },
+      {
+        "id": "on-drag-end",
+        "scriptName": "OnDragEnd",
+        "highlight": false,
+        "isTrigger": true,
+        "isInvertible": false,
+        "isDeprecated": true
+      },
+      {
+        "id": "is_drag_over",
+        "scriptName": "Is_Drag_Over",
+        "highlight": false,
+        "isInvertible": true
+      },
+      {
+        "id": "on-mouse-over",
+        "scriptName": "OnMouseOver",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-mouse-leave",
+        "scriptName": "OnMouseLeave",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "is_mouse_over",
+        "scriptName": "Is_Mouse_Over",
+        "highlight": false,
+        "isInvertible": true
+      }
+    ],
+    "actions": [
+      {
+        "id": "release-file",
+        "scriptName": "ReleaseFile",
+        "highlight": false,
+        "params": [
+          {
+            "id": "file-url",
+            "type": "string",
+            "initialValue": ""
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "id": "file-url-at",
+        "expressionName": "FileUrlAt",
+        "returnType": "any",
+        "params": [
+          {
+            "id": "index",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "file-count",
+        "expressionName": "FileCount",
+        "returnType": "number"
+      },
+      {
+        "id": "file-name-at",
+        "expressionName": "FileNameAt",
+        "returnType": "string",
+        "params": [
+          {
+            "id": "index",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "file-size-at",
+        "expressionName": "FileSizeAt",
+        "returnType": "number",
+        "params": [
+          {
+            "id": "index",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "file-type-at",
+        "expressionName": "FileTypeAt",
+        "returnType": "string",
+        "params": [
+          {
+            "id": "index",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "file-extension-at",
+        "expressionName": "FileExtensionAt",
+        "returnType": "string",
+        "params": [
+          {
+            "id": "index",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      }
+    ]
+  },
+  "sizeandposition": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "set-x",
+        "scriptName": "SetX",
+        "highlight": false,
+        "params": [
+          {
+            "id": "x",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "set-y",
+        "scriptName": "SetY",
+        "highlight": false,
+        "params": [
+          {
+            "id": "y",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "set-width",
+        "scriptName": "SetWidth",
+        "highlight": false,
+        "params": [
+          {
+            "id": "width",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "set-height",
+        "scriptName": "SetHeight",
+        "highlight": false,
+        "params": [
+          {
+            "id": "height",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "id": "x",
+        "expressionName": "X",
+        "returnType": "number"
+      },
+      {
+        "id": "y",
+        "expressionName": "Y",
+        "returnType": "number"
+      },
+      {
+        "id": "width",
+        "expressionName": "Width",
+        "returnType": "number"
+      },
+      {
+        "id": "height",
+        "expressionName": "Height",
+        "returnType": "number"
+      }
+    ]
+  },
+  "selected": {
+    "conditions": [
+      {
+        "id": "has-file-selected",
+        "scriptName": "HasFileSelected",
+        "highlight": false
+      },
+      {
+        "id": "has-only-1-file-selected",
+        "scriptName": "HasOnly1FileSelected",
+        "highlight": false
+      }
+    ],
+    "actions": [
+      {
+        "id": "clear-file-selected-at",
+        "scriptName": "ClearFileSelectedAt",
+        "highlight": false,
+        "params": [
+          {
+            "id": "index",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "clear-all-files",
+        "scriptName": "ClearAllFiles",
+        "highlight": false
+      }
+    ],
+    "expressions": []
+  }
+}

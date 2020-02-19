@@ -1,0 +1,312 @@
+@@START ADDON.JSON
+{
+  "is-c3-addon": true,
+  "type": "plugin",
+  "name": "Random Color (David Merfield)",
+  "id": "StraniAnelli_RandomColor_DavidMerfield",
+  "version": "1.0.0.0",
+  "author": "StraniAnelli",
+  "website": "https://el3um4s.github.io/construct-random-color-david-merfield-plugin/",
+  "documentation": "https://el3um4s.github.io/construct-random-color-david-merfield-plugin/",
+  "description": "A tiny script for generating attractive colors.",
+  "editor-scripts": [
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ],
+  "file-list": [
+    "c3runtime/plugin.js",
+    "c3runtime/type.js",
+    "c3runtime/instance.js",
+    "c3runtime/conditions.js",
+    "c3runtime/actions.js",
+    "c3runtime/expressions.js",
+    "lang/en-US.json",
+    "aces.json",
+    "addon.json",
+    "icon.svg",
+    "instance.js",
+    "plugin.js",
+    "type.js",
+    "c3runtime/randomColor.js",
+    "c3runtime/randomColor_Utility.js",
+    "c3runtime/utility.js"
+  ]
+}
+@@END ADDON.JSON
+
+@@START PLUGIN_EDIT.JS
+"use strict";
+{
+
+    const PLUGIN_ID = "StraniAnelli_RandomColor_DavidMerfield";
+    const PLUGIN_VERSION = "1.0.0.0";
+    const PLUGIN_CATEGORY = "general";
+
+    const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_RandomColor_DavidMerfield = class RandomColor_DavidMerfieldPlugin extends SDK.IPluginBase
+    {
+        constructor()
+        {
+            super(PLUGIN_ID);
+
+            SDK.Lang.PushContext("plugins." + PLUGIN_ID.toLowerCase());
+
+            this._info.SetName(lang(".name"));
+            this._info.SetDescription(lang(".description"));
+            this._info.SetVersion(PLUGIN_VERSION);
+            this._info.SetCategory(PLUGIN_CATEGORY);
+            this._info.SetAuthor("StraniAnelli");
+            this._info.SetHelpUrl(lang(".help-url"));
+            this._info.SetIsSingleGlobal(true);
+
+            this._info.SetSupportedRuntimes(["c3"]);
+
+            SDK.Lang.PushContext(".properties");
+
+            this._info.SetProperties([
+                new SDK.PluginProperty("text", "hue", ""),
+                new SDK.PluginProperty("combo", "luminosity", {
+                "initialValue": "random",
+                "items": ["random", "bright", "light", "dark"]
+            }),
+                new SDK.PluginProperty("integer", "count", 1),
+                new SDK.PluginProperty("text", "seed", ""),
+                new SDK.PluginProperty("combo", "format",{
+                "initialValue": "hex",
+                "items": ["rgb", "rgba", "rgbArray", "hsl", "hsla", "hslArray", "hex"]
+            }),
+                new SDK.PluginProperty("percent", "alpha", 0)
+            ]);
+
+            this._info.AddFileDependency(
+            {
+                filename: "c3runtime/randomColor.js",
+                type: "inline-script"
+            });
+            this._info.AddFileDependency(
+            {
+                filename: "c3runtime/randomColor_Utility.js",
+                type: "inline-script"
+            });
+            this._info.AddFileDependency(
+            {
+                filename: "c3runtime/utility.js",
+                type: "inline-script"
+            });
+
+
+            SDK.Lang.PopContext(); //.properties
+            SDK.Lang.PopContext();
+        }
+    };
+
+    PLUGIN_CLASS.Register(PLUGIN_ID, PLUGIN_CLASS);
+}
+
+@@END PLUGIN_EDIT.JS
+
+@@START PLUGIN_RUN.JS
+"use strict";
+{
+	C3.Plugins.StraniAnelli_RandomColor_DavidMerfield = class RandomColor_DavidMerfieldPlugin extends C3.SDKPluginBase
+	{
+		constructor(opts)
+		{
+			super(opts);
+		}
+		
+		Release()
+		{
+			super.Release();
+		}
+	};
+}
+
+@@END PLUGIN_RUN.JS
+
+@@START TYPE_EDIT.JS
+"use strict";
+{
+	const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_RandomColor_DavidMerfield;
+	
+	PLUGIN_CLASS.Type = class RandomColor_DavidMerfieldType extends SDK.ITypeBase
+	{
+		constructor(sdkPlugin, iObjectType)
+		{
+			super(sdkPlugin, iObjectType);
+		}
+	};
+}
+
+@@END TYPE_EDIT.JS
+
+@@START TYPE_RUN.JS
+"use strict";
+{
+	C3.Plugins.StraniAnelli_RandomColor_DavidMerfield.Type = class RandomColor_DavidMerfieldType extends C3.SDKTypeBase
+	{
+		constructor(objectClass)
+		{
+			super(objectClass);
+		}
+		
+		Release()
+		{
+			super.Release();
+		}
+		
+		OnCreate()
+		{	
+		}
+	};
+}
+
+@@END TYPE_RUN.JS
+
+@@START INSTANCE_EDIT.JS
+"use strict";
+{
+	const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_RandomColor_DavidMerfield;
+	
+	PLUGIN_CLASS.Instance = class RandomColor_DavidMerfieldInstance extends SDK.IInstanceBase
+	{
+		constructor(sdkType, inst)
+		{
+			super(sdkType, inst);
+		}
+		
+		Release()
+		{
+		}
+		
+		OnCreate()
+		{
+		}
+		
+		OnPropertyChanged(id, value)
+		{
+		}
+		
+		LoadC2Property(name, valueString)
+		{
+			return false;		// not handled
+		}
+	};
+}
+
+@@END INSTANCE_EDIT.JS
+
+@@START INSTANCE_RUN.JS
+"use strict";
+{
+	C3.Plugins.StraniAnelli_RandomColor_DavidMerfield.Instance = class RandomColor_DavidMerfieldInstance extends C3.SDKInstanceBase
+	{
+		constructor(inst, properties)
+		{
+			super(inst);
+			
+			this.options = {
+				hue: "",
+				luminosity: "random",
+				count: 1,
+				seed: "",
+				format: "hex",
+				alpha: 0				
+			};
+			
+			const tempRandomColor = randomColor();
+			this.lastColor = tempRandomColor[0];
+			this.lastColorsArray = tempRandomColor;
+			
+			this.lastFormat = "hex";
+			
+			if (properties)
+			{
+				this.options.hue = properties[0];
+				this.options.luminosity = getComboLuminosity(properties[1]);
+				this.options.count = properties[2];
+				this.options.seed = properties[3];
+				this.options.format = getComboFormat(properties[4]);
+				this.options.alpha = properties[5];
+				this.lastFormat = this.options.format;
+			}
+		}
+		
+		Release()
+		{
+			super.Release();
+		}
+		
+		SaveToJson()
+		{
+			return {
+				// data to be saved for savegames
+			};
+		}
+		
+		LoadFromJson(o)
+		{
+			// load state for savegames
+		}
+	};
+}
+
+@@END INSTANCE_RUN.JS
+
+@@START LANG_PROP.JSON
+"properties": {
+    "hue": {
+      "name": "Hue",
+      "desc": "Controls the hue of the generated color. You can pass a string representing a color name: red, orange, yellow, green, blue, purple, pink and monochrome are currently supported. If you pass a hexidecimal color string such as #00FFFF, randomColor will extract its hue value and use that to generate colors."
+    },
+    "luminosity": {
+      "name": "Luminosity",
+      "desc": "Controls the luminosity of the generated color. You can specify a string containing bright, light or dark.",
+      "items": {
+        "random": "random",
+        "bright": "bright",
+        "light": "light",
+        "dark": "dark"
+      }
+    },
+    "count": {
+      "name": "Count",
+      "desc": "An integer which specifies the number of colors to generate."
+    },
+    "seed": {
+      "name": "Seed",
+      "desc": "An integer or string which when passed will cause randomColor to return the same color each time."
+    },
+    "format": {
+      "name": "Format",
+      "desc": "A string which specifies the format of the generated color. Possible values are rgb, rgba, rgbArray, hsl, hsla, hslArray and hex (default).",
+      "items": {
+        "rgb": "rgb",
+        "rgba": "rgba",
+        "rgbArray": "rgbArray",
+        "hsl": "hsl",
+        "hsla": "hsla",
+        "hslArray": "hslArray",
+        "hex": "hex"
+      }
+    },
+    "alpha": {
+      "name": "Alpha",
+      "desc": "A decimal between 0 and 1. Only relevant when using a format with an alpha channel (rgba and hsla). Defaults to a random value."
+    }
+  }
+
+@@END LANG_PROP.JSON
+
+@@START LANG_CAT.JSON
+"aceCategories": {
+    "one color" : "One Color",
+    "color array" : "Color Array",
+    "set properties" : "Set Properties",
+    "c3array" : "C3 Array",
+    "c3 sprite" : "C3 Sprite",
+    "get properties" : "Get Properties"
+}
+
+@@END LANG_CAT.JSON
+

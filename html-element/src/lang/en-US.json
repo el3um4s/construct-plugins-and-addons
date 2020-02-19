@@ -1,0 +1,1614 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for MyDrawingPlugin.",
+  "text": {
+    "plugins": {
+      "stranianelli_htmlelement": {
+        "name": "HTML Element",
+        "description": "HTML Elements inside Construct3.",
+        "help-url": "https://www.construct.net",
+        "properties": {
+          "parentUID": {
+            "name": "Parent (UID)",
+            "desc": "The parent of the html element (C3 UID)"
+          },
+          "parentID": {
+            "name": "Parent (ID)",
+            "desc": "The parent of the html element (HTML ID)"
+          },
+          "useC3position": {
+            "name": "Use C3 Position",
+            "desc": "Use C3 Position."
+          },
+          "useC3size": {
+            "name": "Use C3 Size",
+            "desc": "Use C3 Size."
+          },
+          "useC3rotation": {
+            "name": "Use C3 Rotation",
+            "desc": "Use C3 Rotation."
+          },
+          "objectModel": {
+            "name": "Model",
+            "desc": "Instance variables name, in the same order, like an array: [\"Variable1\", \"Variable2\" , \"NameVar3\"]"
+          },
+          "objectStore": {
+            "name": "Store",
+            "desc": "Instance UID name, like an array: [\"UID1\", \"UID2\" , UID3, UID4, ...]"
+          },
+          "htmlGroup": {
+            "name": "HTML",
+            "desc": "HTML Settings"
+          },
+          "htmlInitiallyVisible": {
+            "name": "Initially Visible",
+            "desc": "Choose whether the object is visible when the layout stats."
+          },
+          "htmlTag": {
+            "name": "TAG",
+            "desc": "The TAG HTML to inject."
+          },
+          "htmlID": {
+            "name": "ID",
+            "desc": "An optional ID for the element."
+          },
+          "htmlClass": {
+            "name": "Class",
+            "desc": "Optional Class for the element."
+          },
+          "htmlAttribute": {
+            "name": "Attribute",
+            "desc": "Attribute to set like object: {\"lang\": \"en\", \"runt\": \"c3\"}"
+          },
+          "htmlHasText": {
+            "name": "Has Text",
+            "desc": "Insert text into the element."
+          },
+          "htmlTextAsHTML": {
+            "name": "Text Like HTML",
+            "desc": "Show text like HTML code."
+          },
+          "htmlText": {
+            "name": "Text",
+            "desc": "The initial text to display."
+          },
+          "inlineStyle": {
+            "name": "Inline Style",
+            "desc": "Set the inline style."
+          },
+          "inlineStyleUsePreviewColor": {
+            "name": "Use Preview Color",
+            "desc": "Use Preview Color."
+          },
+          "inlineStyleUsePreviewBorderSettings": {
+            "name": "Use Preview Border Settings",
+            "desc": "Use Preview Border Settings."
+          },
+          "inlineStyleBorderStyle": {
+            "name": "border-style",
+            "desc": "The border-style CSS property is a shorthand property that sets the line style for all four sides of an element's border.",
+            "items": {
+              "notinuse": "Not in use",
+              "none": "none",
+              "hidden": "hidden",
+              "dotted": "dotted",
+              "dashed": "dashed",
+              "solid": "solid",
+              "double": "double",
+              "groove": "groove",
+              "ridge": "ridge",
+              "inset": "inset",
+              "outset": "outset"
+            }
+          },
+          "inlineStyleBorderRadius": {
+            "name": "border-radius",
+            "desc": "The border-radius CSS property lets you round the corners of an element's outer border edge. You can specify a single radius to make circular corners, or two radii to make elliptical corners."
+          },
+          "inlineStyleUsePreviewFontFamily": {
+            "name": "Use C3 Font Family",
+            "desc": "Use C3 Font Family."
+          },
+          "inlineStyleUsePreviewFontSettings": {
+            "name": "Use Preview Text Settings",
+            "desc": "Use Preview Text Settings."
+          },
+          "inlineStyleUsePreviewAutoFontSize": {
+            "name": "Auto Font Size",
+            "desc": "Automatically set the font size depending on the layer scale."
+          },
+          "inlineStylePadding": {
+            "name": "padding",
+            "desc": "The padding CSS property sets the padding area on all four sides of an element."
+          },
+          "inlineStyleBoxSizing": {
+            "name": "box-sizing",
+            "desc": "The box-sizing CSS property defines how the user agent should calculate the total width and height of an element.",
+            "items": {
+              "notinuse": "Not in use",
+              "content-box": "content-box",
+              "border-box": "border-box"
+            }
+          },
+          "inlineStyleWordBreak": {
+            "name": "word-break",
+            "desc": "The word-break CSS property sets whether line breaks appear wherever the text would otherwise overflow its content box.",
+            "items": {
+              "notinuse": "Not in use",
+              "normal": "normal",
+              "break-all": "break-all",
+              "keep-all": "keep-all",
+              "break-word": "break-word"
+            }
+          },
+          "inlineStyleWhiteSpace": {
+            "name": "white-space",
+            "desc": "The white-space CSS property determines how white space inside an element is handled.",
+            "items": {
+              "notinuse": "Not in use",
+              "normal": "normal",
+              "nowrap": "nowrap",
+              "pre": "pre",
+              "pre-wrap": "pre-wrap",
+              "pre-line": "pre-line"
+            }
+          },
+          "inlineStyleOverflowX": {
+            "name": "overflow-x",
+            "desc": "The overflow-x CSS property specifies whether to clip content, render a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges.",
+            "items": {
+              "notinuse": "Not in use",
+              "visible": "visible",
+              "hidden": "hidden",
+              "scroll": "scroll",
+              "auto": "auto"
+            }
+          },
+          "inlineStyleOverflowY": {
+            "name": "overflow-y",
+            "desc": "The overflow-y CSS property specifies whether to clip content, render a scroll bar, or display overflow content of a block-level element, when it overflows at the top and bottom edges.",
+            "items": {
+              "notinuse": "Not in use",
+              "visible": "visible",
+              "hidden": "hidden",
+              "scroll": "scroll",
+              "auto": "auto"
+            }
+          },
+          "inlineStyleLongtext": {
+            "name": "Inline Style",
+            "desc": "CSS Style to set: background-color: red; border: 5px solid green;"
+          },
+          "editorPreviewGroup": {
+            "name": "EDITOR PREVIEW",
+            "desc": "Editor Preview"
+          },
+          "editorPreviewColor": {
+            "name": "Color",
+            "desc": "Editor color (not shown in release)"
+          },
+          "editorPreviewBorderWidth": {
+            "name": "Border (width)",
+            "desc": "Border width (in px)"
+          },
+          "editorPreviewBorderColor": {
+            "name": "Border (color)",
+            "desc": "Border color (not shown in release)"
+          },
+          "editorPreviewShowTag": {
+            "name": "Show TAG",
+            "desc": "Display the TAG name in the editor."
+          },
+          "editorPreviewTagColor": {
+            "name": "Tag Color",
+            "desc": "Tag Color in SA_CommentHTMLElements layer."
+          },
+          "editorPreviewShowText": {
+            "name": "Show TEXT",
+            "desc": "Display the TEXT in the editor."
+          },
+          "textGroup": {
+            "name": "TEXT PREVIEW",
+            "desc": "The initial text to display."
+          },
+          "textFont": {
+            "name": "Font",
+            "desc": "The name of the font to display the text with."
+          },
+          "textSize": {
+            "name": "Size",
+            "desc": "The size of the text to display, in points (pt)."
+          },
+          "textColor": {
+            "name": "Color",
+            "desc": "The color of the text to display."
+          },
+          "textIsBold": {
+            "name": "Bold",
+            "desc": "Display the font in a bold weight."
+          },
+          "textIsItalic": {
+            "name": "Italic",
+            "desc": "Display the font in a slanted italic style."
+          },
+          "textHorizontalAlign": {
+            "name": "Horizontal alignment",
+            "desc": "Horizontal alignment of the text inside its bounding box",
+            "items": {
+              "left": "Left",
+              "center": "Center",
+              "right": "Right"
+            }
+          },
+          "transformGroup": {
+            "name": "TRANSFORM (ORIGIN)",
+            "desc": "Change the point of origin of transforms"
+          },
+          "transformOriginVertical": {
+            "name": "Vertical (first value)",
+            "desc": "Vertical origin (top, center, bottom)",
+            "items": {
+              "top": "Top",
+              "center": "Center",
+              "bottom": "Bottom"
+            }
+          },
+          "transformOriginHorizontal": {
+            "name": "Horizontal (second value)",
+            "desc": "Horizontal origin (left, center, right)",
+            "items": {
+              "left": "Left",
+              "center": "Center",
+              "right": "Right"
+            }
+          },
+          "eventEventHandlers": {
+            "name": "EVENT HANDLERS",
+            "desc": ""
+          },
+          "eventEventGeneral": {
+            "name": "Inline Event",
+            "desc": "onclick, doThis('hello','world')"
+          },
+          "eventMouseGroup": {
+            "name": "EVENT (mouse)",
+            "desc": ""
+          },
+          "eventMouseOnClick": {
+            "name": "On Click",
+            "desc": "A pointing device button (ANY button; soon to be primary button only) has been pressed and released on an element."
+          },
+          "eventMouseOnClickFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnDoubleClick": {
+            "name": "On Double Click",
+            "desc": "A pointing device button is clicked twice on an element."
+          },
+          "eventMouseOnDoubleClickFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnContextMenu": {
+            "name": "On Context Menu",
+            "desc": "The right button of the mouse is clicked (before the context menu is displayed)."
+          },
+          "eventMouseOnContextMenuFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnAuxClick": {
+            "name": "On Aux Click",
+            "desc": "A pointing device button (ANY non-primary button) has been pressed and released on an element."
+          },
+          "eventMouseOnAuxClickFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnMouseWheel": {
+            "name": "On Mouse Wheel",
+            "desc": "A wheel button of a pointing device is rotated in any direction."
+          },
+          "eventMouseOnMouseWheelFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnMouseOver": {
+            "name": "On Mouse Over",
+            "desc": "A pointing device is moved onto the element that has the listener attached or onto one of its children."
+          },
+          "eventMouseOnMouseOverFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnMouseOut": {
+            "name": "On Mouse Out",
+            "desc": "A pointing device is moved off the element that has the listener attached or off one of its children."
+          },
+          "eventMouseOnMouseOutFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnMouseDown": {
+            "name": "On Mouse Down",
+            "desc": "A pointing device button is pressed on an element."
+          },
+          "eventMouseOnMouseDownFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnMouseUp": {
+            "name": "On Mouse Up",
+            "desc": "A pointing device button is released over an element."
+          },
+          "eventMouseOnMouseUpFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnMouseEnter": {
+            "name": "On Mouse Enter",
+            "desc": "A pointing device is moved onto the element that has the listener attached."
+          },
+          "eventMouseOnMouseEnterFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnMouseLeave": {
+            "name": "On Mouse Leave",
+            "desc": "A pointing device is moved off the element that has the listener attached."
+          },
+          "eventMouseOnMouseLeaveFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnMouseMove": {
+            "name": "On Mouse Move",
+            "desc": "A pointing device is moved over an element. (Fired continously as the mouse moves.)"
+          },
+          "eventMouseOnMouseMoveFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventMouseOnMouseSelect": {
+            "name": "On Mouse Select",
+            "desc": "Some text is being selected."
+          },
+          "eventMouseOnMouseSelectFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventFocusGroup": {
+            "name": "EVENT (focus)",
+            "desc": ""
+          },
+          "eventFocusOnFocus": {
+            "name": "On Focus",
+            "desc": "An element has received focus (does not bubble)."
+          },
+          "eventFocusOnFocusFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventFocusOnBlur": {
+            "name": "On Blur",
+            "desc": "An element has lost focus (does not bubble)."
+          },
+          "eventFocusOnBlurFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventKeyboardGroup": {
+            "name": "EVENT (keyboard)",
+            "desc": ""
+          },
+          "eventKeyboardOnKeyDown": {
+            "name": "On Key Down",
+            "desc": "ANY key is pressed"
+          },
+          "eventKeyboardOnKeyDownFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventKeyboardOnKeyPress": {
+            "name": "On Key Press",
+            "desc": "ANY key except Shift, Fn, CapsLock is in pressed position. (Fired continously.)"
+          },
+          "eventKeyboardOnKeyPressFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventKeyboardOnKeyUp": {
+            "name": "On Key Up",
+            "desc": "ANY key is released"
+          },
+          "eventKeyboardOnKeyUpFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventValueChangeGroup": {
+            "name": "EVENT (value change)",
+            "desc": ""
+          },
+          "eventValueChangeOnCheckboxStateChange": {
+            "name": "On Checkbox State Change",
+            "desc": "The CheckboxStateChange event is executed when the state of a <checkbox> element has changed."
+          },
+          "eventValueChangeOnCheckboxStateChangeFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventValueChangeOnInput": {
+            "name": "On Input",
+            "desc": "The DOM input event is fired synchronously when the value of an <input>, <select>, or <textarea> element is changed."
+          },
+          "eventValueChangeOnInputFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventValueChangeOnRadioStateChange": {
+            "name": "On Radio State Change",
+            "desc": "The RadioStateChange event is executed when the state of a <radio> element has changed."
+          },
+          "eventValueChangeOnRadioStateChangeFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventValueChangeOnValueChange": {
+            "name": "On Value Change",
+            "desc": "The ValueChange event is executed when the value of an element, <progress> for example, has changed."
+          },
+          "eventValueChangeOnValueChangeFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventFormGroup": {
+            "name": "EVENT (form)",
+            "desc": ""
+          },
+          "eventFormReset": {
+            "name": "On Reset",
+            "desc": "The reset button is pressed"
+          },
+          "eventFormResetFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          },
+          "eventFormSubmit": {
+            "name": "On Submit",
+            "desc": "The submit button is pressed"
+          },
+          "eventFormSubmitFunct": {
+            "name": "Function",
+            "desc": "C3 function to trigger."
+          }
+        },
+        "aceCategories": {
+          "appearance": "APPEARANCE",
+          "text": "TEXT",
+          "sizeetposition": "SIZE & POSITION",
+          "angle": "ANGLE",
+          "origintransform": "ORIGIN TRANSFORM",
+          "css": "CSS",
+          "generic": "GENERAL HTML (ID AND SELECTORS)",
+          "html": "HTML",
+          "event": "EVENT",
+          "eventmouse": "EVENT (Mouse)",
+          "eventfocus": "EVENT (Focus)",
+          "eventkeyboard": "EVENT (Keyboard)",
+          "eventvaluechange": "EVENT (ValueChange)",
+          "eventform": "EVENT (Form)",
+          "customjs": "CUSTOM JS"
+        },
+        "conditions": {
+          "appearance-is-visible": {
+            "list-name": "Is visible",
+            "display-text": "Is visible",
+            "description": "Test if the object is currently visible."
+          },
+          "appearance-compare-opacity": {
+            "list-name": "Compare opacity",
+            "display-text": "Opacity {0} {1}",
+            "description": "Compare the object's current opacity.",
+            "params": {
+              "comparison": {
+                "name": "Comparison",
+                "desc": "How to compare the opacity."
+              },
+              "value": {
+                "name": "Opacity",
+                "desc": "The opacity (0-100) to compare to."
+              }
+            }
+          },
+          "text-has-text": {
+            "list-name": "Has text",
+            "display-text": "Has text",
+            "description": "Test if the object has text."
+          },
+          "text-compare-text": {
+            "list-name": "Compare text",
+            "display-text": "Text is [b]{0}[/b] [i]({1})[/i]",
+            "description": "Compare the text in this object.",
+            "params": {
+              "value": {
+                "name": "Text to compare",
+                "desc": "Enter the text to compare with the object's content."
+              },
+              "case-sensitive": {
+                "name": "Case sensitivity",
+                "desc": "Choose whether capital letters count as different to lowercase. If ignoring case, \"ABC\" mathches \"abc\".",
+                "items": {
+                  "ignore-case": "Ignore case",
+                  "case-sensitive": "Case sensitive"
+                }
+              }
+            }
+          },
+          "size-compare-width": {
+            "list-name": "Compare width",
+            "display-text": "Width {0} {1}",
+            "description": "Compare the width to a value.",
+            "params": {
+              "comparison": {
+                "name": "Comparison",
+                "desc": "How to compare the width."
+              },
+              "value": {
+                "name": "Width",
+                "desc": "The width to compare to."
+              }
+            }
+          },
+          "size-compare-height": {
+            "list-name": "Compare height",
+            "display-text": "Height {0} {1}",
+            "description": "Compare the height to a value.",
+            "params": {
+              "comparison": {
+                "name": "Comparison",
+                "desc": "How to compare the height."
+              },
+              "value": {
+                "name": "Height",
+                "desc": "The height to compare to."
+              }
+            }
+          },
+          "position-compare-x": {
+            "list-name": "Compare X",
+            "display-text": "X {0} {1}",
+            "description": "Compare the X co-ordinate to a value.",
+            "params": {
+              "comparison": {
+                "name": "Comparison",
+                "desc": "How to compare the X co-ordinate."
+              },
+              "value": {
+                "name": "X",
+                "desc": "The X co-ordinate to compare to."
+              }
+            }
+          },
+          "position-compare-y": {
+            "list-name": "Compare Y",
+            "display-text": "Y {0} {1}",
+            "description": "Compare the Y co-ordinate to a value.",
+            "params": {
+              "comparison": {
+                "name": "Comparison",
+                "desc": "How to compare the Y co-ordinate."
+              },
+              "value": {
+                "name": "Opacity",
+                "desc": "The Y co-ordinate to compare to."
+              }
+            }
+          },
+          "angle-is-between-angles": {
+            "list-name": "Is between angles",
+            "display-text": "Is between {0} and {1} degrees",
+            "description": "if the object's angle is between two angles.",
+            "params": {
+              "first": {
+                "name": "First angle",
+                "desc": "First angle, in degrees. Specify in clockwise order."
+              },
+              "second": {
+                "name": "Second angle",
+                "desc": "First angle, in degrees. Specify in clockwise order."
+              }
+            }
+          },
+          "origin-transform-compare-vertical": {
+            "list-name": "Compare Vertical",
+            "display-text": "Vertical origin transform is {0}",
+            "description": "Compare the vertical origin transform.",
+            "params": {
+              "vertical": {
+                "name": "Vertical",
+                "desc": "Vertical origin options",
+                "items": {
+                  "top": "Top",
+                  "center": "Center",
+                  "bottom": "Bottom"
+                }
+              }
+            }
+          },
+          "origin-transform-compare-horizontal": {
+            "list-name": "Compare Horizontal",
+            "display-text": "Horizontal origin transform is {0}",
+            "description": "Compare the horizontal origin transform.",
+            "params": {
+              "horizontal": {
+                "name": "Vertical",
+                "desc": "Vertical origin options",
+                "items": {
+                  "left": "Left",
+                  "center": "Center",
+                  "right": "Right"
+                }
+              }
+            }
+          },
+          "css-compare-class": {
+            "list-name": "Compare Class",
+            "display-text": "Has Class '{0}'",
+            "description": "Checks whether html element is assigned to the given class.",
+            "params": {
+              "classDaVerificare": {
+                "name": "Class",
+                "desc": "Class that function will check."
+              }
+            }
+          },
+          "css-has-style-defined": {
+            "list-name": "Has style defined",
+            "display-text": "Has style '{0}' defined",
+            "description": "Checks whether html element has a syle defined.",
+            "params": {
+              "style": {
+                "name": "Style",
+                "desc": "Style that function will check."
+              }
+            }
+          },
+          "css-compare-style": {
+            "list-name": "Compare Style",
+            "display-text": "Has Style '{0}':'{1}'",
+            "description": "Compare the style to a value.",
+            "params": {
+              "style": {
+                "name": "Style",
+                "desc": "Style that function will check."
+              },
+              "value": {
+                "name": "Value",
+                "desc": "Value that function will check."
+              }
+            }
+          },
+          "html-has-id": {
+            "list-name": "Has ID",
+            "display-text": "Has ID",
+            "description": "Checks whether html element has the ID defined."
+          },
+          "html-is-checked": {
+            "list-name": "Is Checked",
+            "display-text": "Is Checked",
+            "description": "Checks if the element is checked or not.."
+          },
+          "html-compare-id": {
+            "list-name": "Compare ID",
+            "display-text": "ID is '{0}'",
+            "description": "Checks whether html element has the the given ID.",
+            "params": {
+              "id": {
+                "name": "ID",
+                "desc": "ID that function will check."
+              }
+            }
+          },
+          "html-compare-tag": {
+            "list-name": "Compare TAG",
+            "display-text": "TAG is '{0}'",
+            "description": "Checks whether html element has the the given TAG.",
+            "params": {
+              "tag": {
+                "name": "TAG",
+                "desc": "TAG that function will check."
+              }
+            }
+          },
+          "html-has-attribute": {
+            "list-name": "Has Attribute",
+            "display-text": "Has attribute: '{0}'",
+            "description": "Checks whether html element has the the given attribute.",
+            "params": {
+              "attr": {
+                "name": "Attr",
+                "desc": "Attr that function will check."
+              }
+            }
+          },
+          "html-compare-value": {
+            "list-name": "Compare Value",
+            "display-text": "Value is {0} '{1}'",
+            "description": "Checks whether html element has the the given value.",
+            "params": {
+              "comparison": {
+                "name": "Comparison",
+                "desc": "How to compare the width."
+              },
+              "value": {
+                "name": "Value",
+                "desc": "Value that function will check."
+              }
+            }
+          },
+          "html-compare-attribute": {
+            "list-name": "Compare Attribute",
+            "display-text": "{0} {1} {2}",
+            "description": "Checks whether attribute has the the given value.",
+            "params": {
+              "attr": {
+                "name": "Attr",
+                "desc": "Attr that function will check."
+              },
+              "comparison": {
+                "name": "Comparison",
+                "desc": "How to compare the width."
+              },
+              "value": {
+                "name": "Value",
+                "desc": "Value that function will check."
+              }
+            }
+          },
+          "html-compare-value-radio": {
+            "list-name": "Compare Value (radio)",
+            "display-text": "Input radio '{0}' {1} '{2}'",
+            "description": "Checks whether attribute has the the given value.",
+            "params": {
+              "radioName": {
+                "name": "radioName",
+                "desc": "radioName that function will check."
+              },
+              "comparison": {
+                "name": "Comparison",
+                "desc": "How to compare the width."
+              },
+              "value": {
+                "name": "Value",
+                "desc": "Value that function will check."
+              }
+            }
+          },
+          "html-compare-value-as-string": {
+            "list-name": "Compare Value  (as string)",
+            "display-text": "Value is {0} '{1}'",
+            "description": "Checks whether html element has the the given value.",
+            "params": {
+              "case-sensitive": {
+                "name": "Case sensitivity",
+                "desc": "Choose whether capital letters count as different to lowercase. If ignoring case, \"ABC\" mathches \"abc\".",
+                "items": {
+                  "ignore-case": "Ignore case",
+                  "case-sensitive": "Case sensitive"
+                }
+              },
+              "value": {
+                "name": "Value",
+                "desc": "Value that function will check."
+              }
+            }
+          },
+          "html-compare-attribute-as-string": {
+            "list-name": "Compare Attribute (as string)",
+            "display-text": "{0} {1} {2}",
+            "description": "Checks whether attribute has the the given value.",
+            "params": {
+              "attr": {
+                "name": "Attr",
+                "desc": "Attr that function will check."
+              },
+              "case-sensitive": {
+                "name": "Case sensitivity",
+                "desc": "Choose whether capital letters count as different to lowercase. If ignoring case, \"ABC\" mathches \"abc\".",
+                "items": {
+                  "ignore-case": "Ignore case",
+                  "case-sensitive": "Case sensitive"
+                }
+              },
+              "value": {
+                "name": "Value",
+                "desc": "Value that function will check."
+              }
+            }
+          },
+          "html-compare-value-radio-as-string": {
+            "list-name": "Compare Value (radio) (as string)",
+            "display-text": "Input radio '{0}' {1} '{2}'",
+            "description": "Checks whether attribute has the the given value.",
+            "params": {
+              "radioName": {
+                "name": "radioName",
+                "desc": "radioName that function will check."
+              },
+              "case-sensitive": {
+                "name": "Case sensitivity",
+                "desc": "Choose whether capital letters count as different to lowercase. If ignoring case, \"ABC\" mathches \"abc\".",
+                "items": {
+                  "ignore-case": "Ignore case",
+                  "case-sensitive": "Case sensitive"
+                }
+              },
+              "value": {
+                "name": "Value",
+                "desc": "Value that function will check."
+              }
+            }
+          },
+          "event-mouse-on-click": {
+            "list-name": "On Click",
+            "display-text": "On Click",
+            "description": "A pointing device button (ANY button; soon to be primary button only) has been pressed and released on the element."
+          },
+          "event-mouse-on-dbl-click": {
+            "list-name": "On Double Click",
+            "display-text": "On Double Click",
+            "description": "A pointing device button is clicked twice on the element."
+          },
+          "event-mouse-on-context-menu": {
+            "list-name": "On Context Menu (right click)",
+            "display-text": "On Context Menu (right click)",
+            "description": "The right button of the mouse is clicked (before the context menu is displayed)."
+          },
+          "event-mouse-on-aux-click": {
+            "list-name": "On Aux Click",
+            "display-text": "On Aux Click",
+            "description": "A pointing device button (ANY non-primary button) has been pressed and released on the element."
+          },
+          "event-mouse-on-wheel": {
+            "list-name": "On Wheel",
+            "display-text": "On Wheel",
+            "description": "A wheel button of a pointing device is rotated in any direction."
+          },
+          "event-mouse-on-mouse-over": {
+            "list-name": "On Mouse Over",
+            "display-text": "On Mouse Over",
+            "description": "A pointing device is moved onto the element that has the listener attached or onto one of its children."
+          },
+          "event-mouse-on-mouse-out": {
+            "list-name": "On Mouse Out",
+            "display-text": "On Mouse Out",
+            "description": "A pointing device is moved off the element that has the listener attached or off one of its children."
+          },
+          "event-mouse-on-mouse-down": {
+            "list-name": "On Mouse Down",
+            "display-text": "On Mouse Down",
+            "description": "A pointing device button is pressed on an element."
+          },
+          "event-mouse-on-mouse-up": {
+            "list-name": "On Mouse Up",
+            "display-text": "On Mouse Up",
+            "description": "A pointing device button is released over an element."
+          },
+          "event-mouse-on-mouse-enter": {
+            "list-name": "On Mouse Enter",
+            "display-text": "On Mouse Enter",
+            "description": "A pointing device is moved onto the element that has the listener attached."
+          },
+          "event-mouse-on-mouse-leave": {
+            "list-name": "On Mouse Leave",
+            "display-text": "On Mouse Leave",
+            "description": "A pointing device is moved off the element that has the listener attached."
+          },
+          "event-mouse-on-mouse-move": {
+            "list-name": "On Mouse Move",
+            "display-text": "On Mouse Move",
+            "description": "A pointing device is moved over an element. (Fired continously as the mouse moves.)"
+          },
+          "event-mouse-on-mouse-select": {
+            "list-name": "On Select",
+            "display-text": "On Select",
+            "description": "Some text is being selected."
+          },
+          "event-focus-on-focus": {
+            "list-name": "On Focus",
+            "display-text": "On Focus",
+            "description": "An element has received focus (does not bubble)."
+          },
+          "event-focus-on-blur": {
+            "list-name": "On Blur",
+            "display-text": "On Blur",
+            "description": "An element has lost focus (does not bubble)."
+          },
+          "event-keyboard-on-key-down": {
+            "list-name": "On Key Down",
+            "display-text": "On Key Down",
+            "description": "ANY key is pressed."
+          },
+          "event-keyboard-on-key-press": {
+            "list-name": "On Key Press",
+            "display-text": "On Key Press",
+            "description": "ANY key except Shift, Fn, CapsLock is in pressed position. (Fired continously.)."
+          },
+          "event-keyboard-on-key-up": {
+            "list-name": "On Key Up",
+            "display-text": "On Key Up",
+            "description": "ANY key is released."
+          },
+          "event-value-change-on-checkbox-state-change": {
+            "list-name": "On Checkbox state change",
+            "display-text": "On Checkbox state change",
+            "description": "The CheckboxStateChange event is executed when the state of a <checkbox> element has changed."
+          },
+          "event-value-change-on-input": {
+            "list-name": "On Input",
+            "display-text": "On Input",
+            "description": "The DOM input event is fired synchronously when the value of an <input>, <select>, or <textarea> element is changed."
+          },
+          "event-value-change-on-radio-state-change": {
+            "list-name": "On Radio State Change",
+            "display-text": "On Radio State Change",
+            "description": "The RadioStateChange event is executed when the state of a <radio> element has changed."
+          },
+          "event-value-change-on-value-change": {
+            "list-name": "On Value Change",
+            "display-text": "On Value Change",
+            "description": "The ValueChange event is executed when the value of an element, <progress> for example, has changed."
+          },
+          "event-form-reset": {
+            "list-name": "On Reset",
+            "display-text": "On Reset",
+            "description": "The reset button is pressed."
+          },
+          "event-form-submit": {
+            "list-name": "On Submit",
+            "display-text": "On Submit",
+            "description": "The submit button is pressed."
+          },
+          "js-on-get-file-url": {
+            "list-name": "On Get File URL",
+            "display-text": "On Get File URL",
+            "description": "On Get File URL."
+          },
+          "js-on-get-blob": {
+            "list-name": "On Get BLOB",
+            "display-text": "On Get BLOB",
+            "description": "On Get BLOB."
+          },
+          "js-on-get-url-blob": {
+            "list-name": "On Get URL BLOB",
+            "display-text": "On Get URL BLOB",
+            "description": "On Get URL BLOB."
+          },
+          "js-on-get-base64img-from-url": {
+            "list-name": "On Get base64Img from URL",
+            "display-text": "On Get base64Img from URL",
+            "description": "On Get base64Img from URL."
+          },
+          "js-on-get-base64img-from-file": {
+            "list-name": "On Get base64Img from Project FILE",
+            "display-text": "On Get base64Img from Project FILE",
+            "description": "On Get base64Img from Project FILE."
+          }
+        },
+        "actions": {
+          "appearance-toggle-visible": {
+            "list-name": "Toggle Visible",
+            "display-text": "Toggle Visible",
+            "description": "Toggle whether the object is hidden or shown."
+          },
+          "appearance-set-visible": {
+            "list-name": "Set Visible",
+            "display-text": "Set {0}",
+            "description": "Set whether the object is hidden or shown.",
+            "params": {
+              "set-visible": {
+                "name": "Visibility",
+                "desc": "Choose whethever the object is hidden or shown.",
+                "items": {
+                  "invisible": "Invisible",
+                  "visible": "Visible"
+                }
+              }
+            }
+          },
+          "appearance-set-opacity": {
+            "list-name": "Set opacity",
+            "display-text": "Set opacity to [i]{0}[/i]",
+            "description": "Set how transparent the object appears.",
+            "params": {
+              "set-opacity": {
+                "name": "Opacity",
+                "desc": "Choose the object opacity, from 0 (transparent) to 100 (opaque)."
+              }
+            }
+          },
+          "text-set-text": {
+            "list-name": "Set text",
+            "display-text": "Set text to [i]{0}[/i]",
+            "description": "Set the text of this object.",
+            "params": {
+              "text": {
+                "name": "Text",
+                "desc": "Enter the text to set the object's content to."
+              }
+            }
+          },
+          "text-append-text": {
+            "list-name": "Append text",
+            "display-text": "Append [i]{0}[/i]",
+            "description": "Add text to the end of the existing text.",
+            "params": {
+              "text": {
+                "name": "Text",
+                "desc": "Enter the text to appendt to the object's content."
+              }
+            }
+          },
+          "position-set-position": {
+            "list-name": "Set position",
+            "display-text": "Set position to [i]({0} , {1})[/i]",
+            "description": "Set the object's X and Y co-ordinates at the same time.",
+            "params": {
+              "x": {
+                "name": "X",
+                "desc": "New X co-ordinate, in pixels."
+              },
+              "y": {
+                "name": "Y",
+                "desc": "New Y co-ordinate, in pixels."
+              }
+            }
+          },
+          "position-set-x": {
+            "list-name": "Set X",
+            "display-text": "Set X to [i]{0}[/i]",
+            "description": "Set the object's X co-ordinate.",
+            "params": {
+              "x": {
+                "name": "X",
+                "desc": "New X co-ordinate, in pixels."
+              }
+            }
+          },
+          "position-set-y": {
+            "list-name": " Set Y",
+            "display-text": "Set Y to [i]{0}[/i]",
+            "description": "Set the object's Y co-ordinate.",
+            "params": {
+              "y": {
+                "name": "Y",
+                "desc": "New Y co-ordinate, in pixels."
+              }
+            }
+          },
+          "size-set-size": {
+            "list-name": "Set size",
+            "display-text": "Set size to [i]({0} , {1})[/i]",
+            "description": "Set the object's width and height at the same time.",
+            "params": {
+              "width": {
+                "name": "Width",
+                "desc": "New object width, in pixels."
+              },
+              "height": {
+                "name": "Height",
+                "desc": "New object height, in pixels."
+              }
+            }
+          },
+          "size-set-height": {
+            "list-name": "Set height",
+            "display-text": "Set height to [i]{0}[/i]",
+            "description": "Set the object's height.",
+            "params": {
+              "height": {
+                "name": "Height",
+                "desc": "New object height, in pixels."
+              }
+            }
+          },
+          "size-set-width": {
+            "list-name": "Set width",
+            "display-text": "Set width to [i]{0}[/i]",
+            "description": "Set the object's width.",
+            "params": {
+              "width": {
+                "name": "Width",
+                "desc": "New object width, in pixels."
+              }
+            }
+          },
+          "angle-set-angle": {
+            "list-name": "Set angle",
+            "display-text": "Set angle to [i]{0}[/i] degrees",
+            "description": "Set the angle the object is oriented at.",
+            "params": {
+              "angle": {
+                "name": "Angle",
+                "desc": "New object angle, in degrees."
+              }
+            }
+          },
+          "angle-rotate-clockwise": {
+            "list-name": "Rotate clockwise",
+            "display-text": "Rotate [i]{0}[/i] degrees clockwise",
+            "description": "Rotate the object's angle clockwise by a number of degrees.",
+            "params": {
+              "angle": {
+                "name": "Angle",
+                "desc": "Number of degrees to rotate the object clockwise."
+              }
+            }
+          },
+          "angle-rotate-counter-clockwise": {
+            "list-name": "Rotate counter-clockwise",
+            "display-text": "Rotate [i]{0}[/i] degrees counter-clockwise",
+            "description": "Rotate the object's angle counter-clockwise by a number of degrees.",
+            "params": {
+              "angle": {
+                "name": "Angle",
+                "desc": "Number of degrees to rotate the object counter-clockwise."
+              }
+            }
+          },
+          "origin-transform-set-origin": {
+            "list-name": "Set Transform Origin",
+            "display-text": "Set transform-origin to {0} {1}",
+            "description": "Set the origin for the element's transformations.",
+            "params": {
+              "set-vertical": {
+                "name": "Vertical",
+                "desc": "Set the vertical origin.",
+                "items": {
+                  "top": "Top",
+                  "center": "Center",
+                  "bottom": "Bottom"
+                }
+              },
+              "set-horizontal": {
+                "name": "Horizontal",
+                "desc": "Set the horizontal origin.",
+                "items": {
+                  "left": "Left",
+                  "center": "Center",
+                  "right": "Right"
+                }
+              }
+            }
+          },
+          "origin-transform-set-vertical-origin": {
+            "list-name": "Set Transform Origin (Vertical)",
+            "display-text": "Set transform-origin vertical to {0}",
+            "description": "Set the vertical origin for the element's transformations.",
+            "params": {
+              "set-vertical": {
+                "name": "Vertical",
+                "desc": "Set the vertical origin.",
+                "items": {
+                  "top": "Top",
+                  "center": "Center",
+                  "bottom": "Bottom"
+                }
+              }
+            }
+          },
+          "origin-transform-set-horizontal-origin": {
+            "list-name": "Set Transform Origin (Horizontal)",
+            "display-text": "Set transform-origin horizontal to {0}",
+            "description": "Set the horizontal origin for the element's transformations.",
+            "params": {
+              "set-horizontal": {
+                "name": "Horizontal",
+                "desc": "Set the horizontal origin.",
+                "items": {
+                  "left": "Left",
+                  "center": "Center",
+                  "right": "Right"
+                }
+              }
+            }
+          },
+          "css-add-class": {
+            "list-name": "Add Class",
+            "display-text": "Add class [b]{0}[/b]",
+            "description": "Add specified class values.",
+            "params": {
+              "nameClass": {
+                "name": "Class",
+                "desc": "Number of degrees to rotate the object counter-clockwise."
+              }
+            }
+          },
+          "css-remove-class": {
+            "list-name": "Remove Class",
+            "display-text": "Remove class [b]{0}[/b]",
+            "description": "Remove specified class values.",
+            "params": {
+              "nameClass": {
+                "name": "Class",
+                "desc": "Class."
+              }
+            }
+          },
+          "css-toggle-class": {
+            "list-name": "Toggle Class",
+            "display-text": "Toggle class [b]{0}[/b]",
+            "description": "Toggle class value: if class exists then remove it, if not then add it.",
+            "params": {
+              "nameClass": {
+                "name": "Class",
+                "desc": "Class."
+              }
+            }
+          },
+          "css-replace-class": {
+            "list-name": "Replace Class",
+            "display-text": "Replace class [b]{0}[/b] with class [b]{1}[/b]",
+            "description": "Replaces an existing class with a new class.",
+            "params": {
+              "oldClass": {
+                "name": "oldClass",
+                "desc": "oldClass."
+              },
+              "newClass": {
+                "name": "newClass",
+                "desc": "newClass."
+              }
+            }
+          },
+          "css-set-style": {
+            "list-name": "Set CSS style",
+            "display-text": "Set style [b]{0}[/b]",
+            "description": "Set a CSS style on the element.",
+            "params": {
+              "style": {
+                "name": "style",
+                "desc": "style: val; style2: val2; ..."
+              }
+            }
+          },
+          "html-add-attribute": {
+            "list-name": "Add Attribute",
+            "display-text": "Add attribute [b]{0}[/b]:[i]{1}[/i]",
+            "description": "Sets the value of an attribute on the specified element.",
+            "params": {
+              "attr": {
+                "name": "Attr",
+                "desc": "Attr to add."
+              },
+              "value": {
+                "name": "Value",
+                "desc": "Value to assign."
+              }
+            }
+          },
+          "html-remove-attribute": {
+            "list-name": "Remove Attribute",
+            "display-text": "Remove attribute [b]{0}[/b]",
+            "description": "Removes the attribute with the specified name from the element.",
+            "params": {
+              "attr": {
+                "name": "Attr",
+                "desc": "Attr to remove."
+              }
+            }
+          },
+          "html-change-attribute": {
+            "list-name": "Change Attribute",
+            "display-text": "Change attribute [b]{0}[/b] to [i]{1}[/i]",
+            "description": "Updates the value of an attribute on the specified element.",
+            "params": {
+              "attr": {
+                "name": "Attr",
+                "desc": "Attr to change."
+              },
+              "value": {
+                "name": "Value",
+                "desc": "Value to assign."
+              }
+            }
+          },
+          "html-set-id": {
+            "list-name": "Set ID",
+            "display-text": "Set ID to: [b]{0}[/b]",
+            "description": "Set the ID of the element.",
+            "params": {
+              "id": {
+                "name": "ID",
+                "desc": "ID"
+              }
+            }
+          },
+          "custom-js-get-file-url": {
+            "list-name": "Get File URL",
+            "display-text": "Get URL for FILE [b]{0}[/b]",
+            "description": "Obtain a URL to a given project filename that can be directly fetched.",
+            "params": {
+              "nameFile": {
+                "name": "nameFile",
+                "desc": "nameFile"
+              }
+            }
+          },
+          "custom-js-get-file-blob": {
+            "list-name": "Get File BLOB",
+            "display-text": "Get BLOB for FILE [b]{0}[/b]",
+            "description": "Fetch a blob from a given FILE.",
+            "params": {
+              "nameFile": {
+                "name": "nameFile",
+                "desc": "nameFile"
+              }
+            }
+          },
+          "custom-js-get-url-blob": {
+            "list-name": "Get URL BLOB",
+            "display-text": "Get BLOB for URL: [b]{0}[/b]",
+            "description": "Fetch a blob from a given URL.",
+            "params": {
+              "url": {
+                "name": "URL",
+                "desc": "URL"
+              }
+            }
+          },
+          "custom-js-get-base64img-from-url": {
+            "list-name": "Get base64img from URL",
+            "display-text": "Get base64img from URL: [b]{0}[/b]",
+            "description": "Get base64img from a given URL.",
+            "params": {
+              "url": {
+                "name": "URL",
+                "desc": "URL"
+              }
+            }
+          },
+          "custom-js-get-base64img-from-file": {
+            "list-name": "Get base64img from Project File",
+            "display-text": "Get base64img from Project File: [b]{0}[/b]",
+            "description": "Get base64img from a project file.",
+            "params": {
+              "nameFile": {
+                "name": "nameFile",
+                "desc": "nameFile"
+              }
+            }
+          }
+        },
+        "expressions": {
+          "appearance-get-opacity": {
+            "description": "Get the object's current opacity, from 0 (transparent) to 100 (opaque).",
+            "translated-name": "Opacity"
+          },
+          "text-get-text": {
+            "description": "Get the object's text.",
+            "translated-name": "Text"
+          },
+          "text-get-inner-html": {
+            "description": "Get the object's inner HTML.",
+            "translated-name": "InnerHTML"
+          },
+          "position-get-x": {
+            "description": "Get the object's X co-ordinate, in pixels.",
+            "translated-name": "X"
+          },
+          "position-get-y": {
+            "description": "Get the object's Y co-ordinate, in pixels.",
+            "translated-name": "Y"
+          },
+          "size-get-width": {
+            "description": "Get the object's width, in pixels",
+            "translated-name": "Width"
+          },
+          "size-get-height": {
+            "description": "Get the object's height, in pixels.",
+            "translated-name": "Height"
+          },
+          "angle-get-angle": {
+            "description": "Get the object's current angle, in degrees.",
+            "translated-name": "Angle"
+          },
+          "angle-get-angle-rad": {
+            "description": "Get the object's current angle, in radians.",
+            "translated-name": "AngleRAD"
+          },
+          "origin-transform-get-vertical": {
+            "description": "Get the vertical origin for the element's transformations.",
+            "translated-name": "OriginTransformGetVertical"
+          },
+          "origin-transform-get-horizontal": {
+            "description": "Get the horizontal origin for the element's transformations.",
+            "translated-name": "OriginTransformGetHorizontal"
+          },
+          "event-get-last-event-as-json": {
+            "description": "Get the last event registered.",
+            "translated-name": "GetLastEventAsJSON"
+          },
+          "event-get-last-event-type": {
+            "description": "Get the type of the last event registered.",
+            "translated-name": "GetLastEventType"
+          },
+          "event-get-last-event-property": {
+            "description": "Get the last event registered.",
+            "translated-name": "GetLastEventProperty",
+            "params": {
+              "property": {
+                "name": "Property",
+                "desc": "Choose the property to get from the last event."
+              }
+            }
+          },
+          "css-get-classes-as-string-list": {
+            "description": "Get the classes of the given element (like a string).",
+            "translated-name": "CSSGetClassesAsStringList"
+          },
+          "css-get-class-as-boolean": {
+            "description": "Return 1 if the class exists, 0 if not.",
+            "translated-name": "CSSGetClassAsBoolean",
+            "params": {
+              "class": {
+                "name": "Class",
+                "desc": "The class to verify."
+              }
+            }
+          },
+          "css-get-CSS": {
+            "description": "Return the element's style.",
+            "translated-name": "CSSgetCSS",
+            "params": {
+              "style": {
+                "name": "Style",
+                "desc": "The property name to get."
+              }
+            }
+          },
+          "html-get-id": {
+            "description": "Return the ID of the element.",
+            "translated-name": "HTMLgetID"
+          },
+          "html-get-uid": {
+            "description": "Return the UID of the element.",
+            "translated-name": "HTMLgetUID"
+          },
+          "html-get-tag": {
+            "description": "Return the tag name of the element.",
+            "translated-name": "HTMLgetTAG"
+          },
+          "html-get-attribute": {
+            "description": "Return the value of a specified attribute on the element.",
+            "translated-name": "HTMLgetAttribute",
+            "params": {
+              "attr": {
+                "name": "Attr",
+                "desc": "The attribute to get."
+              }
+            }
+          },
+          "html-get-value": {
+            "description": "Return the value of the element.",
+            "translated-name": "HTMLgetVALUE"
+          },
+          "html-get-value-radio": {
+            "description": "Return the value of one radio element.",
+            "translated-name": "HTMLgetValueRadio",
+            "params": {
+              "radioName": {
+                "name": "radioName",
+                "desc": "The name of radio element."
+              }
+            }
+          },
+          "html-get-checked-status": {
+            "description": "Return 1 if the element is checked, 0 if not.",
+            "translated-name": "HTMLgetCheckedStatus"
+          },
+
+          "js-get-file-url": {
+            "description": "Obtain a URL to a given project filename that can be directly fetched.",
+            "translated-name": "JSGetFileURL"
+          },
+          "js-get-file-blob": {
+            "description": "Fetch a blob from a given namefile.",
+            "translated-name": "JSGetFileBLOB"
+          },
+          "js-get-url-blob": {
+            "description": "Fetch a blob from a given URL.",
+            "translated-name": "JSGetUrlBLOB"
+          },
+          "js-get-base64img-from-url": {
+            "description": "Get a base64Img from a given URL.",
+            "translated-name": "JSGetBase64ImgFromURL"
+          },
+          "js-get-base64img-from-file": {
+            "description": "Get a base64Img from a project file.",
+            "translated-name": "JSGetBase64ImgFromFILE"
+          },
+          "generic-html-get-value": {
+            "description": "Return the value of the element.",
+            "translated-name": "GenericGetValue",
+            "params": {
+              "id": {
+                "name": "ID",
+                "desc": "ID of the element"
+              }
+            }
+          },
+					"generic-html-get-attribute": {
+            "description": "Return the value of an attribute.",
+            "translated-name": "GenericGetAttribute",
+            "params": {
+              "id": {
+                "name": "ID",
+                "desc": "ID of the element"
+              },
+							"attr": {
+                "name": "Attr",
+                "desc": "Attr"
+              }
+            }
+          },
+					"generic-html-get-value-with-query-selector": {
+            "description": "Return the value of the element (query selector).",
+            "translated-name": "GenericGetValueWithQuerySelector",
+            "params": {
+              "selectors": {
+                "name": "Selectors",
+                "desc": "Selectors"
+              }
+            }
+          },
+					"generic-html-get-attribute-with-query-selector": {
+            "description": "Return the value of an attribute (query selector).",
+            "translated-name": "GenericGetAttributeWithQuerySelector",
+            "params": {
+              "selectors": {
+                "name": "Selectors",
+                "desc": "Selectors"
+              },
+							"attr": {
+                "name": "Attr",
+                "desc": "Attr"
+              }
+            }
+          },
+					"generic-html-get-checked-status": {
+            "description": "Return the check status of the element.",
+            "translated-name": "GenericGetCheckedStatus",
+            "params": {
+              "id": {
+                "name": "ID",
+                "desc": "ID"
+              }
+            }
+          },
+					"generic-html-get-checked-status-with-query-selector": {
+            "description": "Return the check status of the element (query selector).",
+            "translated-name": "GenericGetCheckedStatusQuerySelector",
+            "params": {
+              "selectors": {
+                "name": "Selectors",
+                "desc": "Selectors"
+              }
+            }
+          },
+					"generic-html-get-value-radio": {
+            "description": "Return the value of a radio element.",
+            "translated-name": "GenericGetValueRadio",
+            "params": {
+              "radioName": {
+                "name": "radioName",
+                "desc": "radioName"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

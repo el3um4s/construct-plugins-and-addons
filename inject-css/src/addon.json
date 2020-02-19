@@ -1,0 +1,31 @@
+﻿{
+	"is-c3-addon": true,
+	"type": "plugin",
+	"name": "Inject CSS",
+	"id": "StraniAnelli_InjectCSS",
+	"version": "0.1.3.0",
+	"author": "Strani Anelli",
+	"website": "https://el3um4s.github.io/construct-inject-css-plugin/",
+	"documentation": "https://el3um4s.github.io/construct-inject-css-plugin/",
+	"description": "Use CSS stylesheet in Construct 3 and inject simple html elements.",
+	"editor-scripts": [
+						"plugin.js",
+						"type.js",
+						"instance.js"
+					],
+	"file-list": [
+		"c3runtime/plugin.js",
+		"c3runtime/type.js",
+		"c3runtime/instance.js",
+		"c3runtime/conditions.js",
+		"c3runtime/actions.js",
+		"c3runtime/expressions.js",
+		"lang/en-US.json",
+		"aces.json",
+		"addon.json",
+		"icon.svg",
+		"instance.js",
+		"plugin.js",
+		"type.js"
+		]
+}

@@ -1,0 +1,49 @@
+﻿{
+	"custom": {
+		"conditions": [],
+		"actions": [
+			{
+				"id": "set-option",
+				"scriptName": "SetOption",
+				"highlight": false,
+				"params": [
+					{
+						"id": "optionKey",
+						"type": "string"
+					},
+					{
+						"id": "value",
+						"type": "string"
+					}
+				]
+			},
+			{
+				"id": "set-flavor",
+				"scriptName": "SetFlavor",
+				"highlight": false,
+				"params": [
+					{
+						"id": "flavor",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"expressions": [
+			{
+				"id": "make-html",
+				"expressionName": "MakeHtml",
+				"scriptName": "MakeHtml",
+				"highlight": true,
+				"returnType": "any",
+				"params": [
+					{
+						"id": "text",
+						"type": "string",
+						"initialValue": "text"
+					}
+				]
+			}
+		]
+	}
+}

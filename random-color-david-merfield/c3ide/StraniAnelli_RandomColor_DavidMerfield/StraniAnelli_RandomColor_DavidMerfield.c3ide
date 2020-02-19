@@ -1,0 +1,16 @@
+@@METADATA
+Id|1b7bbbce-150d-46a6-a4ae-3e6721dab6c0
+Name|Random Color (David Merfield)
+Class|RandomColor_DavidMerfield
+Company|StraniAnelli
+Author|StraniAnelli
+MajorVersion|1
+MinorVersion|0
+RevisionVersion|0
+BuildVersion|0
+Description|A tiny script for generating attractive colors.
+Category|general
+Type|SingleGlobalPlugin
+CreateDate|10/05/2019 12:48:40
+DateModified|18/05/2019 19:45:27
+AddonId|StraniAnelli_RandomColor_DavidMerfield

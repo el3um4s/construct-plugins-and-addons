@@ -1,0 +1,356 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for Random Color (David Merfield) Plugin",
+  "text": {
+    "plugins": {
+      "stranianelli_randomcolor_davidmerfield": {
+        "name": "Random Color (David Merfield)",
+        "description": "A tiny script for generating attractive colors.",
+        "help-url": "https://github.com/armandoalonso/c3IDE",
+        "properties": {
+          "hue": {
+            "name": "Hue",
+            "desc": "Controls the hue of the generated color. You can pass a string representing a color name: red, orange, yellow, green, blue, purple, pink and monochrome are currently supported. If you pass a hexidecimal color string such as #00FFFF, randomColor will extract its hue value and use that to generate colors."
+          },
+          "luminosity": {
+            "name": "Luminosity",
+            "desc": "Controls the luminosity of the generated color. You can specify a string containing bright, light or dark.",
+            "items": {
+              "random": "random",
+              "bright": "bright",
+              "light": "light",
+              "dark": "dark"
+            }
+          },
+          "count": {
+            "name": "Count",
+            "desc": "An integer which specifies the number of colors to generate."
+          },
+          "seed": {
+            "name": "Seed",
+            "desc": "An integer or string which when passed will cause randomColor to return the same color each time."
+          },
+          "format": {
+            "name": "Format",
+            "desc": "A string which specifies the format of the generated color. Possible values are rgb, rgba, rgbArray, hsl, hsla, hslArray and hex (default).",
+            "items": {
+              "rgb": "rgb",
+              "rgba": "rgba",
+              "rgbArray": "rgbArray",
+              "hsl": "hsl",
+              "hsla": "hsla",
+              "hslArray": "hslArray",
+              "hex": "hex"
+            }
+          },
+          "alpha": {
+            "name": "Alpha",
+            "desc": "A decimal between 0 and 1. Only relevant when using a format with an alpha channel (rgba and hsla). Defaults to a random value."
+          }
+        },
+        "aceCategories": {
+          "one color": "One Color",
+          "color array": "Color Array",
+          "set properties": "Set Properties",
+          "c3array": "C3 Array",
+          "c3 sprite": "C3 Sprite",
+          "get properties": "Get Properties"
+        },
+        "conditions": {},
+        "actions": {
+          "generateRandomColor": {
+            "list-name": "generateRandomColor",
+            "display-text": "Generate a random color",
+            "description": "Generate a random color"
+          },
+          "generateRandomColorArray": {
+            "list-name": "generateRandomColorArray",
+            "display-text": "Generate an array of random colors",
+            "description": "Generate an array of random colors."
+          },
+          "setPropertyHue": {
+            "list-name": "setPropertyHue",
+            "display-text": "Set hue to {0}",
+            "description": "Set the hue of the generated color",
+            "params": {
+              "prop": {
+                "name": "Hue",
+                "desc": "Controls the hue of the generated color."
+              }
+            }
+          },
+          "setPropertyCount": {
+            "list-name": "setPropertyCount",
+            "display-text": "Set count to {0}",
+            "description": "Set the number of colors to generate.",
+            "params": {
+              "prop": {
+                "name": "Count",
+                "desc": "An integer which specifies the number of colors to generate."
+              }
+            }
+          },
+          "setPropertyLuminosity": {
+            "list-name": "setPropertyLuminosity",
+            "display-text": "Set luminosity to {0}",
+            "description": "Set the luminosity of the generated color",
+            "params": {
+              "prop": {
+                "name": "Luminosity",
+                "desc": "The luminosity of the generated color.",
+                "items": {
+                  "random": "random",
+                  "bright": "bright",
+                  "light": "light",
+                  "dark": "dark"
+                }
+              }
+            }
+          },
+          "setPropertySeed": {
+            "list-name": "setPropertySeed",
+            "display-text": "Set seed to {0}",
+            "description": "Set the seed of colors to generate.",
+            "params": {
+              "prop": {
+                "name": "Seed",
+                "desc": "A string which when passed will cause randomColor to return the same color each time."
+              }
+            }
+          },
+          "setPropertyAlpha": {
+            "list-name": "setPropertyAlpha",
+            "display-text": "Set alpha to {0}",
+            "description": "Set the alpha of color to generate",
+            "params": {
+              "prop": {
+                "name": "Alpha",
+                "desc": "A decimal between 0 and 1. Only relevant when using a format with an alpha channel (rgba and hsla)."
+              }
+            }
+          },
+          "setPropertyFormat": {
+            "list-name": "setPropertyFormat",
+            "display-text": "Set format to {0}",
+            "description": "Set the format of the generated color",
+            "params": {
+              "prop": {
+                "name": "Format",
+                "desc": "The format of the generated color.",
+                "items": {
+                  "rgb": "rgb",
+                  "rgba": "rgba",
+                  "rgbArray": "rgbArray",
+                  "hsl": "hsl",
+                  "hsla": "hsla",
+                  "hslArray": "hslArray",
+                  "hex": "hex"
+                }
+              }
+            }
+          },
+          "setAllProperties": {
+            "list-name": "setAllProperties",
+            "display-text": "Set properties to hue = {0}, luminosity = {1}, count = {2}, seed = {3}, format = {4}, alpha = {5}",
+            "description": "Set all properties",
+            "params": {
+              "hue": {
+                "name": "Hue",
+                "desc": "Controls the hue of the generated color."
+              },
+              "luminosity": {
+                "name": "Luminosity",
+                "desc": "Controls the hue of the generated color.",
+                "items": {
+                  "random": "random",
+                  "bright": "bright",
+                  "light": "light",
+                  "dark": "dark"
+                }
+              },
+              "count": {
+                "name": "Count",
+                "desc": "An integer which specifies the number of colors to generate."
+              },
+              "seed": {
+                "name": "Seed",
+                "desc": "A string which when passed will cause randomColor to return the same color each time."
+              },
+              "format": {
+                "name": "Format",
+                "desc": "The format of the generated color.",
+                "items": {
+                  "rgb": "rgb",
+                  "rgba": "rgba",
+                  "rgbArray": "rgbArray",
+                  "hsl": "hsl",
+                  "hsla": "hsla",
+                  "hslArray": "hslArray",
+                  "hex": "hex"
+                }
+              },
+              "alpha": {
+                "name": "Alpha",
+                "desc": "A decimal between 0 and 1. Only relevant when using a format with an alpha channel (rgba and hsla)."
+              }
+            }
+          },
+          "setAllPropertiesViaString": {
+            "list-name": "setAllPropertiesViaString",
+            "display-text": "Set properties to hue = {0}, luminosity = {1}, count = {2}, seed = {3}, format = {4}, alpha = {5}",
+            "description": "Set all properties via String",
+            "params": {
+              "hue": {
+                "name": "Hue",
+                "desc": "Controls the hue of the generated color."
+              },
+              "luminosity": {
+                "name": "Luminosity",
+                "desc": "Controls the hue of the generated color."
+              },
+              "count": {
+                "name": "Count",
+                "desc": "An integer which specifies the number of colors to generate."
+              },
+              "seed": {
+                "name": "Seed",
+                "desc": "A string which when passed will cause randomColor to return the same color each time."
+              },
+              "format": {
+                "name": "Format",
+                "desc": "The format of the generated color."
+              },
+              "alpha": {
+                "name": "Alpha",
+                "desc": "A decimal between 0 and 1. Only relevant when using a format with an alpha channel (rgba and hsla)."
+              }
+            }
+          },
+          "copyRandomColorsToC3Array": {
+            "list-name": "copyRandomColorsToC3Array",
+            "display-text": "Copy random colors to {0}",
+            "description": "Copy random colors to a C3Array",
+            "params": {
+              "c3array": {
+                "name": "c3array",
+                "desc": "A C3 Array"
+              }
+            }
+          },
+          "applyLastRandomColorToSprite": {
+            "list-name": "applyLastRandomColorToSprite",
+            "display-text": "Apply last random color to {0} (alpha = {1})",
+            "description": "Apply last random color to a Sprite",
+            "params": {
+              "c3sprite": {
+                "name": "c3sprite",
+                "desc": "Sprite"
+              },
+              "alpha": {
+                "name": "alpha",
+                "desc": "Apply the alpha (opacity)"
+              }
+            }
+          },
+          "applyRandomColorToSpriteFromArray": {
+            "list-name": "applyRandomColorToSpriteFromArray",
+            "display-text": "Apply color to {0} (Alpha = {1}) from index {2} (last array)",
+            "description": "Apply random color to sprite from last array of random colors.",
+            "params": {
+              "c3sprite": {
+                "name": "c3sprite",
+                "desc": "Sprite"
+              },
+              "alpha": {
+                "name": "alpha",
+                "desc": "Apply the alpha (opacity)"
+              },
+              "index": {
+                "name": "Index",
+                "desc": "Index Array"
+              }
+            }
+          },
+          "setPropertyLuminosityViaString": {
+            "list-name": "setPropertyLuminosityViaString",
+            "display-text": "Set the luminosity to {0}",
+            "description": "Set the luminosity of the generated color.",
+            "params": {
+              "luminosity": {
+                "name": "Luminosity",
+                "desc": "The luminosity of the generated color (random, bright, light, dark)."
+              }
+            }
+          },
+          "setPropertyFormatViaString": {
+            "list-name": "setPropertyFormatViaString",
+            "display-text": "Set the format to {0}",
+            "description": "Set the format of the generated color.",
+            "params": {
+              "format": {
+                "name": "Format",
+                "desc": "The luminosity of the generated color (rgb, rgba, rgbArray, hsl, hsla, hslArray, hex)."
+              }
+            }
+          }
+        },
+        "expressions": {
+          "getRandomColor": {
+            "translated-name": "getRandomColor",
+            "description": "Returns a code for an attractive color"
+          },
+          "getLastColor": {
+            "translated-name": "getLastColor",
+            "description": "Get the last random color."
+          },
+          "getRandomColorArray": {
+            "translated-name": "getRandomColorArray",
+            "description": "Get an array of random colors (as String)."
+          },
+          "getLastRandomColorArray": {
+            "translated-name": "getLastRandomColorArray",
+            "description": "Get the last array of random colors (as String)."
+          },
+          "getColorFromLastArray": {
+            "translated-name": "getColorFromLastArray",
+            "description": "Get a color from last array of random colors.",
+            "params": {
+              "index": {
+                "name": "Index",
+                "desc": "Index"
+              }
+            }
+          },
+          "getLengthArrayRandomColor": {
+            "translated-name": "getLengthArrayRandomColor",
+            "description": "Get the length of array of random color"
+          },
+          "getPropertyHue": {
+            "translated-name": "getPropertyHue",
+            "description": "Get the Hue (property)"
+          },
+          "getPropertyLuminosity": {
+            "translated-name": "getPropertyLuminosity",
+            "description": "Get the Luminosity (property)"
+          },
+          "getPropertyCount": {
+            "translated-name": "getPropertyCount",
+            "description": "Get the Count (property)"
+          },
+          "getPropertySeed": {
+            "translated-name": "getPropertySeed",
+            "description": "Get the Seed (property)"
+          },
+          "getPropertyFormat": {
+            "translated-name": "getPropertyFormat",
+            "description": "Get the Hue (property)"
+          },
+          "getPropertyAlpha": {
+            "translated-name": "getPropertyAlpha",
+            "description": "Get the Alpha (property)"
+          }
+        }
+      }
+    }
+  }
+}

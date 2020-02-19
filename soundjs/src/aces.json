@@ -1,0 +1,34 @@
+﻿{
+    "": {
+        "conditions": [
+            {
+                "id": "is-moving",
+                "scriptName": "IsMoving"
+			}
+		],
+        "actions": [
+            {
+                "id": "play",
+                "scriptName": "Play"
+			},
+            {
+                "id": "setnotefrequency",
+                "scriptName": "setNoteFrequency",
+                "params": [
+                    {
+                        "id": "notefrequency",
+                        "type": "any"
+                    }
+                ]
+            }
+		],
+        "expressions": [
+            {
+                "id": "leet",
+                "expressionName": "MyExpression",
+                "scriptName": "MyExpression",
+                "returnType": "number"
+			}
+		]
+    }
+}

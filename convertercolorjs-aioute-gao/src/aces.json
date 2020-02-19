@@ -1,0 +1,164 @@
+{
+  "custom": {
+    "conditions": [],
+    "actions": [],
+    "expressions": [
+      {
+        "id": "toHex",
+        "expressionName": "toHex",
+        "returnType": "any",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "rgb(15, 170, 255)"
+          }
+        ]
+      },
+      {
+        "id": "toHexA",
+        "expressionName": "toHexA",
+        "returnType": "any",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "rgb(15, 170, 255)"
+          }
+        ]
+      },
+      {
+        "id": "toRGB",
+        "expressionName": "toRGB",
+        "returnType": "any",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "#0FAAFF"
+          }
+        ]
+      },
+      {
+        "id": "toRGBA",
+        "expressionName": "toRGBA",
+        "returnType": "any",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "#0FAAFF"
+          }
+        ]
+      }
+    ]
+  },
+  "singlecolor255": {
+    "conditions": [],
+    "actions": [],
+    "expressions": [
+      {
+        "id": "getRed255",
+        "expressionName": "getRed255",
+        "returnType": "number",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "#0FAAFF"
+          }
+        ]
+      },
+      {
+        "id": "getGreen255",
+        "expressionName": "getGreen255",
+        "returnType": "number",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "#0FAAFF"
+          }
+        ]
+      },
+      {
+        "id": "getBlue255",
+        "expressionName": "getBlue255",
+        "returnType": "number",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "#0FAAFF"
+          }
+        ]
+      },
+      {
+        "id": "getAlpha255",
+        "expressionName": "getAlpha255",
+        "returnType": "number",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "#0FAAFF"
+          }
+        ]
+      }
+    ]
+  },
+  "singlecolorhex": {
+    "conditions": [],
+    "actions": [],
+    "expressions": [
+      {
+        "id": "getRedHEX",
+        "expressionName": "getRedHEX",
+        "returnType": "number",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "#0FAAFF"
+          }
+        ]
+      },
+      {
+        "id": "getGreenHEX",
+        "expressionName": "getGreenHEX",
+        "returnType": "number",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "#0FAAFF"
+          }
+        ]
+      },
+      {
+        "id": "getBlueHEX",
+        "expressionName": "getBlueHEX",
+        "returnType": "number",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "#0FAAFF"
+          }
+        ]
+      },
+      {
+        "id": "getAlphaHEX",
+        "expressionName": "getAlphaHEX",
+        "returnType": "number",
+        "params": [
+          {
+            "id": "color",
+            "type": "any",
+            "initialValue": "#0FAAFF"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Drag and drop files in Construct 3",
+  "text": {
+    "plugins": {
+      "stranianelli_draganddropfiles": {
+        "name": "Drag and Drop Files",
+        "description": "Drag and Drop Files into Construct 3.",
+        "help-url": "https://el3um4s.github.io/construct-drag-and-drop-files-plugin/",
+        "properties": {
+          "control-text": {
+            "name": "Text",
+            "desc": "The text to display on the control."
+          },
+          "accept": {
+            "name": "Accept",
+            "desc": "File type filter, e.g. png or image/*"
+          },
+          "visible": {
+            "name": "Initially visible",
+            "desc": "Choose if the object is visible when the layout starts."
+          },
+          "font-size": {
+            "name": "Font Size",
+            "desc": "The size of the text to display (CSS)."
+          },
+          "id": {
+            "name": "ID",
+            "desc": "An optional ID for the control allowing it to be styled with CSS from the page HTML."
+          }
+        },
+        "aceCategories": {
+          "appearance": "Appearance",
+          "css": "CSS",
+          "custom": "Drag And Drop",
+          "sizeandposition": "Size & Position",
+          "selected": "Files Selected"
+        },
+        "conditions": {
+          "on-click": {
+            "list-name": "On click",
+            "display-text": "On click",
+            "description": "Triggered when the bbject is clicked."
+          },
+          "on-drop": {
+            "list-name": "On Drop",
+            "display-text": "On Drop",
+            "description": "Fired when an element is dropped on a valid drop target."
+          },
+          "on-drag-over": {
+            "list-name": "On Drag Over",
+            "display-text": "On Drag Over",
+            "description": "Fired when an element is being dragged over a valid drop target."
+          },
+          "on-drag": {
+            "list-name": "On Drag",
+            "display-text": "On Drag",
+            "description": "Fired when a file is being dragged."
+          },
+          "on-drag-enter": {
+            "list-name": "On Drag Enter",
+            "display-text": "On Drag Enter",
+            "description": "Fired when a dragged element enters a valid drop target."
+          },
+          "on-drag-exit": {
+            "list-name": "On Drag Exit",
+            "display-text": "On Drag Exit",
+            "description": "Fired when an element is no longer the drag operation's immediate selection target."
+          },
+          "on-drag-leave": {
+            "list-name": "On Drag Leave",
+            "display-text": "On Drag Leave",
+            "description": "Fired when a dragged element leaves a valid drop target."
+          },
+          "on-drag-start": {
+            "list-name": "On Drag Start",
+            "display-text": "On Drag Start",
+            "description": "Fired when the user starts dragging an element."
+          },
+          "on-drag-end": {
+            "list-name": "On Drag End",
+            "display-text": "On Drag End",
+            "description": "Fired when a drag operation is being ended (for example, by releasing a mouse button or hitting the escape key)."
+          },
+          "has-file-selected": {
+            "list-name": "Has File Selected",
+            "display-text": "Has file selected",
+            "description": "Check if some files are selected"
+          },
+          "has-only-1-file-selected": {
+            "list-name": "Has Only 1 File Selected",
+            "display-text": "Has only 1 file selected",
+            "description": "Check if only 1 file is selected"
+          },
+          "is_drag_over": {
+            "list-name": "Is Drag Over",
+            "display-text": "Is dragging over",
+            "description": "Is dragging over"
+          },
+          "on-mouse-over": {
+            "list-name": "On Mouse Over",
+            "display-text": "On mouse over",
+            "description": "On mouse over"
+          },
+          "on-mouse-leave": {
+            "list-name": "On Mouse Leave",
+            "display-text": "On mouse Leave",
+            "description": "On mouse Leave"
+          },
+          "is_mouse_over": {
+            "list-name": "Is Mouse Over",
+            "display-text": "Is Mouse Over",
+            "description": "Is Mouse Over"
+          }
+        },
+        "actions": {
+          "set-text": {
+            "list-name": "Set text",
+            "display-text": "Set text to [i]{0}[/i]",
+            "description": "Set the control text.",
+            "params": {
+              "text": {
+                "name": "Text",
+                "desc": "The new text."
+              }
+            }
+          },
+          "set-visible": {
+            "list-name": "Set Visible",
+            "display-text": "Set [b]{0}[/b]",
+            "description": "Hide or show the control",
+            "params": {
+              "visibility": {
+                "name": "Visibility",
+                "desc": "Visibility",
+                "items": {
+                  "invisible": "Invisible",
+                  "visible": "Visible"
+                }
+              }
+            }
+          },
+          "set-css-style": {
+            "list-name": "Set CSS Style",
+            "display-text": "Set CSS style {0} to {1}",
+            "description": " Set a CSS style on the control",
+            "params": {
+              "property-name": {
+                "name": "Property Name",
+                "desc": "A CSS property name to set on the control."
+              },
+              "value": {
+                "name": "Value",
+                "desc": "A string to assign as the value for this CSS property."
+              }
+            }
+          },
+          "release-file": {
+            "list-name": "Release File",
+            "display-text": "Release file [i]{0}[/i]",
+            "description": "Release a file so it is no longer using memory.",
+            "params": {
+              "file-url": {
+                "name": "File URL",
+                "desc": "The URL of the file to release."
+              }
+            }
+          },
+          "set-x": {
+            "list-name": "Set X",
+            "display-text": "Set X to [i]{0}[/i]",
+            "description": "Set the object's X co-ordinate",
+            "params": {
+              "x": {
+                "name": "X",
+                "desc": "New X co-ordinate, in pixels."
+              }
+            }
+          },
+          "set-y": {
+            "list-name": "Set Y",
+            "display-text": "Set Y to [i]{0}[/i]",
+            "description": "Set the object's X co-ordinate",
+            "params": {
+              "y": {
+                "name": "Y",
+                "desc": "New Y co-ordinate, in pixels."
+              }
+            }
+          },
+          "set-width": {
+            "list-name": "Set Width",
+            "display-text": "Set width to [i]{0}[/i]",
+            "description": "Set the object's width.",
+            "params": {
+              "width": {
+                "name": "Width",
+                "desc": "New object's width, in pixels."
+              }
+            }
+          },
+          "set-height": {
+            "list-name": "Set Height",
+            "display-text": "Set height to [i]{0}[/i]",
+            "description": "Set the object's height.",
+            "params": {
+              "height": {
+                "name": "Height",
+                "desc": "New object's height, in pixels."
+              }
+            }
+          },
+          "clear-file-selected-at": {
+            "list-name": "Clear File Selected At",
+            "display-text": "Clear file at index {0}",
+            "description": "Clear selection of the file at an index",
+            "params": {
+              "index": {
+                "name": "Index",
+                "desc": "Index"
+              }
+            }
+          },
+          "clear-all-files": {
+            "list-name": "Clear All Files",
+            "display-text": "Clear all files",
+            "description": "Clear all files selected"
+          },
+          "set-appaerance": {
+            "list-name": "Set Appaerance",
+            "display-text": "Set background color to {0}, font color to {1} and border to {2}",
+            "description": "Set background color, font color and border",
+            "params": {
+              "background-color": {
+                "name": "Background Color",
+                "desc": "Background Color (CSS)"
+              },
+              "font-color": {
+                "name": "Font Color",
+                "desc": "Font Color (CSS)"
+              },
+              "border": {
+                "name": "Border",
+                "desc": "Border (CSS)"
+              }
+            }
+          },
+          "set-tooltip": {
+            "list-name": "Set Tooltip",
+            "display-text": "Set tooltip to [i]{0}[/i]",
+            "description": "Set the element's tooltip",
+            "params": {
+              "tooltip": {
+                "name": "Tooltip",
+                "desc": "The tooltip to set on the element"
+              }
+            }
+          },
+          "set-font-face": {
+            "list-name": "Set Font Face",
+            "display-text": "Set font face to [i][{0}[/i] ([i]{1}[/i] & [i]{2}[/i])",
+            "description": "Set the font face used to display text.",
+            "params": {
+              "font-face": {
+                "name": "Font Face",
+                "desc": "The new font face name to set"
+              },
+              "style": {
+                "name": "Style",
+                "desc": "Choose the style for the given font face.",
+                "items": {
+                  "normal": "normal",
+                  "italic": "italic",
+                  "oblique": "oblique"
+                }
+              },
+              "weight": {
+                "name": "Weight",
+                "desc": "Choose the weight for the given font face.",
+                "items": {
+                  "normal": "normal",
+                  "bold": "bold",
+                  "lighter": "lighter",
+                  "bolder": "bolder"
+                }
+              }
+            }
+          },
+          "set-font-size": {
+            "list-name": "Set Font Size",
+            "display-text": "Set font size to {0}",
+            "description": "Set the object's font Size.",
+            "params": {
+              "size": {
+                "name": "Size",
+                "desc": "A string to assign as the value for the font size (CSS)."
+              }
+            }
+          },
+          "set-font-size-to-layer": {
+            "list-name": "Set Font Size (autosize)",
+            "display-text": "Set font size to {0} in layer scale",
+            "description": "Set the object's font Size in layer scale.",
+            "params": {
+              "size": {
+                "name": "Size",
+                "desc": "A string to assign as the value for the font size."
+              }
+            }
+          }
+        },
+        "expressions": {
+          "text": {
+            "description": "The control text.",
+            "translated-name": "Text"
+          },
+          "file-url-at": {
+            "translated-name": "FileUrlAt",
+            "description": "A URL to access the data of the chosen file at an index.",
+            "params": {
+              "index": {
+                "name": "Index",
+                "desc": "Index"
+              }
+            }
+          },
+          "file-count": {
+            "translated-name": "FileCount",
+            "description": "The number of chosen files."
+          },
+          "file-name-at": {
+            "translated-name": "FileNameAt",
+            "description": "Name of chosen file at an index.",
+            "params": {
+              "index": {
+                "name": "Index",
+                "desc": "Index"
+              }
+            }
+          },
+          "file-size-at": {
+            "translated-name": "FileSizeAt",
+            "description": "Size of chosen file at an index.",
+            "params": {
+              "index": {
+                "name": "Index",
+                "desc": "Index"
+              }
+            }
+          },
+          "file-type-at": {
+            "translated-name": "FileTypeAt",
+            "description": "MIME type of chosen file at an index.",
+            "params": {
+              "index": {
+                "name": "Index",
+                "desc": "Index"
+              }
+            }
+          },
+          "x": {
+            "translated-name": "X",
+            "description": "Get the object's X co-ordinate, in pixels."
+          },
+          "y": {
+            "translated-name": "Y",
+            "description": "Get the object's Y co-ordinate, in pixels."
+          },
+          "width": {
+            "translated-name": "Width",
+            "description": "Get the object's width, in pixels."
+          },
+          "height": {
+            "translated-name": "Height",
+            "description": "Get the object's height, in pixels."
+          },
+          "background-color": {
+            "translated-name": "BackgroundColor",
+            "description": "Get the object's background color (CSS)."
+          },
+          "font-color": {
+            "translated-name": "FontColor",
+            "description": "Get the object's font color (CSS)."
+          },
+          "border": {
+            "translated-name": "Border",
+            "description": "Return the object's border (CSS)."
+          },
+          "file-extension-at": {
+            "translated-name": "FileExtensionAt",
+            "description": "File Extensione of chosen file at an index.",
+            "params": {
+              "index": {
+                "name": "Index",
+                "desc": "Index"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

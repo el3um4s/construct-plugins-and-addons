@@ -1,0 +1,217 @@
+html {
+	overflow-y: auto;
+}
+
+html, body, canvas {
+	touch-action: manipulation;
+}
+
+@media screen and (max-width: 350px) {
+  #tag-made-with-love-and-c3 {
+    display:none;
+  }
+}
+
+.main-nav {
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: white;
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: yellow;
+}
+
+.nav-link {
+	margin: 8px;
+}
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	/*border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);*/
+}
+
+#header-img {
+	padding: 10px 15px;
+	margin: 0;
+	height: 80%;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section {
+	width: 100%;
+	max-width: 800px;
+	margin: 16px auto;
+}
+
+.grid {
+  display: flex;
+}
+
+#features {
+  margin-top: 30px;
+}
+#features .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: rgb(0,64,64);
+}
+
+@media (max-width: 550px) {
+  #features .icon {
+    display: none;
+  }
+}
+#features .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+@media (max-width: 550px) {
+  #features .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+@media (max-width: 650px) {
+  #features {
+    margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .main-nav {
+	  width: 80%;
+	  margin: auto;
+	}
+}
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+		width: 80%;
+		margin: 0 auto;
+		/*max-width: 1150px;*/
+	}
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-top: 15px;
+    width: 50px;
+    margin: auto;
+  }
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#pricing #tenor, #pricing #bass, #pricing #valve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100%  / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+#pricing #tenor .level, #pricing #bass .level, #pricing #valve .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#pricing #tenor h2, #pricing #bass h2, #pricing #valve h2 {
+  margin-top: 15px;
+}
+#pricing #tenor ol, #pricing #bass ol, #pricing #valve ol {
+  margin: 15px 0;
+}
+#pricing #tenor ol li, #pricing #bass ol li, #pricing #valve ol li {
+  padding: 5px 0;
+}
+#pricing #tenor button, #pricing #bass button, #pricing #valve button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #f1c40f;
+  font-weight: 400;
+}
+#pricing #tenor button:hover, #pricing #bass button:hover, #pricing #valve button:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+  #pricing #tenor, #pricing #bass, #pricing #valve {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for CSS Plugin",
+  "text": {
+    "plugins": {
+      "stranianelli_injectcss_v2": {
+        "name": "CSS",
+        "description": "Use CSS stylesheet in Construct 3 (version 2).",
+        "help-url": "https://github.com/armandoalonso/c3IDE",
+        "properties": {
+          "is-local": {
+            "name": "Is Local",
+            "desc": "Is local CSS"
+          },
+          "css": {
+            "name": "CSS",
+            "desc": "CSS"
+          }
+        },
+        "aceCategories": {
+          "custom": "CSS",
+          "classlist": "Class List"
+        },
+        "conditions": {},
+        "actions": {
+          "add-css": {
+            "list-name": "Add CSS",
+            "display-text": "Add CSS",
+            "description": "Add CSS"
+          },
+          "delete-css": {
+            "list-name": "Delete Css",
+            "display-text": "Delete CSS",
+            "description": "Delete CSS"
+          },
+          "change-css": {
+            "list-name": "Change CSS",
+            "display-text": "Change CSS to [i]{0}[/i] (Is Local: {1})",
+            "description": "Change CSS",
+            "params": {
+              "new-css": {
+                "name": "New CSS",
+                "desc": "New CSS"
+              },
+              "is-local-css": {
+                "name": "Is Local CSS",
+                "desc": "Is Local CSS"
+              }
+            }
+          },
+          "add-class": {
+            "list-name": "Add Class",
+            "display-text": "Add Class (CSS) [b]{1}[/b] to [i]{0}[/i]",
+            "description": "Add Class (CSS)",
+            "params": {
+              "selector": {
+                "name": "Selector",
+                "desc": "A DOMString containing one or more selectors to match against."
+              },
+              "classe": {
+                "name": "Class",
+                "desc": "Adds the specified class values."
+              }
+            }
+          },
+          "remove-class": {
+            "list-name": "Remove Class",
+            "display-text": "Remove Class (CSS) [b]{1}[/b] from [i]{0}[/i]",
+            "description": "Remove Class (CSS)",
+            "params": {
+              "selector": {
+                "name": "Selector",
+                "desc": "A DOMString containing one or more selectors to match against."
+              },
+              "classe": {
+                "name": "Class",
+                "desc": "Removes the specified class values."
+              }
+            }
+          },
+          "toggle-class": {
+            "list-name": "Toggle Class",
+            "display-text": "Toggle Class (CSS) [b]{1}[/b] to [i]{0}[/i]",
+            "description": "Toggle Class (CSS)",
+            "params": {
+              "selector": {
+                "name": "Selector",
+                "desc": "A DOMString containing one or more selectors to match against."
+              },
+              "classe": {
+                "name": "Class",
+                "desc": "Toggles the specified class values."
+              }
+            }
+          },
+          "replace-class": {
+            "list-name": "Replace Class",
+            "display-text": "Replace Class (CSS) [b]{1}[/b] with [b]{2}[/b] in [i]{0}[/i]",
+            "description": "Replace Class (CSS)",
+            "params": {
+              "selector": {
+                "name": "Selector",
+                "desc": "A DOMString containing one or more selectors to match against."
+              },
+              "oldclasse": {
+                "name": "Old Class",
+                "desc": "The old class."
+              },
+              "newclasse": {
+                "name": "New Class",
+                "desc": "The new class."
+              }
+            }
+          }
+        },
+        "expressions": {}
+      }
+    }
+  }
+}

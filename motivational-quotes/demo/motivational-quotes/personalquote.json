@@ -1,0 +1,78 @@
+{
+	"myCategory": [
+			{
+				"autore": "Dr. Seuss",
+			 	"citazione": "Non piangere perché è finita, sorridi perché è accaduto."
+			},
+			{
+				"autore": "Marilyn Monroe",
+			 	"citazione": "Sono egoista, impaziente e insicura. Faccio degli errori, sono fuori controllo e a volte difficile da gestire. Ma se non puoi gestire la mia parte peggiore, allora sicuro come l’inferno non mi meriti quando sono al mio meglio."
+			},
+			{
+				"autore": "Oscar Wilde",
+			 	"citazione": "Sii te stesso, tutto il resto è già stato preso."
+			},
+			{
+				"autore": "Bernard M. Baruch",
+			 	"citazione": "Sii ciò che sei e di’ ciò che senti, perché quelli a cui importa non contano e a quelli che contano non importa."
+			},
+			{
+				"autore": "William W. Purkey",
+			 	"citazione": "Balla come se nessuno stesse guardando, ama come se nessuno ti avesse mai ferito, canta come se nessuno stesse ascoltando, vivi come se il paradiso fosse sulla terra."
+			},
+			{
+				"autore": "Albert Einstein",
+			 	"citazione": "Due cose sono infinite: l’universo e la stupidità umana, ma riguardo l’universo ho ancora dei dubbi."
+			},
+			{
+				"autore": "Dr. Seuss",
+			 	"citazione": "Sai che sei innamorato, quando non riesci a dormire perchè finalmente la realtà è migliore dei tuoi sogni."
+			},
+			{
+				"autore": "Frank Zappa",
+			 	"citazione": "Così tanti libri, così poco tempo"
+			},
+			{
+				"autore": "Mae West",
+			 	"citazione": "Si vive una volta sola, ma se lo fai bene, una volta sola è abbastanza."
+			},
+			{
+				"autore": "Marco Tullio Cicerone",
+			 	"citazione": "Una stanza senza libri è come un corpo senza anima."
+			},
+			{
+				"autore": "Gandhi",
+			 	"citazione": "Sii il cambiamento che vuoi vedere nel mondo."
+			},
+			{
+				"autore": "Robert Lee Frost",
+			 	"citazione": "In tre parole posso riassumere tutto quello che ho imparato sulla vita: si va avanti."
+			},
+			{
+				"autore": "C.S. Lewis",
+			 	"citazione": "L’amicizia nasce nel momento in cui una persona dice ad un’altra: “Cosa? Anche tu? Credevo di essere solo io”."
+			},
+			{
+				"autore": "Albert Camus",
+			 	"citazione": "Non camminare dietro a me, potrei non condurti. Non camminarmi davanti, potrei non seguirti. Cammina soltanto accanto a me e sii mio amico."
+			}
+		],
+	"otherCategory": [
+			{
+				"autore": "Eleanor Roosevelt",
+			 	"citazione": "Nessuno può farti sentire inferiore senza il tuo consenso."
+			},
+			{
+				"autore": "Mark Twain",
+			 	"citazione": "Se dici sempre la verità non hai bisogno di ricordare ogni cosa."
+			},
+			{
+				"autore": " JK Rowling",
+			 	"citazione": "Se vuoi sapere com’è un uomo, guarda bene come tratta i suoi inferiori, non i suoi pari."
+			},
+			{
+				"autore": "Elbert Hubbard",
+			 	"citazione": "Un amico è uno che sa tutto di te e nonostante questo gli piaci."
+			}
+		]
+}

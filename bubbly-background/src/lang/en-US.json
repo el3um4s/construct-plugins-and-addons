@@ -1,0 +1,351 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Create a bubbly background.",
+	"text": {
+		"plugins": {
+			"stranianelli_bubblybackground": {
+				"name": "Bubbly Background",
+				"description": "Create a bubbly background.",
+				"help-url": "https://el3um4s.github.io/c3-global-plugin-bubbly-background/",
+				"properties": {
+					"stylebackground": {
+						"name": "Style",
+						"desc": "",
+						"items": {
+                	"solid": "Solid",
+									"gradient": "Gradient",
+									"bubbly": "Bubbly"
+									}
+					},
+					"colorStart": {
+						"name": "Color Start",
+						"desc": "Choose the first color."
+					},
+					"colorStop": {
+						"name": "Color Stop",
+						"desc": "Choose the secondo color."
+					},
+					"gruppoBubbly": {
+						"name": "Bubbly Background",
+						"desc": "Set the bubbly background."
+					},
+					"presetBubbly": {
+						"name": "Style Preset",
+						"desc": "",
+						"items": {
+                	"custom": "Custom",
+									"blueWithWhiteBubbles": "Blue with white bubbles",
+									"blackRedWithRedBubbles": "Black/red with red bubbles",
+									"purpleWithMulticoloredBubbles": "Purple with multicolored bubbles",
+									"yellowPinkWithRedOrangeYellowBubbles": "Yellow/pink with red/orange/yellow bubbles"
+									}
+					},
+					"animate": {
+						"name": "Animate",
+						"desc": "Animate the bubbles."
+					},
+					"shadowColor": {
+						"name": "Shadow Color",
+						"desc": "Choose the shadow color."
+					},
+					"compose": {
+            "name": "Compose",
+            "desc": "Choose how to compose the bubbles.",
+            "items": {
+                	"lighter": "Lighter",
+									"source-over": "Source Over"
+									}
+						},
+					"blur": {
+						"name": "Blur",
+						"desc": "Set the blur."
+					},
+					"bubbles": {
+						"name": "Bubbles",
+						"desc": "Insert a number or a function to set the number of bubbles to show."
+					},
+					"bubbleFunc": {
+						"name": "Bubble Func",
+						"desc": ""
+					},
+					"angleFunc": {
+						"name": "Angle Func",
+						"desc": ""
+					},
+					"velocityFunc": {
+						"name": "Velocity Func",
+						"desc": ""
+					},
+					"radiusFunc": {
+						"name": "Radius Func",
+						"desc": ""
+					}
+				},
+				"aceCategories": {
+					"main": "Main",
+					"setproperty": "Set Property",
+					"getproperty": "Get Property",
+					"json": "JSON"
+				},
+				"conditions": {
+					"is-animate": {
+						"list-name": "Is Animate",
+						"display-text": "The background is animate",
+						"description": "Test if the background is animated."
+					},
+					"is-compose-lighter": {
+						"list-name": "Is Compose Lighter",
+						"display-text": "The compose is lighter",
+						"description": "Test if compose is set to Lighter or to Source Over."
+					}
+				},
+				"actions": {
+					"reset-property": {
+						"list-name": "Reset Property",
+						"display-text": "Reset Property",
+						"description": "Reset proterty to default value."
+					},
+					"redraw-background": {
+						"list-name": "Redraw Background",
+						"display-text": "[b]Redraw[/b] Background",
+						"description": "Redraw background."
+					},
+					"change-style-background": {
+						"list-name": "Change Style",
+						"display-text": "Change style to [b]{0}[/b]",
+						"description": "Change background style to Solid, Gradient or Bubbly",
+						"params": {
+							"set-style": {
+								"name": "Style",
+								"desc": "",
+								"items": {
+		                	"solid": "Solid",
+											"gradient": "Gradient",
+											"bubbly": "Bubbly"
+											}
+							}
+						}
+					},
+					"change-preset-bubbly": {
+						"list-name": "Change Preset Bubbly",
+						"display-text": "Change preset bubbly to [b]{0}[/b]",
+						"description": "",
+						"params": {
+							"set-preset": {
+								"name": "Preset",
+								"desc": "",
+								"items": {
+		                	"custom": "Custom",
+											"blueWithWhiteBubbles": "Blue with white bubbles",
+											"blackRedWithRedBubbles": "Black/red with red bubbles",
+											"purpleWithMulticoloredBubbles": "Purple with multicolored bubbles",
+											"yellowPinkWithRedOrangeYellowBubbles": "Yellow/pink with red/orange/yellow bubbles"
+											}
+							}
+						}
+					},
+					"set-animate": {
+						"list-name": "Set Animate",
+						"display-text": "Background animation set to [b]{0}[/b]",
+						"description": "",
+						"params": {
+							"animate": {
+								"name": "Animate",
+								"desc": "",
+								"items": {
+		                	"notAnimate": "Not Animate",
+											"animate": "Animate"	}
+							}
+						}
+					},
+					"set-compose": {
+						"list-name": "Set Compose",
+						"display-text": "Compose set to [b]{0}[/b]",
+						"description": "",
+						"params": {
+							"compose": {
+								"name": "Compose",
+								"desc": "",
+								"items": {
+		                	"sourceOver": "Source Over",
+											"lighter": "Lighter"	}
+							}
+						}
+					},
+					"set-blur": {
+						"list-name": "Set Blur",
+						"display-text": "Blur set to [b]{0}[/b]",
+						"description": "",
+						"params": {
+							"number": {
+								"name": "Blur",
+								"desc": ""
+							}
+						}
+					},
+					"set-bubbles": {
+						"list-name": "Set Bubbles",
+						"display-text": "[b]Bubbles[/b] set to {0}",
+						"description": "",
+						"params": {
+							"string": {
+								"name": "Bubbles",
+								"desc": ""
+							}
+						}
+					},
+					"set-bubble-func": {
+						"list-name": "Set Bubble Func",
+						"display-text": "[b]Bubble Func[/b] set to {0}",
+						"description": "",
+						"params": {
+							"string": {
+								"name": "Bubble Func",
+								"desc": ""
+							}
+						}
+					},
+					"set-angle-func": {
+						"list-name": "Set Angle Func",
+						"display-text": "[b]Angle Func[/b] set to {0}",
+						"description": "",
+						"params": {
+							"string": {
+								"name": "Angle Func",
+								"desc": ""
+							}
+						}
+					},
+					"set-velocity-func": {
+						"list-name": "Set Velocity Func",
+						"display-text": "[b]Velocity Func[/b] set to {0}",
+						"description": "",
+						"params": {
+							"string": {
+								"name": "Velocity Func",
+								"desc": ""
+							}
+						}
+					},
+					"set-radius-func": {
+						"list-name": "Set Radius Func",
+						"display-text": "[b]Radius Func[/b] set to {0}",
+						"description": "",
+						"params": {
+							"string": {
+								"name": "Radius Func",
+								"desc": ""
+							}
+						}
+					},
+					"set-color-start": {
+						"list-name": "Set Color Start",
+						"display-text": "[b]Color Start[/b] set to {0}",
+						"description": "",
+						"params": {
+							"string": {
+								"name": "Color (string)",
+								"desc": ""
+							}
+						}
+					},
+					"set-color-stop": {
+						"list-name": "Set Color Stop",
+						"display-text": "[b]Color Stop[/b] set to {0}",
+						"description": "",
+						"params": {
+							"string": {
+								"name": "Color (string)",
+								"desc": ""
+							}
+						}
+					},
+					"set-color-shadow": {
+						"list-name": "Set Shadow Color",
+						"display-text": "[b]Shadow Color[/b] set to {0}",
+						"description": "",
+						"params": {
+							"string": {
+								"name": "Color (string)",
+								"desc": ""
+							}
+						}
+					},
+					"load-from-json": {
+						"list-name": "Load from JSON",
+						"display-text": "Load background from [b]JSON[/b]: {0}",
+						"description": "Load the settings from a string (JSON).",
+						"params": {
+							"string": {
+								"name": "JSON (string)",
+								"desc": ""
+							}
+						}
+					}
+				},
+				"expressions": {
+					"get-style-background": {
+						"description": "Get the background style.",
+						"translated-name": "getStyleBackground"
+					},
+					"get-preset-bubbly": {
+						"description": "Get the preset bubbly config.",
+						"translated-name": "getPresetBubbly"
+					},
+					"get-blur": {
+						"description": "Get the blur value (number).",
+						"translated-name": "getBlur"
+					},
+					"is-animate": {
+						"description": "True if the background is animate.",
+						"translated-name": "isAnimate"
+					},
+					"get-compose": {
+						"description": "Get Compose Value.",
+						"translated-name": "getCompose"
+					},
+					"get-bubbles": {
+						"description": "Get Bubbles.",
+						"translated-name": "getBubbles"
+					},
+					"get-bubble-func": {
+						"description": "Get Bubble Func.",
+						"translated-name": "getBubbleFunc"
+					},
+					"get-angle-func": {
+						"description": "Get Angle Func.",
+						"translated-name": "getAngleFunc"
+					},
+					"get-velocity-func": {
+						"description": "Get Velocity Func.",
+						"translated-name": "getVelocityFunc"
+					},
+					"get-radius-func": {
+						"description": "Get Radius Func.",
+						"translated-name": "getRadiusFunc"
+					},
+					"get-color-start": {
+						"description": "Get Color Start.",
+						"translated-name": "getColorStart"
+					},
+					"get-color-stop": {
+						"description": "Get Color Stop.",
+						"translated-name": "getColorStop"
+					},
+					"get-color-shadow": {
+						"description": "Get Color Shadow.",
+						"translated-name": "getColorShadow"
+					},
+					"get-as-json": {
+						"description": "Get as JSON.",
+						"translated-name": "getAsJSON"
+					},
+					"get-as-string-json": {
+						"description": "Get as String (JSON format).",
+						"translated-name": "getAsStringJSON"
+					}
+				}
+			}
+		}
+	}
+}

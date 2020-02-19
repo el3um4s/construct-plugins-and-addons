@@ -1,0 +1,41 @@
+{
+  "name": "c3-bubbly-background",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist:32win": "build --win --ia32 ",
+    "dist:64win": "build --win --x64",
+    "dist:32deb": "build --linux --ia32",
+    "dist:64deb": "build --linux --x64",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "author": "Strani Anelli",
+  "license": "ISC",
+  "dependencies": {
+    "npm": "^6.0.1"
+  },
+  "devDependencies": {
+    "electron": "^2.0.1",
+    "electron-builder": "^20.13.4"
+  },
+  "build": {
+    "productName": "Bubbly Background",
+    "appId": "com.stranianelli.bubblybackground",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "src/icons/icon.ico"
+    },
+    "linux": {
+      "icon": "src/icons"
+    }
+  }
+}

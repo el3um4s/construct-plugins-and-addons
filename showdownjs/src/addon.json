@@ -1,0 +1,32 @@
+﻿{
+	"is-c3-addon": true,
+	"type": "plugin",
+	"name": "Showdown",
+	"id": "StraniAnelli_Showdown",
+	"version": "1.0.2.0",
+	"author": "Strani Anelli",
+	"website": "https://github.com/el3um4s/construct-showdownjs-plugin",
+	"documentation": "https://github.com/el3um4s/construct-showdownjs-plugin",
+	"description": "A Markdown to HTML converter written in Javascript.",
+	"editor-scripts": [
+						"plugin.js",
+						"type.js",
+						"instance.js"
+					],
+	"file-list": [
+		"showdown.js",
+		"c3runtime/plugin.js",
+		"c3runtime/type.js",
+		"c3runtime/instance.js",
+		"c3runtime/conditions.js",
+		"c3runtime/actions.js",
+		"c3runtime/expressions.js",
+		"lang/en-US.json",
+		"aces.json",
+		"addon.json",
+		"icon.svg",
+		"instance.js",
+		"plugin.js",
+		"type.js"
+		]
+}

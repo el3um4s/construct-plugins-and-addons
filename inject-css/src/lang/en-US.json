@@ -1,0 +1,497 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for MyCustomPlugin.",
+	"text": {
+		"plugins": {
+			"stranianelli_injectcss": {
+				"name": "InjectCSS",
+				"description": "Use CSS stylesheet in Construct 3 and inject simple html elements.",
+				"help-url": "https://el3um4s.github.io/construct-inject-css-plugin/",
+				"properties": {
+					"groupCSS": {
+						"name": "CSS",
+						"desc": "CSS origin"
+					},
+					"CSSFiles": {
+						"name": "CSS files",
+						"desc": "CSS files to include to the game."
+					},
+					"CSSExternal": {
+						"name": "External CSS",
+						"desc": "Link to External CSS."
+					},
+					"groupJS": {
+						"name": "JS",
+						"desc": "JS origin"
+					},
+					"JSFiles": {
+						"name": "JS files",
+						"desc": "JS files to include to the game."
+					},
+					"JSExternal": {
+						"name": "External JS",
+						"desc": "Link to External JS."
+					},
+					"groupOnStart": {
+						"name": "On Start",
+						"desc": "On start."
+					},
+					"destroyCanvas": {
+						"name": "Destroy Canvas",
+						"desc": "Destroy canvas."
+					},
+					"disableBodyStyleInline": {
+						"name": "Disable Body Style",
+						"desc": "Disable body inline style."
+					},
+					"disableHtmlPageStyleInline": {
+						"name": "Disable Html Page Style",
+						"desc": "Disable Html page inline style"
+					},
+					"removePreloadedCSS": {
+						"name": "Remove Preloaded CSS",
+						"desc": "Remove preloaded CSS."
+					}
+				},
+				"aceCategories": {
+					"css": "CSS",
+					"js": "JS",
+					"canvas": "CANVAS",
+					"html": "HTML"
+				},
+				"conditions": {
+					"is-css-already-present": {
+						"list-name": "Is CSS Already Present",
+						"display-text": "[i]{0}[/i] is already present",
+						"description": "Test if a CSS is already present.",
+						"params": {
+							"nomeCSS": {
+								"name": "nomeCSS",
+								"desc": "CSS name to test."
+							}
+						}
+					},
+					"is-css-enabled": {
+						"list-name": "Is CSS Enabled",
+						"display-text": "[i]{0}[/i] is enabled",
+						"description": "Test if a CSS is enabled.",
+						"params": {
+							"nomeCSS": {
+								"name": "nomeCSS",
+								"desc": "CSS name to test."
+							}
+						}
+					}
+				},
+				"actions": {
+					"add-local-css-file": {
+						"list-name": "Add Local CSS",
+						"display-text": "Add Local CSS: [i]{0}[/i]",
+						"description": "Add a local CSS file.",
+						"params": {
+							"nomeCSS": {
+								"name": "nomeCSS",
+								"desc": "CSS name"
+							}
+						}
+					},
+					"add-external-css-file": {
+						"list-name": "Add External CSS",
+						"display-text": "Add External CSS: [i]{0}[/i]",
+						"description": "Add an External CSS file.",
+						"params": {
+							"nomeCSS": {
+								"name": "nomeCSS",
+								"desc": "CSS name"
+							}
+						}
+					},
+					"remove-local-css-file": {
+						"list-name": "Remove Local CSS",
+						"display-text": "Remove Local CSS: [i]{0}[/i]",
+						"description": "Remove a Local CSS file.",
+						"params": {
+							"nomeCSS": {
+								"name": "nomeCSS",
+								"desc": "CSS name"
+							}
+						}
+					},
+					"remove-external-css-file": {
+						"list-name": "Remove External CSS",
+						"display-text": "Remove External CSS: [i]{0}[/i]",
+						"description": "Remove an External CSS file.",
+						"params": {
+							"nomeCSS": {
+								"name": "nomeCSS",
+								"desc": "CSS name"
+							}
+						}
+					},
+					"remove-all-imported-css-file": {
+						"list-name": "Remove All Imported CSS",
+						"display-text": "Remove All [i]Imported[/i] CSS",
+						"description": "Remove all imported CSS file."
+					},
+					"remove-all-css-file": {
+						"list-name": "Remove All CSS From Page",
+						"display-text": "Remove [i]ALL[/i] CSS From Page",
+						"description": "Remove all CSS file."
+					},
+					"enable-local-css-file": {
+						"list-name": "Enable Local CSS",
+						"display-text": "Enable Local CSS: [i]{0}[/i]",
+						"description": "Enable a Local CSS file.",
+						"params": {
+							"nomeCSS": {
+								"name": "nomeCSS",
+								"desc": "CSS name"
+							}
+						}
+					},
+					"enable-external-css-file": {
+						"list-name": "Enable External CSS",
+						"display-text": "Enable External CSS: [i]{0}[/i]",
+						"description": "Enable an External CSS file.",
+						"params": {
+							"nomeCSS": {
+								"name": "nomeCSS",
+								"desc": "CSS name"
+							}
+						}
+					},
+					"disable-local-css-file": {
+						"list-name": "Disable Local CSS",
+						"display-text": "Disable Local CSS: [i]{0}[/i]",
+						"description": "Disable a Local CSS file.",
+						"params": {
+							"nomeCSS": {
+								"name": "nomeCSS",
+								"desc": "CSS name"
+							}
+						}
+					},
+					"disable-external-css-file": {
+						"list-name": "Disable External CSS",
+						"display-text": "Disable External CSS: [i]{0}[/i]",
+						"description": "Disable an External CSS file.",
+						"params": {
+							"nomeCSS": {
+								"name": "nomeCSS",
+								"desc": "CSS name"
+							}
+						}
+					},
+					"add-local-js-file": {
+						"list-name": "Add Local JS",
+						"display-text": "Add Local JS: [i]{0}[/i]",
+						"description": "Add a local JS file.",
+						"params": {
+							"nomeJS": {
+								"name": "nomeJS",
+								"desc": "JS name"
+							}
+						}
+					},
+					"add-external-js-file": {
+						"list-name": "Add External JS",
+						"display-text": "Add External JS: [i]{0}[/i]",
+						"description": "Add an External JS file.",
+						"params": {
+							"nomeJS": {
+								"name": "nomeJS",
+								"desc": "JS name"
+							}
+						}
+					},
+					"remove-local-js-file": {
+						"list-name": "Remove Local JS",
+						"display-text": "Remove Local JS: [i]{0}[/i]",
+						"description": "Remove a Local JS file.",
+						"params": {
+							"nomeJS": {
+								"name": "nomeJS",
+								"desc": "JS name"
+							}
+						}
+					},
+					"remove-external-js-file": {
+						"list-name": "Remove External JS",
+						"display-text": "Remove External JS: [i]{0}[/i]",
+						"description": "Remove an External JS file.",
+						"params": {
+							"nomeJS": {
+								"name": "nomeJS",
+								"desc": "JS name"
+							}
+						}
+					},
+					"remove-all-imported-js-file": {
+						"list-name": "Remove All Imported JS",
+						"display-text": "Remove All [i]Imported[/i] JS",
+						"description": "Remove all imported JS file."
+					},
+					"destroy-canvas": {
+						"list-name": "Destroy Canvas",
+						"display-text": "[b]Destroy[/b] Canvas",
+						"description": "Destroy the Canvas from the page."
+					},
+
+					"add-html-element": {
+						"list-name": "Add HTML Element",
+						"display-text": "Add HTML Element: [i]{0}[/i]",
+						"description": "Add HTML Element.",
+						"params": {
+							"stringElement": {
+								"name": "HTML (string)",
+								"desc": "HTML code like a string"
+							}
+						}
+					},
+					"remove-html-element-by-id": {
+						"list-name": "Remove HTML Element By ID",
+						"display-text": "Remove HTML Element By ID: [i]{0}[/i]",
+						"description": "Remove HTML Element By ID.",
+						"params": {
+							"idElement": {
+								"name": "ID",
+								"desc": "Element ID"
+							}
+						}
+					},
+					"change-viewport": {
+						"list-name": "Change the viewport",
+						"display-text": "Set viewport to \"width={0}, initial-scale={1}, maximum-scale={2}, minimum-scale={3}, user-scalable={4} (,{5})\"",
+						"description": "Change the viewport meta tag.",
+						"params": {
+							"width": {
+								"name": "width",
+								"desc": "device-width"
+							},
+							"initialScale": {
+								"name": "initial-scale",
+								"desc": "initial-scale"
+							},
+							"maximumScale": {
+								"name": "maximum-scale",
+								"desc": "maximum-scale"
+							},
+							"mimimumScale": {
+								"name": "minimum-scale",
+								"desc": "minimum-scale"
+							},
+							"userScalable": {
+								"name": "user-scalable",
+								"desc": "user-scalable"
+							},
+							"other": {
+								"name": "other",
+								"desc": "other"
+							}
+						}
+					},
+					"add-attribute-via-id": {
+						"list-name": "Add attribute ",
+						"display-text": "Add attr [b]{1}={2}[/b] to ID=[b]{0}[/b]",
+						"description": "Add attribute.",
+						"params": {
+							"id": {
+								"name": "ID",
+								"desc": "Element ID"
+							},
+							"attr": {
+								"name": "attr",
+								"desc": "attr"
+							},
+							"value": {
+								"name": "value",
+								"desc": "value"
+							}
+						}
+					},
+					"remove-attribute-via-id": {
+						"list-name": "Remove attribute",
+						"display-text": "Remove attr [b]{1}[/b] from ID=[b]{0}[/b]",
+						"description": "Remove attribute.",
+						"params": {
+							"id": {
+								"name": "ID",
+								"desc": "Element ID"
+							},
+							"attr": {
+								"name": "attr",
+								"desc": "attr"
+							}
+						}
+					},
+					"change-attribute-via-id": {
+						"list-name": "Change attribute",
+						"display-text": "Change attr: [b]{1}={2}[/b] to ID=[b]{0}[/b]",
+						"description": "Change attribute.",
+						"params": {
+							"id": {
+								"name": "ID",
+								"desc": "Element ID"
+							},
+							"attr": {
+								"name": "attr",
+								"desc": "attr"
+							},
+							"value": {
+								"name": "value",
+								"desc": "value"
+							}
+						}
+					},
+					"add-attribute-via-query-selector": {
+						"list-name": "Add attribute (query selector)",
+						"display-text": "Add attr [b]{1}={2}[/b] to query selector [b]{0}[/b]",
+						"description": "Add attribute.",
+						"params": {
+							"selectors": {
+								"name": "selectors",
+								"desc": "selectors"
+							},
+							"attr": {
+								"name": "attr",
+								"desc": "attr"
+							},
+							"value": {
+								"name": "value",
+								"desc": "value"
+							}
+						}
+					},
+					"remove-attribute-via-query-selector": {
+						"list-name": "Remove attribute (query selector)",
+						"display-text": "Remove attr [b]{1}[/b] from query selector [b]{0}[/b]",
+						"description": "Remove attribute.",
+						"params": {
+							"selectors": {
+								"name": "selectors",
+								"desc": "selectors"
+							},
+							"attr": {
+								"name": "attr",
+								"desc": "attr"
+							}
+						}
+					},
+					"change-attribute-via-query-selector": {
+						"list-name": "Change attribute (query selector)",
+						"display-text": "Change attr: [b]{1}={2}[/b] to query selector [b]{0}[/b]",
+						"description": "Change attribute.",
+						"params": {
+							"selectors": {
+								"name": "selectors",
+								"desc": "selectors"
+							},
+							"attr": {
+								"name": "attr",
+								"desc": "attr"
+							},
+							"value": {
+								"name": "value",
+								"desc": "value"
+							}
+						}
+					}
+				},
+				"expressions": {
+					"html-get-value": {
+            "description": "Return the value of the element.",
+            "translated-name": "GetValue",
+            "params": {
+              "id": {
+                "name": "ID",
+                "desc": "ID of the element"
+              }
+            }
+          },
+					"html-get-attribute": {
+            "description": "Return the value of an attribute.",
+            "translated-name": "GetAttribute",
+            "params": {
+              "id": {
+                "name": "ID",
+                "desc": "ID of the element"
+              },
+							"attr": {
+                "name": "Attr",
+                "desc": "Attr"
+              }
+            }
+          },
+					"html-get-value-with-query-selector": {
+            "description": "Return the value of the element (query selector).",
+            "translated-name": "GetValueWithQuerySelector",
+            "params": {
+              "selectors": {
+                "name": "Selectors",
+                "desc": "Selectors"
+              }
+            }
+          },
+					"html-get-attribute-with-query-selector": {
+            "description": "Return the value of an attribute (query selector).",
+            "translated-name": "GetAttributeWithQuerySelector",
+            "params": {
+              "selectors": {
+                "name": "Selectors",
+                "desc": "Selectors"
+              },
+							"attr": {
+                "name": "Attr",
+                "desc": "Attr"
+              }
+            }
+          },
+					"html-get-checked-status": {
+            "description": "Return the check status of the element.",
+            "translated-name": "GetCheckedStatus",
+            "params": {
+              "id": {
+                "name": "ID",
+                "desc": "ID"
+              }
+            }
+          },
+					"html-get-checked-status-with-query-selector": {
+            "description": "Return the check status of the element (query selector).",
+            "translated-name": "GetCheckedStatusQuerySelector",
+            "params": {
+              "selectors": {
+                "name": "Selectors",
+                "desc": "Selectors"
+              }
+            }
+          },
+					"html-get-value-radio": {
+            "description": "Return the value of a radio element.",
+            "translated-name": "GetValueRadio",
+            "params": {
+              "radioName": {
+                "name": "radioName",
+                "desc": "radioName"
+              }
+            }
+          },
+					"html-get-attribute-from-string": {
+            "description": "Return the value of an attribute (from a string).",
+            "translated-name": "GetAttrFromString",
+            "params": {
+              "string": {
+                "name": "string",
+                "desc": "String"
+              },
+							"attr": {
+                "name": "Attr",
+                "desc": "Attr"
+              }
+            }
+          }
+				}
+			}
+		}
+	}
+}

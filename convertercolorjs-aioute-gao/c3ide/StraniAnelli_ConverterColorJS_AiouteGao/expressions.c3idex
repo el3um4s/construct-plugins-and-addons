@@ -1,0 +1,396 @@
+@@START tohex|custom
+@@ACE
+{
+  "id": "toHex",
+  "expressionName": "toHex",
+  "returnType": "any",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "rgb(15, 170, 255)"
+    }
+  ]
+}
+@@LANG
+"toHex": { 
+	"translated-name": "toHex",
+	"description": "Get 6 digits Hex color like #0FAAFF.",
+	"params": {
+        "color": {
+            "name": "Color",
+            "desc": "Color string"
+        }
+    }
+}
+@@CODE
+toHex(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toHex();
+}
+@@END tohex
+
+@@START tohexa|custom
+@@ACE
+{
+  "id": "toHexA",
+  "expressionName": "toHexA",
+  "returnType": "any",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "rgb(15, 170, 255)"
+    }
+  ]
+}
+@@LANG
+"toHexA": { 
+	"translated-name": "toHexA",
+	"description": "Get 8 digits Hex color with alpha like #0FAAFF80.",
+	"params": {
+        "color": {
+            "name": "Color",
+            "desc": "Color string"
+        }
+    }
+}
+@@CODE
+toHexA(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toHexA();
+}
+@@END tohexa
+
+@@START torgb|custom
+@@ACE
+{
+  "id": "toRGB",
+  "expressionName": "toRGB",
+  "returnType": "any",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "#0FAAFF"
+    }
+  ]
+}
+@@LANG
+"toRGB": { 
+	"translated-name": "toRGB",
+	"description": "Get CSS RGB color like rgb(15, 170, 255).",
+	"params": {
+        "color": {
+            "name": "Color",
+            "desc": "Color string"
+        }
+    }
+}
+@@CODE
+toRGB(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toRGB();
+}
+@@END torgb
+
+@@START torgba|custom
+@@ACE
+{
+  "id": "toRGBA",
+  "expressionName": "toRGBA",
+  "returnType": "any",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "#0FAAFF"
+    }
+  ]
+}
+@@LANG
+"toRGBA": { 
+	"translated-name": "toRGBA",
+	"description": "Get CSS RGBA color like rgba(15, 170, 255, 0.5).",
+	"params": {
+        "color": {
+            "name": "Color",
+            "desc": "Color string"
+        }
+    }
+}
+@@CODE
+toRGBA(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toRGBA();
+}
+@@END torgba
+
+@@START getred255|singlecolor255
+@@ACE
+{
+  "id": "getRed255",
+  "expressionName": "getRed255",
+  "returnType": "number",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "#0FAAFF"
+    }
+  ]
+}
+@@LANG
+"getRed255": {
+    "translated-name": "getRed255",
+    "description": "Red in number range 0 ~ 255.",
+    "params": {
+      "color": {
+        "name": "Color",
+        "desc": "Color string"
+      }
+    }
+  }
+@@CODE
+getRed255(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toFormat('$r');
+}
+@@END getred255
+
+@@START getgreen255|singlecolor255
+@@ACE
+{
+  "id": "getGreen255",
+  "expressionName": "getGreen255",
+  "returnType": "number",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "#0FAAFF"
+    }
+  ]
+}
+@@LANG
+"getGreen255": {
+    "translated-name": "getGreen255",
+    "description": "Green in number range 0 ~ 255.",
+    "params": {
+      "color": {
+        "name": "Color",
+        "desc": "Color string"
+      }
+    }
+  }
+@@CODE
+getGreen255(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toFormat('$g');
+}
+@@END getgreen255
+
+@@START getblue255|singlecolor255
+@@ACE
+{
+  "id": "getBlue255",
+  "expressionName": "getBlue255",
+  "returnType": "number",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "#0FAAFF"
+    }
+  ]
+}
+@@LANG
+"getBlue255": {
+    "translated-name": "getBlue255",
+    "description": "Blue in number range 0 ~ 255.",
+    "params": {
+      "color": {
+        "name": "Color",
+        "desc": "Color string"
+      }
+    }
+  }
+@@CODE
+getBlue255(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toFormat('$b');
+}
+@@END getblue255
+
+@@START getalpha255|singlecolor255
+@@ACE
+{
+  "id": "getAlpha255",
+  "expressionName": "getAlpha255",
+  "returnType": "number",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "#0FAAFF"
+    }
+  ]
+}
+@@LANG
+"getAlpha255": {
+    "translated-name": "getAlpha255",
+    "description": "Alpha in number range 0 ~ 1.",
+    "params": {
+      "color": {
+        "name": "Color",
+        "desc": "Color string"
+      }
+    }
+  }
+@@CODE
+getAlpha255(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toFormat('$a');
+}
+@@END getalpha255
+
+@@START getredhex|singlecolorhex
+@@ACE
+{
+  "id": "getRedHEX",
+  "expressionName": "getRedHEX",
+  "returnType": "number",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "#0FAAFF"
+    }
+  ]
+}
+@@LANG
+"getRedHEX": {
+    "translated-name": "getRedHEX",
+    "description": "Upper-case red in hex.",
+    "params": {
+      "color": {
+        "name": "Color",
+        "desc": "Color string"
+      }
+    }
+  }
+@@CODE
+getRedHEX(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toFormat('$0xR');
+}
+@@END getredhex
+
+@@START getgreenhex|singlecolorhex
+@@ACE
+{
+  "id": "getGreenHEX",
+  "expressionName": "getGreenHEX",
+  "returnType": "number",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "#0FAAFF"
+    }
+  ]
+}
+@@LANG
+"getGreenHEX": {
+    "translated-name": "getGreenHEX",
+    "description": "Upper-case green in hex.",
+    "params": {
+      "color": {
+        "name": "Color",
+        "desc": "Color string"
+      }
+    }
+  }
+@@CODE
+getGreenHEX(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toFormat('$0xG');
+}
+@@END getgreenhex
+
+@@START getbluehex|singlecolorhex
+@@ACE
+{
+  "id": "getBlueHEX",
+  "expressionName": "getBlueHEX",
+  "returnType": "number",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "#0FAAFF"
+    }
+  ]
+}
+@@LANG
+"getBlueHEX": {
+    "translated-name": "getBlueHEX",
+    "description": "Upper-case blue in hex.",
+    "params": {
+      "color": {
+        "name": "Color",
+        "desc": "Color string"
+      }
+    }
+  }
+@@CODE
+getBlueHEX(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toFormat('$0xB');
+}
+@@END getbluehex
+
+@@START getalphahex|singlecolorhex
+@@ACE
+{
+  "id": "getAlphaHEX",
+  "expressionName": "getAlphaHEX",
+  "returnType": "number",
+  "params": [
+    {
+      "id": "color",
+      "type": "any",
+      "initialValue": "#0FAAFF"
+    }
+  ]
+}
+@@LANG
+"getAlphaHEX": {
+    "translated-name": "getAlphaHEX",
+    "description": "Upper-case alpha in hex.",
+    "params": {
+      "color": {
+        "name": "Color",
+        "desc": "Color string"
+      }
+    }
+  }
+@@CODE
+getAlphaHEX(color)
+{
+	const c = new StraniAnelliConverterColor(color);
+	return c.toFormat('$0xA');
+}
+@@END getalphahex
+

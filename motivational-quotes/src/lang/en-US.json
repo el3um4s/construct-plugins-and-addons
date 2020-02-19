@@ -1,0 +1,149 @@
+﻿
+{
+  "languageTag": "en-US",
+  "fileDescription": "Get and create motivational quotes.",
+  "text": {
+    "plugins": {
+      "stranianelli_motivationalquotes": {
+        "name": "MotivationalQuotes",
+        "description": "Get and create motivational quotes.",
+        "help-url": "https://el3um4s.github.io/construct-motivational-quote-plugin/",
+        "properties": {},
+        "aceCategories": {
+          "default": "Default",
+          "local": "Local",
+          "others": "Others",
+          "remove": "Remove"
+        },
+        "conditions": {},
+        "actions": {
+          "initializelocaljson": {
+						"list-name": "InitializeLocalJson",
+						"display-text": "Initialize JSON from file [b]{0}[/b]",
+						"description": "Inizialize a JSON from a project file.",
+            "params": {
+              "namefile": {
+                "name": "Name File",
+                "desc": "The project file's name."
+              }
+            }
+					},
+          "intializeexternaljson": {
+						"list-name": "IntializeExternalJson",
+						"display-text": "Inizialize an external JSON from URL [i]{1}[/i] with alias [b]{0}[/b]",
+						"description": "Initialize a JSON from an external URL.",
+            "params": {
+              "alias": {
+                "name": "Alias",
+                "desc": "The alias to assign to the JSON."
+              },
+              "url": {
+                "name": "URL",
+                "desc": "The remote JSON's url"
+              }
+            }
+					},
+          "removejsonfrommemory": {
+						"list-name": "RemoveJSONFromMemory",
+						"display-text": "Remove JSON [b]{0}[/b] from the memory",
+						"description": "Remove a JSON from the memory.",
+            "params": {
+              "namefile": {
+                "name": "Name File or Alias",
+                "desc": "The alias or the file to remove from the memory."
+              }
+            }
+					},
+          "removealljsonfrommemory": {
+						"list-name": "RemoveAllJSONFromMemory",
+						"display-text": "Remove all the JSONs from the memory.",
+						"description": "Remove all the JSONs from the memory."
+					}
+				},
+        "expressions": {
+          "getquotejson": {
+            "description": "Get a quote like a JSON ({quote, author}).",
+            "translated-name": "GetQuoteJSON (as JSON)"
+          },
+          "getquotefromjson": {
+            "description": "Get the quote from a JSON string ({quote, author}).",
+            "translated-name": "GetQuoteFromJSON",
+            "params": {
+              "json": {
+                "name": "JSON",
+                "desc": "The JSON string ({quote, author})"
+              }
+            }
+          },
+          "getauthorfromjson": {
+            "description": "Get the author from a JSON string ({quote, author}).",
+            "translated-name": "GetAuthorFromJSON",
+            "params": {
+              "json": {
+                "name": "JSON",
+                "desc": "The JSON string ({quote, author})"
+              }
+            }
+          },
+          "getquotefromlocaljson": {
+            "description": "Get a quote like a JSON ({quote, author}) from a project file.",
+            "translated-name": "GetQuoteFromLocalJSON (as JSON)",
+            "params": {
+              "namefile": {
+                "name": "NameFile",
+                "desc": "The project file's name."
+              },
+              "category": {
+                "name": "Category",
+                "desc": "The category/property to select."
+              }
+            }
+          },
+          "getpropertyfromlocaljson": {
+            "description": "Get a property from a JSON file.",
+            "translated-name": "GetPropertyFromJSON",
+            "params": {
+              "json": {
+                "name": "JSON",
+                "desc": "A JSON (like a string)"
+              },
+              "property": {
+                "name": "Property",
+                "desc": "The JSON's property to get."
+              }
+            }
+          },
+
+          "getquotefromexternaljson": {
+            "description": "Get a quote like a JSON ({quote, author}) from a remote file.",
+            "translated-name": "GetQuoteFromExternalJSON (as JSON)",
+            "params": {
+              "alias": {
+                "name": "Alias",
+                "desc": "The remote file's ALIAS."
+              },
+              "category": {
+                "name": "Category",
+                "desc": "The category/property to select."
+              }
+            }
+          },
+          "getpropertyfromexternaljson": {
+            "description": "Get a property from a JSON file.",
+            "translated-name": "GetPropertyFromJSON",
+            "params": {
+              "json": {
+                "name": "JSON",
+                "desc": "A JSON (like a string)."
+              },
+              "property": {
+                "name": "Property",
+                "desc": "The JSON's property to get."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

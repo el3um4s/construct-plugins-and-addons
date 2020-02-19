@@ -1,0 +1,156 @@
+{
+    "languageTag": "en-US",
+    "fileDescription": "Strings for MyCustomPlugin.",
+    "text": {
+        "plugins": {
+            "stranianelli_random_color": {
+                "name": "Random Color",
+                "description": "Generate a random color.",
+                "help-url": "http://stranianelli.com/c3plugin/randomcolor/index.html",
+                "properties": {
+                    "prop_hue": {
+                        "name": "Hue",
+                        "desc": "Controls the hue of the generated color.",
+                        "items": {
+                            "random": "Random (default)",
+                            "red": "Red",
+                            "orange": "Orange",
+                            "yellow": "Yellow",
+                            "green": "Green",
+                            "blue": "Blue",
+                            "purple": "Purple",
+                            "pink": "Pink",
+                            "monochrome": "Monochrome"
+                        }
+                    },
+                    "prop_luminosity": {
+                        "name": "Luminosity",
+                        "desc": "Controls the luminosity of the generated color.",
+                        "items": {
+                            "random": "Random (default)",
+                            "bright": "bright",
+                            "light": "light",
+                            "dark": "dark"
+                        }
+                    },
+                    "prop_seed": {
+                        "name": "Seed (optional)",
+                        "desc": "An integer or string which when passed will cause to return the same color each time."
+                    },
+                    "prop_format": {
+                        "name": "Format",
+                        "desc": "The format of the generated color.",
+                        "items": {
+                            "integer": "Integer (default)",
+                            "rgb": "RGB",
+                            "rgba": "RGBA",
+                            "rgbArray": "RGB (JSON c2array)",
+                            "hsl": "HSL",
+                            "hsla": "HSLA",
+                            "hslArray": "HSL (JSON c2array)",
+                            "hex": "HEX",
+                            "hsv": "HSV",
+                            "hsvArray": "HSV (JSON c2array)"
+                        }
+                    },
+                    "prop_group_alpha": {
+                        "name": "Alpha (optional)",
+                        "desc": "The alpha amount of rgba and hsla formats. Defaults to a random value."
+                    },
+                    "prop_check_alpha": {
+                        "name": "Use Custom Alpha",
+                        "desc": "Use a custom value"
+                    },
+                    "prop_alpha": {
+                        "name": "Alpha",
+                        "desc": "The alpha amount of rgba and hsla formats: default random."
+                    }
+                },
+                "aceCategories": {
+                    "custom": "Custom"
+                },
+                "actions": {
+                    "set_properties": {
+                        "list-name": "Set Properties",
+                        "display-text": "Set [i]hue = [b]{0}[/b][/i] , [i]luminosity = [b]{1}[/b][/i] , [i]format = [b]{2}[/b][/i]",
+                        "description": "Set the properties for generate a random color (hue, luminosity, format)",
+                        "params": {
+                            "hue": {
+                                "name": "Hue",
+                                "desc": "Controls the hue of the generated color (random, red, orange, yellow, green, blue, purple, pink, monochrome)."
+                            },
+                            "luminosity": {
+                                "name": "Luminosity",
+                                "desc": "Controls the luminosity of the generated color (random, bright, light, dark)."
+                            },
+                            "format": {
+                                "name": "Format",
+                                "desc": "The format of the generated color (integer, rgb, rgba, rgbArray, hsl, hsla, hslArray, hex, hsv, hsvArray)."
+                            }
+                        }
+                    },
+                    "set_properties_alpha": {
+                        "list-name": "Set Alpha",
+                        "display-text": "Set [b]alpha[/b] to [b]{0}[/b].",
+                        "description": "Set the alpha amount of rgba and hsla formats (0-100).",
+                        "params": {
+                            "alpha": {
+                                "name": "Alpha",
+                                "desc": "Set the alpha amount of rgba and hsla formats (0-100)."
+                            }
+                        }
+                    },
+                    "set_properties_seed": {
+                        "list-name": "Set Seed",
+                        "display-text": "Set [b]seed[/b] to [b]{0}[/b].",
+                        "description": "Set an integer or string which when passed will cause to return the same color each time.",
+                        "params": {
+                            "seed": {
+                                "name": "Seed",
+                                "desc": "An integer or string which when passed will cause to return the same color each time."
+                            }
+                        }
+                    }
+                },
+                "expressions": {
+                    "random_color": {
+                        "description": "Generate a random color (use instance properties).",
+                        "translated-name": "getRandomColor"
+                    },
+                    "random_color_with_text_setting": {
+                        "description": "Generate a random color (use custom value).",
+                        "translated-name": "getRandomColor",
+                        "params": {
+                            "hue": {
+                                "name": "Hue",
+                                "desc": "Controls the hue of the generated color (random, red, orange, yellow, green, blue, purple, pink, monochrome)."
+                            },
+                            "luminosity": {
+                                "name": "Luminosity",
+                                "desc": "Controls the luminosity of the generated color (random, bright, light, dark)."
+                            },
+                            "format": {
+                                "name": "Format",
+                                "desc": "The format of the generated color (integer, rgb, rgba, rgbArray, hsl, hsla, hslArray, hex, hsv, hsvArray)."
+                            }
+                        }
+                    },
+                    "random_color_with_seed": {
+                        "description": "Generate a random color based to a seed.",
+                        "translated-name": "getSeedColor",
+                        "params": {
+                            "seed": {
+                                "name": "Seed",
+                                "desc": "An integer or string which when passed will cause to return the same color each time."
+                            },
+                            "format": {
+                                "name": "Format",
+                                "desc": "The format of the generated color (integer, rgb, rgba, rgbArray, hsl, hsla, hslArray, hex, hsv, hsvArray)."
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+﻿{
+	"custom": {
+		"conditions": [],
+		"actions": [],
+		"expressions": []
+	},
+	"mapstate": {
+		"conditions": [
+			{	"id": "on-resize",	"scriptName": "OnResize",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-unload",	"scriptName": "OnUnload",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-view-reset",	"scriptName": "OnViewReset",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-load",	"scriptName": "OnLoad",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-zoom-start",	"scriptName": "OnZoomStart",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-move-start",	"scriptName": "OnMoveStart",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-zoom",	"scriptName": "OnZoom",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-move",	"scriptName": "OnMove",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-zoom-end",	"scriptName": "OnZoomEnd",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-move-end",	"scriptName": "OnMoveEnd",	"highlight": false,		"isTrigger": true,	"isInvertible": false }
+		],
+		"expressions": [
+			{	"id": "get-zoom",	"expressionName": "GetZoom", 	"scriptName": "GetZoom", "highlight": false, "returnType": "number" },
+			{ "id": "get-center-lat", "expressionName": "GetCenterLat", "scriptName": "GetCenterLat", "highlight": false, "returnType": "number" },
+			{ "id": "get-center-lng", "expressionName": "GetCenterLng", "scriptName": "GetCenterLng", "highlight": false, "returnType": "number" },
+			{ "id": "get-min-zoom", "expressionName": "GetMinZoom", "scriptName": "GetMinZoom", "highlight": false, "returnType": "number" },
+			{ "id": "get-max-zoom", "expressionName": "GetMaxZoom", "scriptName": "GetMaxZoom", "highlight": false, "returnType": "number" },
+			{ "id": "get-size-x", "expressionName": "GetSizeX", "scriptName": "GetSizeX", "highlight": false, "returnType": "number" },
+			{ "id": "get-size-y", "expressionName": "GetSizeY", "scriptName": "GetSizeY", "highlight": false, "returnType": "number" },
+			{ "id": "get-pixel-origin-x", "expressionName": "GetPixelOriginX", "scriptName": "GetPixelOriginX", "highlight": false, "returnType": "number" },
+			{ "id": "get-pixel-origin-y", "expressionName": "GetPixelOriginY", "scriptName": "GetPixelOriginY", "highlight": false, "returnType": "number" },
+			{ "id": "get-bounds-json", "expressionName": "GetBoundsJSON", "scriptName": "GetBoundsJSON", "highlight": false, "returnType": "string" },
+			{ "id": "get-pixel-bounds-json", "expressionName": "GetPixelBoundsJSON", "scriptName": "GetPixelBoundsJSON", "highlight": false, "returnType": "string" }
+		]
+	},
+	"interactionevents": {
+		"conditions": [
+			{	"id": "on-click",	"scriptName": "OnClick",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-dbl-click",	"scriptName": "OnDblClick",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-mouse-down",	"scriptName": "OnMouseDown",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-mouse-up",	"scriptName": "OnMouseUp",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-mouse-over",	"scriptName": "OnMouseOver",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-mouse-out",	"scriptName": "OnMouseOut",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-mouse-move",	"scriptName": "OnMouseMove",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-context-menu",	"scriptName": "OnContextMenu",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-key-press",	"scriptName": "OnKeyPress",	"highlight": false,		"isTrigger": true,	"isInvertible": false },
+			{	"id": "on-pre-click",	"scriptName": "OnPreClick",	"highlight": false,		"isTrigger": true,	"isInvertible": false }
+		]
+	},
+	"mapcontrols": {
+		"actions": [
+			{
+				"id": "set-attribution-visible",
+				"scriptName": "SetAttributionVisible",
+				"highlight": false,
+				"params": [
+					{	"id": "set-visible",
+						"type": "combo",
+						"initialValue": "visible",
+						"items": ["invisible", "visible"] }
+				]
+			},
+			{
+				"id": "set-zoom-control-visible",
+				"scriptName": "SetZoomControlVisible",
+				"highlight": false,
+				"params": [
+					{	"id": "set-visible",
+						"type": "combo",
+						"initialValue": "visible",
+						"items": ["invisible", "visible"] }
+				]
+			},
+			{
+				"id": "set-conrol-scale-visible",
+				"scriptName": "SetControlScaleVisible",
+				"highlight": false,
+				"params": [
+					{	"id": "set-visible",
+						"type": "combo",
+						"initialValue": "visible",
+						"items": ["invisible", "visible"] }
+				]
+			},
+			{
+				"id": "set-imperial-or-metric-scale",
+				"scriptName": "SetImperialOrMetricScale",
+				"highlight": false,
+				"params": [
+					{	"id": "set-scale",
+						"type": "combo",
+						"initialValue": "metric",
+						"items": ["imperial", "metric"] }
+				]
+			}
+		]
+	},
+	"layer": {
+		"actions": [{
+			"id": "change-base-tile-layer-by-combobox",
+			"scriptName": "ChangeBaseTileLayerByComboBox",
+			"highlight": false,
+			"params": [
+				{	"id": "choose-tile-layer",
+					"type": "combo",
+					"initialValue": "openstreetmap",
+					"items": ["openstreetmap",
+									"michelin",
+									"blackandwhite",
+									"stamentoner",
+									"stamentonerbackground",
+									"stamentonerlite",
+									"stamenwatercolor",
+									"stamenterrain",
+									"stamenterrainbackground",
+									"openstreetmapde",
+									"openstreetmapfrance",
+									"openstreetmaphot",
+									"opentopomap",
+									"openmapsurferroad",
+									"openmapsurfergrayscale",
+									"hyddafull",
+									"hyddabase",
+									"esriworldstreetmap",
+									"esridelorme",
+									"esriworldtopomap",
+									"esriworldimagery",
+									"esriworldterrain",
+									"esriworldshapedrelief",
+									"esriworldphysical",
+									"esrioceanbasemap",
+									"esrinatgeoworldmap",
+									"esriworldgraycanvas",
+									"hikebike",
+									"hikebikehillshading",
+									"wikimedia",
+									"cartodbpositron",
+									"cartodbdarkmatter",
+									"custom"] }
+			]},
+			{
+				"id": "change-base-tile-layer-by-numeric-id",
+				"scriptName": "ChangeBaseTileLayerByNumericID",
+				"highlight": false,
+				"params": [
+					{
+						"id": "id",
+						"type": "number"
+					}
+				]
+			}
+		]
+	}
+}

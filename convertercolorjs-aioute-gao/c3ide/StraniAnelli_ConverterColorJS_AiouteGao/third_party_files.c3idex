@@ -1,0 +1,250 @@
+@@START ConverterColorJS.js|.js|false|true|false|inline-script
+@@TEMPLATE
+this._info.AddFileDependency(
+{
+    filename: "c3runtime/ConverterColorJS.js",
+    type: "inline-script"
+});
+@@CONTENT
+// 
+// https://github.com/aioutecism/Color.js
+
+
+(() => {
+
+    const isNumberAndInRange = (input, mix, max) => {
+        return typeof value === 'number' && value >= min && value <= max;
+    };
+
+    const formatNumber = (number, format) => {
+        if (format === 10)
+        {
+            return number;
+        }
+        else if (format === 16)
+        {
+            let output = Math.round(number).toString(16);
+            if (output.length === 1) output = `0$
+            {
+                output
+            }`;
+            return output;
+        }
+        else if (format === 'percent')
+        {
+            return Math.round(number / 255 * 1000) / 1000;
+        }
+        else
+        {
+            throw new Error('Format is invalid.');
+        }
+    };
+
+    const parseRGBA = (color) => {
+        let r, g, b, a = 1;
+
+        if (typeof color === 'string' && color.match(/^rgb\(\d+\s*,\s*\d+\s*,\s*\d+\s*\)$/i))
+        {
+            const matches = color.match(/rgb\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/i)
+            r = matches[1];
+            g = matches[2];
+            b = matches[3];
+        }
+        else if (typeof color === 'string' && color.match(/^rgba\(\d+\s*,\s*\d+\s*,\s*\d+\s*,\s*(0|1|0\.\d+)\s*\)$/i))
+        {
+            const matches = color.match(/rgba\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(0|1|0\.\d+)\s*\)/i)
+            r = matches[1];
+            g = matches[2];
+            b = matches[3];
+            a = matches[4];
+        }
+
+        if (r === undefined || g === undefined || b === undefined || a === undefined)
+        {
+            throw new Error('Not a rgba string.');
+            return;
+        }
+
+        r = parseInt(r, 10);
+        g = parseInt(g, 10);
+        b = parseInt(b, 10);
+        a = parseFloat(a) * 255;
+
+        return {
+            red: r,
+            green: g,
+            blue: b,
+            alpha: a
+        }
+    };
+
+    const parseHex = (color) => {
+        if (!color.match(/^#([0-9a-f]{6}|[0-9a-f]{8})$/i))
+        {
+            throw new Error('Not a hex string.');
+            return;
+        }
+
+        color = color.replace(/^#/, '');
+
+        const convert = (single) => {
+            return parseInt(single, 16);
+        };
+
+        const r = convert(color.substr(0, 2));
+        const g = convert(color.substr(2, 2));
+        const b = convert(color.substr(4, 2));
+        const a = convert(color.substr(6, 2) || 'FF');
+
+        return {
+            red: r,
+            green: g,
+            blue: b,
+            alpha: a
+        }
+    };
+
+    class StraniAnelliConverterColor
+    {
+
+        constructor(color)
+        {
+            this.channel = undefined;
+
+            if (!this.channel)
+            {
+                try
+                {
+                    this.channel = parseHex(color);
+                }
+                catch (e)
+                {}
+            }
+            if (!this.channel)
+            {
+                try
+                {
+                    this.channel = parseRGBA(color);
+                }
+                catch (e)
+                {}
+            }
+
+            if (!this.channel)
+            {
+                throw new Error("Can't parse color.");
+            }
+        }
+
+        setRed(value)
+        {
+            if (!isNumberAndInRange(value, 0, 255))
+            {
+                throw new Error('Please pass in a number between 0 ~ 255.');
+            }
+
+            this.channel.red = parseInt(value, 10);
+        }
+
+        setGreen(value)
+        {
+            if (!isNumberAndInRange(value, 0, 255))
+            {
+                throw new Error('Please pass in a number between 0 ~ 255.');
+            }
+
+            this.channel.green = parseInt(value, 10);
+        }
+
+        setBlue(value)
+        {
+            if (!isNumberAndInRange(value, 0, 255))
+            {
+                throw new Error('Please pass in a number between 0 ~ 255.');
+            }
+
+            this.channel.blue = parseInt(value, 10);
+        }
+
+        setAlpha(value)
+        {
+            if (!isNumberAndInRange(value, 0, 1))
+            {
+                throw new Error('Please pass in a number between 0 ~ 1.');
+            }
+
+            this.channel.alpha = parseInt(value * 255, 10);
+        }
+
+        getRed(format = 10)
+        {
+            return formatNumber(this.channel.red, format);
+        }
+
+        getGreen(format = 10)
+        {
+            return formatNumber(this.channel.green, format);
+        }
+
+        getBlue(format = 10)
+        {
+            return formatNumber(this.channel.blue, format);
+        }
+
+        getAlpha(format = 'percent')
+        {
+            return formatNumber(this.channel.alpha, format);
+        }
+
+        toFormat(format)
+        {
+            if (!typeof format === 'string')
+            {
+                throw new Error('Format must be a string.');
+                return;
+            }
+
+            return format
+                .replace(/\$r/i, this.getRed())
+                .replace(/\$g/i, this.getGreen())
+                .replace(/\$b/i, this.getBlue())
+                .replace(/\$a/i, this.getAlpha())
+                .replace(/\$0xR/, this.getRed(16).toUpperCase())
+                .replace(/\$0xr/, this.getRed(16).toLowerCase())
+                .replace(/\$0xG/, this.getGreen(16).toUpperCase())
+                .replace(/\$0xg/, this.getGreen(16).toLowerCase())
+                .replace(/\$0xB/, this.getBlue(16).toUpperCase())
+                .replace(/\$0xb/, this.getBlue(16).toLowerCase())
+                .replace(/\$0xA/, this.getAlpha(16).toUpperCase())
+                .replace(/\$0xa/, this.getAlpha(16).toLowerCase());
+        }
+
+        toRGB()
+        {
+            return this.toFormat('rgb($r, $g, $b)');
+        }
+
+        toRGBA()
+        {
+            return this.toFormat('rgba($r, $g, $b, $a)');
+        }
+
+        toHex()
+        {
+            return this.toFormat('#$0xR$0xG$0xB');
+        }
+
+        toHexA()
+        {
+            return this.toFormat('#$0xR$0xG$0xB$0xA');
+        }
+
+    }
+
+    window.StraniAnelliConverterColor = StraniAnelliConverterColor;
+
+})();
+@@BYTES
+Ly8gCi8vIGh0dHBzOi8vZ2l0aHViLmNvbS9haW91dGVjaXNtL0NvbG9yLmpzCgoKKCgpID0+IHsKCiAgICBjb25zdCBpc051bWJlckFuZEluUmFuZ2UgPSAoaW5wdXQsIG1peCwgbWF4KSA9PiB7CiAgICAgICAgcmV0dXJuIHR5cGVvZiB2YWx1ZSA9PT0gJ251bWJlcicgJiYgdmFsdWUgPj0gbWluICYmIHZhbHVlIDw9IG1heDsKICAgIH07CgogICAgY29uc3QgZm9ybWF0TnVtYmVyID0gKG51bWJlciwgZm9ybWF0KSA9PiB7CiAgICAgICAgaWYgKGZvcm1hdCA9PT0gMTApCiAgICAgICAgewogICAgICAgICAgICByZXR1cm4gbnVtYmVyOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChmb3JtYXQgPT09IDE2KQogICAgICAgIHsKICAgICAgICAgICAgbGV0IG91dHB1dCA9IE1hdGgucm91bmQobnVtYmVyKS50b1N0cmluZygxNik7CiAgICAgICAgICAgIGlmIChvdXRwdXQubGVuZ3RoID09PSAxKSBvdXRwdXQgPSBgMCQKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgb3V0cHV0CiAgICAgICAgICAgIH1gOwogICAgICAgICAgICByZXR1cm4gb3V0cHV0OwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChmb3JtYXQgPT09ICdwZXJjZW50JykKICAgICAgICB7CiAgICAgICAgICAgIHJldHVybiBNYXRoLnJvdW5kKG51bWJlciAvIDI1NSAqIDEwMDApIC8gMTAwMDsKICAgICAgICB9CiAgICAgICAgZWxzZQogICAgICAgIHsKICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKCdGb3JtYXQgaXMgaW52YWxpZC4nKTsKICAgICAgICB9CiAgICB9OwoKICAgIGNvbnN0IHBhcnNlUkdCQSA9IChjb2xvcikgPT4gewogICAgICAgIGxldCByLCBnLCBiLCBhID0gMTsKCiAgICAgICAgaWYgKHR5cGVvZiBjb2xvciA9PT0gJ3N0cmluZycgJiYgY29sb3IubWF0Y2goL15yZ2JcKFxkK1xzKixccypcZCtccyosXHMqXGQrXHMqXCkkL2kpKQogICAgICAgIHsKICAgICAgICAgICAgY29uc3QgbWF0Y2hlcyA9IGNvbG9yLm1hdGNoKC9yZ2JcKChcZCspXHMqLFxzKihcZCspXHMqLFxzKihcZCspXHMqXCkvaSkKICAgICAgICAgICAgciA9IG1hdGNoZXNbMV07CiAgICAgICAgICAgIGcgPSBtYXRjaGVzWzJdOwogICAgICAgICAgICBiID0gbWF0Y2hlc1szXTsKICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAodHlwZW9mIGNvbG9yID09PSAnc3RyaW5nJyAmJiBjb2xvci5tYXRjaCgvXnJnYmFcKFxkK1xzKixccypcZCtccyosXHMqXGQrXHMqLFxzKigwfDF8MFwuXGQrKVxzKlwpJC9pKSkKICAgICAgICB7CiAgICAgICAgICAgIGNvbnN0IG1hdGNoZXMgPSBjb2xvci5tYXRjaCgvcmdiYVwoKFxkKylccyosXHMqKFxkKylccyosXHMqKFxkKylccyosXHMqKDB8MXwwXC5cZCspXHMqXCkvaSkKICAgICAgICAgICAgciA9IG1hdGNoZXNbMV07CiAgICAgICAgICAgIGcgPSBtYXRjaGVzWzJdOwogICAgICAgICAgICBiID0gbWF0Y2hlc1szXTsKICAgICAgICAgICAgYSA9IG1hdGNoZXNbNF07CiAgICAgICAgfQoKICAgICAgICBpZiAociA9PT0gdW5kZWZpbmVkIHx8IGcgPT09IHVuZGVmaW5lZCB8fCBiID09PSB1bmRlZmluZWQgfHwgYSA9PT0gdW5kZWZpbmVkKQogICAgICAgIHsKICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKCdOb3QgYSByZ2JhIHN0cmluZy4nKTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KCiAgICAgICAgciA9IHBhcnNlSW50KHIsIDEwKTsKICAgICAgICBnID0gcGFyc2VJbnQoZywgMTApOwogICAgICAgIGIgPSBwYXJzZUludChiLCAxMCk7CiAgICAgICAgYSA9IHBhcnNlRmxvYXQoYSkgKiAyNTU7CgogICAgICAgIHJldHVybiB7CiAgICAgICAgICAgIHJlZDogciwKICAgICAgICAgICAgZ3JlZW46IGcsCiAgICAgICAgICAgIGJsdWU6IGIsCiAgICAgICAgICAgIGFscGhhOiBhCiAgICAgICAgfQogICAgfTsKCiAgICBjb25zdCBwYXJzZUhleCA9IChjb2xvcikgPT4gewogICAgICAgIGlmICghY29sb3IubWF0Y2goL14jKFswLTlhLWZdezZ9fFswLTlhLWZdezh9KSQvaSkpCiAgICAgICAgewogICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoJ05vdCBhIGhleCBzdHJpbmcuJyk7CiAgICAgICAgICAgIHJldHVybjsKICAgICAgICB9CgogICAgICAgIGNvbG9yID0gY29sb3IucmVwbGFjZSgvXiMvLCAnJyk7CgogICAgICAgIGNvbnN0IGNvbnZlcnQgPSAoc2luZ2xlKSA9PiB7CiAgICAgICAgICAgIHJldHVybiBwYXJzZUludChzaW5nbGUsIDE2KTsKICAgICAgICB9OwoKICAgICAgICBjb25zdCByID0gY29udmVydChjb2xvci5zdWJzdHIoMCwgMikpOwogICAgICAgIGNvbnN0IGcgPSBjb252ZXJ0KGNvbG9yLnN1YnN0cigyLCAyKSk7CiAgICAgICAgY29uc3QgYiA9IGNvbnZlcnQoY29sb3Iuc3Vic3RyKDQsIDIpKTsKICAgICAgICBjb25zdCBhID0gY29udmVydChjb2xvci5zdWJzdHIoNiwgMikgfHwgJ0ZGJyk7CgogICAgICAgIHJldHVybiB7CiAgICAgICAgICAgIHJlZDogciwKICAgICAgICAgICAgZ3JlZW46IGcsCiAgICAgICAgICAgIGJsdWU6IGIsCiAgICAgICAgICAgIGFscGhhOiBhCiAgICAgICAgfQogICAgfTsKCiAgICBjbGFzcyBTdHJhbmlBbmVsbGlDb252ZXJ0ZXJDb2xvcgogICAgewoKICAgICAgICBjb25zdHJ1Y3Rvcihjb2xvcikKICAgICAgICB7CiAgICAgICAgICAgIHRoaXMuY2hhbm5lbCA9IHVuZGVmaW5lZDsKCiAgICAgICAgICAgIGlmICghdGhpcy5jaGFubmVsKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICB0cnkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICB0aGlzLmNoYW5uZWwgPSBwYXJzZUhleChjb2xvcik7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBjYXRjaCAoZSkKICAgICAgICAgICAgICAgIHt9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgaWYgKCF0aGlzLmNoYW5uZWwpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIHRyeQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIHRoaXMuY2hhbm5lbCA9IHBhcnNlUkdCQShjb2xvcik7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBjYXRjaCAoZSkKICAgICAgICAgICAgICAgIHt9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGlmICghdGhpcy5jaGFubmVsKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoIkNhbid0IHBhcnNlIGNvbG9yLiIpOwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBzZXRSZWQodmFsdWUpCiAgICAgICAgewogICAgICAgICAgICBpZiAoIWlzTnVtYmVyQW5kSW5SYW5nZSh2YWx1ZSwgMCwgMjU1KSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKCdQbGVhc2UgcGFzcyBpbiBhIG51bWJlciBiZXR3ZWVuIDAgfiAyNTUuJyk7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIHRoaXMuY2hhbm5lbC5yZWQgPSBwYXJzZUludCh2YWx1ZSwgMTApOwogICAgICAgIH0KCiAgICAgICAgc2V0R3JlZW4odmFsdWUpCiAgICAgICAgewogICAgICAgICAgICBpZiAoIWlzTnVtYmVyQW5kSW5SYW5nZSh2YWx1ZSwgMCwgMjU1KSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKCdQbGVhc2UgcGFzcyBpbiBhIG51bWJlciBiZXR3ZWVuIDAgfiAyNTUuJyk7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIHRoaXMuY2hhbm5lbC5ncmVlbiA9IHBhcnNlSW50KHZhbHVlLCAxMCk7CiAgICAgICAgfQoKICAgICAgICBzZXRCbHVlKHZhbHVlKQogICAgICAgIHsKICAgICAgICAgICAgaWYgKCFpc051bWJlckFuZEluUmFuZ2UodmFsdWUsIDAsIDI1NSkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcignUGxlYXNlIHBhc3MgaW4gYSBudW1iZXIgYmV0d2VlbiAwIH4gMjU1LicpOwogICAgICAgICAgICB9CgogICAgICAgICAgICB0aGlzLmNoYW5uZWwuYmx1ZSA9IHBhcnNlSW50KHZhbHVlLCAxMCk7CiAgICAgICAgfQoKICAgICAgICBzZXRBbHBoYSh2YWx1ZSkKICAgICAgICB7CiAgICAgICAgICAgIGlmICghaXNOdW1iZXJBbmRJblJhbmdlKHZhbHVlLCAwLCAxKSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKCdQbGVhc2UgcGFzcyBpbiBhIG51bWJlciBiZXR3ZWVuIDAgfiAxLicpOwogICAgICAgICAgICB9CgogICAgICAgICAgICB0aGlzLmNoYW5uZWwuYWxwaGEgPSBwYXJzZUludCh2YWx1ZSAqIDI1NSwgMTApOwogICAgICAgIH0KCiAgICAgICAgZ2V0UmVkKGZvcm1hdCA9IDEwKQogICAgICAgIHsKICAgICAgICAgICAgcmV0dXJuIGZvcm1hdE51bWJlcih0aGlzLmNoYW5uZWwucmVkLCBmb3JtYXQpOwogICAgICAgIH0KCiAgICAgICAgZ2V0R3JlZW4oZm9ybWF0ID0gMTApCiAgICAgICAgewogICAgICAgICAgICByZXR1cm4gZm9ybWF0TnVtYmVyKHRoaXMuY2hhbm5lbC5ncmVlbiwgZm9ybWF0KTsKICAgICAgICB9CgogICAgICAgIGdldEJsdWUoZm9ybWF0ID0gMTApCiAgICAgICAgewogICAgICAgICAgICByZXR1cm4gZm9ybWF0TnVtYmVyKHRoaXMuY2hhbm5lbC5ibHVlLCBmb3JtYXQpOwogICAgICAgIH0KCiAgICAgICAgZ2V0QWxwaGEoZm9ybWF0ID0gJ3BlcmNlbnQnKQogICAgICAgIHsKICAgICAgICAgICAgcmV0dXJuIGZvcm1hdE51bWJlcih0aGlzLmNoYW5uZWwuYWxwaGEsIGZvcm1hdCk7CiAgICAgICAgfQoKICAgICAgICB0b0Zvcm1hdChmb3JtYXQpCiAgICAgICAgewogICAgICAgICAgICBpZiAoIXR5cGVvZiBmb3JtYXQgPT09ICdzdHJpbmcnKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoJ0Zvcm1hdCBtdXN0IGJlIGEgc3RyaW5nLicpOwogICAgICAgICAgICAgICAgcmV0dXJuOwogICAgICAgICAgICB9CgogICAgICAgICAgICByZXR1cm4gZm9ybWF0CiAgICAgICAgICAgICAgICAucmVwbGFjZSgvXCRyL2ksIHRoaXMuZ2V0UmVkKCkpCiAgICAgICAgICAgICAgICAucmVwbGFjZSgvXCRnL2ksIHRoaXMuZ2V0R3JlZW4oKSkKICAgICAgICAgICAgICAgIC5yZXBsYWNlKC9cJGIvaSwgdGhpcy5nZXRCbHVlKCkpCiAgICAgICAgICAgICAgICAucmVwbGFjZSgvXCRhL2ksIHRoaXMuZ2V0QWxwaGEoKSkKICAgICAgICAgICAgICAgIC5yZXBsYWNlKC9cJDB4Ui8sIHRoaXMuZ2V0UmVkKDE2KS50b1VwcGVyQ2FzZSgpKQogICAgICAgICAgICAgICAgLnJlcGxhY2UoL1wkMHhyLywgdGhpcy5nZXRSZWQoMTYpLnRvTG93ZXJDYXNlKCkpCiAgICAgICAgICAgICAgICAucmVwbGFjZSgvXCQweEcvLCB0aGlzLmdldEdyZWVuKDE2KS50b1VwcGVyQ2FzZSgpKQogICAgICAgICAgICAgICAgLnJlcGxhY2UoL1wkMHhnLywgdGhpcy5nZXRHcmVlbigxNikudG9Mb3dlckNhc2UoKSkKICAgICAgICAgICAgICAgIC5yZXBsYWNlKC9cJDB4Qi8sIHRoaXMuZ2V0Qmx1ZSgxNikudG9VcHBlckNhc2UoKSkKICAgICAgICAgICAgICAgIC5yZXBsYWNlKC9cJDB4Yi8sIHRoaXMuZ2V0Qmx1ZSgxNikudG9Mb3dlckNhc2UoKSkKICAgICAgICAgICAgICAgIC5yZXBsYWNlKC9cJDB4QS8sIHRoaXMuZ2V0QWxwaGEoMTYpLnRvVXBwZXJDYXNlKCkpCiAgICAgICAgICAgICAgICAucmVwbGFjZSgvXCQweGEvLCB0aGlzLmdldEFscGhhKDE2KS50b0xvd2VyQ2FzZSgpKTsKICAgICAgICB9CgogICAgICAgIHRvUkdCKCkKICAgICAgICB7CiAgICAgICAgICAgIHJldHVybiB0aGlzLnRvRm9ybWF0KCdyZ2IoJHIsICRnLCAkYiknKTsKICAgICAgICB9CgogICAgICAgIHRvUkdCQSgpCiAgICAgICAgewogICAgICAgICAgICByZXR1cm4gdGhpcy50b0Zvcm1hdCgncmdiYSgkciwgJGcsICRiLCAkYSknKTsKICAgICAgICB9CgogICAgICAgIHRvSGV4KCkKICAgICAgICB7CiAgICAgICAgICAgIHJldHVybiB0aGlzLnRvRm9ybWF0KCcjJDB4UiQweEckMHhCJyk7CiAgICAgICAgfQoKICAgICAgICB0b0hleEEoKQogICAgICAgIHsKICAgICAgICAgICAgcmV0dXJuIHRoaXMudG9Gb3JtYXQoJyMkMHhSJDB4RyQweEIkMHhBJyk7CiAgICAgICAgfQoKICAgIH0KCiAgICB3aW5kb3cuU3RyYW5pQW5lbGxpQ29udmVydGVyQ29sb3IgPSBTdHJhbmlBbmVsbGlDb252ZXJ0ZXJDb2xvcjsKCn0pKCk7
+@@END ConverterColorJS.js
+

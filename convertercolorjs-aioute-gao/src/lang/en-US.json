@@ -1,0 +1,143 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for ConverterColorJS (Aioute Gao) Plugin",
+  "text": {
+    "plugins": {
+      "stranianelli_convertercolorjs_aioutegao": {
+        "name": "ConverterColorJS (Aioute Gao)",
+        "description": "A simple color converter.",
+        "help-url": "https://github.com/armandoalonso/c3IDE",
+        "properties": {},
+        "aceCategories": {
+          "custom": "Custom",
+          "singlecolor255": "Get Single Color (RGB255)",
+          "singlecolorhex": "Get Single Color (HEX)"
+        },
+        "conditions": {},
+        "actions": {},
+        "expressions": {
+          "toHex": {
+            "translated-name": "toHex",
+            "description": "Get 6 digits Hex color like #0FAAFF.",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "toHexA": {
+            "translated-name": "toHexA",
+            "description": "Get 8 digits Hex color with alpha like #0FAAFF80.",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "toRGB": {
+            "translated-name": "toRGB",
+            "description": "Get CSS RGB color like rgb(15, 170, 255).",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "toRGBA": {
+            "translated-name": "toRGBA",
+            "description": "Get CSS RGBA color like rgba(15, 170, 255, 0.5).",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "getRed255": {
+            "translated-name": "getRed255",
+            "description": "Red in number range 0 ~ 255.",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "getGreen255": {
+            "translated-name": "getGreen255",
+            "description": "Green in number range 0 ~ 255.",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "getBlue255": {
+            "translated-name": "getBlue255",
+            "description": "Blue in number range 0 ~ 255.",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "getAlpha255": {
+            "translated-name": "getAlpha255",
+            "description": "Alpha in number range 0 ~ 1.",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "getRedHEX": {
+            "translated-name": "getRedHEX",
+            "description": "Upper-case red in hex.",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "getGreenHEX": {
+            "translated-name": "getGreenHEX",
+            "description": "Upper-case green in hex.",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "getBlueHEX": {
+            "translated-name": "getBlueHEX",
+            "description": "Upper-case blue in hex.",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          },
+          "getAlphaHEX": {
+            "translated-name": "getAlphaHEX",
+            "description": "Upper-case alpha in hex.",
+            "params": {
+              "color": {
+                "name": "Color",
+                "desc": "Color string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+html {
+	overflow-y: auto;
+}
+
+img {
+	display: block;
+	width: 90%;
+	max-width: 400px;
+	height: auto;
+	margin: auto;
+}
+
+.top8 {
+	margin-top: 8px;
+}
+
+html, body, canvas {
+	touch-action: manipulation;
+}
+
+@media screen and (max-width: 350px) {
+  #tag-made-with-love-and-c3 {
+    display:none;
+  }
+}

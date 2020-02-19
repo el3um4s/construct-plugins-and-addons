@@ -1,0 +1,34 @@
+{
+  "is-c3-addon": true,
+  "type": "plugin",
+  "name": "Random Color (David Merfield)",
+  "id": "StraniAnelli_RandomColor_DavidMerfield",
+  "version": "1.0.0.0",
+  "author": "StraniAnelli",
+  "website": "https://el3um4s.github.io/construct-random-color-david-merfield-plugin/",
+  "documentation": "https://el3um4s.github.io/construct-random-color-david-merfield-plugin/",
+  "description": "A tiny script for generating attractive colors.",
+  "editor-scripts": [
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ],
+  "file-list": [
+    "c3runtime/plugin.js",
+    "c3runtime/type.js",
+    "c3runtime/instance.js",
+    "c3runtime/conditions.js",
+    "c3runtime/actions.js",
+    "c3runtime/expressions.js",
+    "lang/en-US.json",
+    "aces.json",
+    "addon.json",
+    "icon.svg",
+    "instance.js",
+    "plugin.js",
+    "type.js",
+    "c3runtime/randomColor.js",
+    "c3runtime/randomColor_Utility.js",
+    "c3runtime/utility.js"
+  ]
+}

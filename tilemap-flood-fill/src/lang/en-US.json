@@ -1,0 +1,66 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for MyCustomBehavior.",
+	"text": {
+		"behaviors": {
+			"stranianelli_tilemapfloodfill": {
+				"name": "TilemapFloodFill",
+				"description": "Flood fill for Tilemaps.",
+				"help-url": "https://github.com/el3um4s/construct-tilemap-flood-fill",
+				"properties": {},
+				"aceCategories": {},
+				"conditions": {},
+				"actions": {
+					"stackbasederecursive": {
+						"list-name": "Flood Fill",
+						"display-text": "Flood Fill: replace {2} with {3} from ({0},{1})",
+						"description": "Stack-based recursive implementation (four-way).",
+						"params": {
+							"x": {
+								"name": "X",
+								"desc": "Start Node: X"
+							},
+							"y": {
+								"name": "Y",
+								"desc": "Start Node: Y"
+							},
+							"targetcolor": {
+								"name": "Target Color",
+								"desc": "Target Color"
+							},
+							"replacementcolor": {
+								"name": "Replacement Color",
+								"desc": "Replacement Color"
+							}
+						}
+					},
+
+					"forestfire": {
+						"list-name": "Forest Fire",
+						"display-text": "Forest Fire: replace {2} with {3} from ({0},{1})",
+						"description": "Forest Fire algorithm.",
+						"params": {
+							"x": {
+								"name": "X",
+								"desc": "Start Node: X"
+							},
+							"y": {
+								"name": "Y",
+								"desc": "Start Node: Y"
+							},
+							"targetcolor": {
+								"name": "Target Color",
+								"desc": "Target Color"
+							},
+							"replacementcolor": {
+								"name": "Replacement Color",
+								"desc": "Replacement Color"
+							}
+						}
+					}
+				},
+				"expressions": {}
+			}
+		}
+	}
+}

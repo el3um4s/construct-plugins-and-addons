@@ -1,0 +1,16 @@
+{
+    "is-c3-addon": true,
+    "type": "plugin",
+    "name": "Random Color",
+    "id": "stranianelli_random_color",
+    "version": "1.0",
+    "author": "Strani Anelli",
+    "website": "http://stranianelli.com/c3plugin/randomcolor/index.html",
+    "documentation": "http://stranianelli.com/c3plugin/randomcolor/index.html",
+    "description": "Generate random color.",
+    "editor-scripts": [
+						"plugin.js",
+						"type.js",
+						"instance.js"
+					]
+}

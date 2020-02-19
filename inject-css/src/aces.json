@@ -1,0 +1,413 @@
+{
+  "css": {
+    "conditions": [{
+        "id": "is-css-already-present",
+        "scriptName": "IsCSSAlreadyPresent",
+        "highlight": true,
+        "params": [{
+          "id": "nomeCSS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "is-css-enabled",
+        "scriptName": "IsCSSEnabled",
+        "highlight": true,
+        "params": [{
+          "id": "nomeCSS",
+          "type": "string"
+        }]
+      }
+    ],
+    "actions": [{
+        "id": "add-local-css-file",
+        "scriptName": "AddLocalCSSFile",
+        "highlight": true,
+        "params": [{
+          "id": "nomeCSS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "add-external-css-file",
+        "scriptName": "AddExternalCSSFile",
+        "highlight": false,
+        "params": [{
+          "id": "nomeCSS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "remove-local-css-file",
+        "scriptName": "RemoveLocalCSSFile",
+        "highlight": true,
+        "params": [{
+          "id": "nomeCSS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "remove-external-css-file",
+        "scriptName": "RemoveExternalCSSFile",
+        "highlight": false,
+        "params": [{
+          "id": "nomeCSS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "remove-all-imported-css-file",
+        "scriptName": "RemoveAllImportedCSSFile",
+        "highlight": false
+      },
+      {
+        "id": "remove-all-css-file",
+        "scriptName": "RemoveAllCSSFile",
+        "highlight": false
+      },
+      {
+        "id": "disable-local-css-file",
+        "scriptName": "DisableLocalCSSFile",
+        "highlight": false,
+        "params": [{
+          "id": "nomeCSS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "disable-external-css-file",
+        "scriptName": "DisableExternalCSSFile",
+        "highlight": false,
+        "params": [{
+          "id": "nomeCSS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "enable-local-css-file",
+        "scriptName": "EnableLocalCSSFile",
+        "highlight": false,
+        "params": [{
+          "id": "nomeCSS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "enable-external-css-file",
+        "scriptName": "EnableExternalCSSFile",
+        "highlight": false,
+        "params": [{
+          "id": "nomeCSS",
+          "type": "string"
+        }]
+      }
+    ],
+    "expressions": []
+  },
+  "js": {
+    "conditions": [],
+    "actions": [{
+        "id": "add-local-js-file",
+        "scriptName": "AddLocalJSFile",
+        "highlight": true,
+        "params": [{
+          "id": "nomeJS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "add-external-js-file",
+        "scriptName": "AddExternalJSFile",
+        "highlight": false,
+        "params": [{
+          "id": "nomeJS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "remove-local-js-file",
+        "scriptName": "RemoveLocalJSFile",
+        "highlight": true,
+        "params": [{
+          "id": "nomeJS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "remove-external-js-file",
+        "scriptName": "RemoveExternalJSFile",
+        "highlight": false,
+        "params": [{
+          "id": "nomeJS",
+          "type": "string"
+        }]
+      },
+      {
+        "id": "remove-all-imported-js-file",
+        "scriptName": "RemoveAllImportedJSFile",
+        "highlight": false
+      }
+    ],
+    "expressions": []
+  },
+  "canvas": {
+    "conditions": [],
+    "actions": [{
+      "id": "destroy-canvas",
+      "scriptName": "DestroyCanvas",
+      "highlight": false
+    }],
+    "expressions": []
+  },
+  "html": {
+    "conditions": [],
+    "actions": [
+      { "id": "add-html-element",
+        "scriptName": "AddHTMLElement",
+        "highlight": false,
+        "params": [{
+          "id": "stringElement",
+          "type": "string"
+        }]
+      },
+      { "id": "remove-html-element-by-id",
+        "scriptName": "RemoveHTMLElementByID",
+        "highlight": false,
+        "params": [{
+          "id": "idElement",
+          "type": "string"
+        }]
+      },
+      { "id": "change-viewport",
+        "scriptName": "ChangeViewport",
+        "highlight": false,
+        "params": [{
+          "id": "width",
+          "type": "any",
+          "initialValue": "\"device-width\""
+        },
+        {
+          "id": "initialScale",
+          "type": "any",
+          "initialValue": "1.0"
+        },
+        {
+          "id": "maximumScale",
+          "type": "any",
+          "initialValue": "1.0"
+        },
+        {
+          "id": "mimimumScale",
+          "type": "any",
+          "initialValue": "1.0"
+        },
+        {
+          "id": "userScalable",
+          "type": "any",
+          "initialValue": "\"no\""
+        },
+        {
+         "id": "other",
+         "type": "string"
+        }]
+      },
+      { "id": "add-attribute-via-id",
+        "scriptName": "AddAttributeViaID",
+        "highlight": false,
+        "params": [{
+          "id": "id",
+          "type": "string"
+        },
+        {
+          "id": "attr",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "string"
+        }]
+      },
+      { "id": "remove-attribute-via-id",
+        "scriptName": "RemoveAttributeViaID",
+        "highlight": false,
+        "params": [{
+          "id": "id",
+          "type": "string"
+        },
+        {
+          "id": "attr",
+          "type": "string"
+        }]
+      },
+      { "id": "change-attribute-via-id",
+        "scriptName": "ChangeAttributeViaID",
+        "highlight": false,
+        "params": [{
+          "id": "id",
+          "type": "string"
+        },
+        {
+          "id": "attr",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "string"
+        }]
+      },
+      { "id": "add-attribute-via-query-selector",
+        "scriptName": "AddAttributeViaQuerySelector",
+        "highlight": false,
+        "params": [{
+          "id": "selectors",
+          "type": "string"
+        },
+        {
+          "id": "attr",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "string"
+        }]
+      },
+      { "id": "remove-attribute-via-query-selector",
+        "scriptName": "RemoveAttributeViaQuerySelector",
+        "highlight": false,
+        "params": [{
+          "id": "selectors",
+          "type": "string"
+        },
+        {
+          "id": "attr",
+          "type": "string"
+        }]
+      },
+      { "id": "change-attribute-via-query-selector",
+        "scriptName": "ChangeAttributeViaQuerySelector",
+        "highlight": false,
+        "params": [{
+          "id": "selectors",
+          "type": "string"
+        },
+        {
+          "id": "attr",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "string"
+        }]
+      }
+
+
+    ],
+    "expressions": [{
+        "id": "html-get-value",
+        "expressionName": "GetValue",
+        "scriptName": "GetValue",
+        "returnType": "any",
+        "params": [{
+          "id": "id",
+          "type": "string",
+          "initialValue": "id"
+        }]
+      },
+      {
+        "id": "html-get-attribute",
+        "expressionName": "GetAttribute",
+        "scriptName": "GetAttribute",
+        "returnType": "any",
+        "params": [{
+            "id": "id",
+            "type": "string",
+            "initialValue": "id"
+          },
+          {
+            "id": "attr",
+            "type": "string",
+            "initialValue": "attr"
+          }
+        ]
+      },
+      {
+        "id": "html-get-value-with-query-selector",
+        "expressionName": "GetValueWithQuerySelector",
+        "scriptName": "GetValueWithQuerySelector",
+        "returnType": "any",
+        "params": [{
+          "id": "selectors",
+          "type": "string",
+          "initialValue": "selectors"
+        }]
+      },
+      {
+        "id": "html-get-attribute-with-query-selector",
+        "expressionName": "GetAttributeWithQuerySelector",
+        "scriptName": "GetAttributeWithQuerySelector",
+        "returnType": "any",
+        "params": [{
+            "id": "selectors",
+            "type": "string",
+            "initialValue": "selectors"
+          },
+          {
+            "id": "attr",
+            "type": "string",
+            "initialValue": "attr"
+          }
+        ]
+      },
+      {
+        "id": "html-get-checked-status",
+        "expressionName": "GetCheckedStatus",
+        "scriptName": "GetCheckedStatus",
+        "returnType": "any",
+        "params": [{
+          "id": "id",
+          "type": "string",
+          "initialValue": "id"
+        }]
+      },
+      {
+        "id": "html-get-checked-status-with-query-selector",
+        "expressionName": "GetCheckedStatusQuerySelector",
+        "scriptName": "GetCheckedStatusQuerySelector",
+        "returnType": "any",
+        "params": [{
+          "id": "selectors",
+          "type": "string",
+          "initialValue": "selectors"
+        }]
+      },
+			{
+	        "id": "html-get-value-radio",
+	        "expressionName": "GetValueRadio",
+	        "scriptName": "GetValueRadio",
+	        "returnType": "any",
+	        "params": [{
+	          "id": "radioName",
+	          "type": "string",
+	          "initialValue": "radioName"
+	        }]
+	      },
+        {
+          "id": "html-get-attribute-from-string",
+          "expressionName": "GetAttrFromString",
+          "scriptName": "GetAttrFromString",
+          "returnType": "any",
+          "params": [{
+              "id": "string",
+              "type": "string",
+              "initialValue": "string"
+            },
+            {
+              "id": "attr",
+              "type": "string",
+              "initialValue": "attr"
+            }
+          ]
+        }
+    ]
+  }
+}

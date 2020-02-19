@@ -1,0 +1,34 @@
+﻿{
+	"is-c3-addon": true,
+	"type": "plugin",
+	"name": "HTMLElement",
+	"id": "StraniAnelli_HTMLElement",
+	"version": "0.0.2.8",
+	"author": "Strani Anelli",
+	"website": "https://github.com/el3um4s/construct-html-element-plugin",
+	"documentation": "https://github.com/el3um4s/construct-html-element-plugin",
+	"description": "The power of the HTML5 inside Construct3. Create HTMLElements, handle events and manage CSS style.",
+	"editor-scripts": [
+						"plugin.js",
+						"type.js",
+						"instance.js"
+					],
+	"file-list": [
+		"c3runtime/plugin.js",
+		"c3runtime/type.js",
+		"c3runtime/instance.js",
+		"c3runtime/conditions.js",
+		"c3runtime/actions.js",
+		"c3runtime/expressions.js",
+		"c3runtime/domSide.js",
+		"c3runtime/dom.js",
+		"c3runtime/globalHTMLElement.js",
+		"lang/en-US.json",
+		"aces.json",
+		"addon.json",
+		"icon.svg",
+		"plugin.js",
+		"type.js",
+		"instance.js"
+	]
+}

@@ -1,0 +1,32 @@
+{
+  "is-c3-addon": true,
+  "type": "plugin",
+  "name": "Drag and Drop Files",
+  "id": "StraniAnelli_DragAndDropFiles",
+  "version": "1.0.1.0",
+  "author": "Strani Anelli",
+  "website": "https://el3um4s.github.io/construct-drag-and-drop-files-plugin/",
+  "documentation": "https://el3um4s.github.io/construct-drag-and-drop-files-plugin/",
+  "description": "Drag and Drop Files into Construct 3.",
+  "editor-scripts": [
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ],
+  "file-list": [
+    "c3runtime/plugin.js",
+    "c3runtime/type.js",
+    "c3runtime/instance.js",
+    "c3runtime/conditions.js",
+    "c3runtime/actions.js",
+    "c3runtime/expressions.js",
+    "lang/en-US.json",
+    "aces.json",
+    "addon.json",
+    "icon.svg",
+    "plugin.js",
+    "type.js",
+    "instance.js",
+    "c3runtime/domSide.js"
+  ]
+}

@@ -1,0 +1,216 @@
+@@START ADDON.JSON
+{
+  "is-c3-addon": true,
+  "type": "plugin",
+  "name": "ConverterColorJS (Aioutate Gao)",
+  "id": "StraniAnelli_ConverterColorJS_AiouteGao",
+  "version": "1.0.0.0",
+  "author": "StraniAnelli",
+  "website": "https://www.construct.net",
+  "documentation": "https://www.construct.net",
+  "description": "A simple color converter.",
+  "editor-scripts": [
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ],
+  "file-list": [
+    "c3runtime/plugin.js",
+    "c3runtime/type.js",
+    "c3runtime/instance.js",
+    "c3runtime/conditions.js",
+    "c3runtime/actions.js",
+    "c3runtime/expressions.js",
+    "lang/en-US.json",
+    "aces.json",
+    "addon.json",
+    "icon.svg",
+    "instance.js",
+    "plugin.js",
+    "type.js",
+    "c3runtime/ConverterColorJS.js"
+  ]
+}
+@@END ADDON.JSON
+
+@@START PLUGIN_EDIT.JS
+"use strict";
+{
+
+    const PLUGIN_ID = "StraniAnelli_ConverterColorJS_AiouteGao";
+    const PLUGIN_VERSION = "1.0.0.0";
+    const PLUGIN_CATEGORY = "other";
+
+    const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_ConverterColorJS_AiouteGao = class ConverterColorJS_AiouteGaoPlugin extends SDK.IPluginBase
+    {
+        constructor()
+        {
+            super(PLUGIN_ID);
+
+            SDK.Lang.PushContext("plugins." + PLUGIN_ID.toLowerCase());
+
+            this._info.SetName(lang(".name"));
+            this._info.SetDescription(lang(".description"));
+            this._info.SetVersion(PLUGIN_VERSION);
+            this._info.SetCategory(PLUGIN_CATEGORY);
+            this._info.SetAuthor("StraniAnelli");
+            this._info.SetHelpUrl(lang(".help-url"));
+            this._info.SetIsSingleGlobal(true);
+
+            this._info.SetSupportedRuntimes(["c3"]);
+
+            SDK.Lang.PushContext(".properties");
+
+            this._info.SetProperties([
+
+            ]);
+
+            this._info.AddFileDependency(
+            {
+                filename: "c3runtime/ConverterColorJS.js",
+                type: "inline-script"
+            });
+
+            SDK.Lang.PopContext(); //.properties
+            SDK.Lang.PopContext();
+        }
+    };
+
+    PLUGIN_CLASS.Register(PLUGIN_ID, PLUGIN_CLASS);
+}
+@@END PLUGIN_EDIT.JS
+
+@@START PLUGIN_RUN.JS
+"use strict";
+{
+	C3.Plugins.StraniAnelli_ConverterColorJS_AiouteGao = class ConverterColorJS_AiouteGaoPlugin extends C3.SDKPluginBase
+	{
+		constructor(opts)
+		{
+			super(opts);
+		}
+		
+		Release()
+		{
+			super.Release();
+		}
+	};
+}
+@@END PLUGIN_RUN.JS
+
+@@START TYPE_EDIT.JS
+"use strict";
+{
+	const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_ConverterColorJS_AiouteGao;
+	
+	PLUGIN_CLASS.Type = class ConverterColorJS_AiouteGaoType extends SDK.ITypeBase
+	{
+		constructor(sdkPlugin, iObjectType)
+		{
+			super(sdkPlugin, iObjectType);
+		}
+	};
+}
+@@END TYPE_EDIT.JS
+
+@@START TYPE_RUN.JS
+"use strict";
+{
+	C3.Plugins.StraniAnelli_ConverterColorJS_AiouteGao.Type = class ConverterColorJS_AiouteGaoType extends C3.SDKTypeBase
+	{
+		constructor(objectClass)
+		{
+			super(objectClass);
+		}
+		
+		Release()
+		{
+			super.Release();
+		}
+		
+		OnCreate()
+		{	
+		}
+	};
+}
+@@END TYPE_RUN.JS
+
+@@START INSTANCE_EDIT.JS
+"use strict";
+{
+	const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_ConverterColorJS_AiouteGao;
+	
+	PLUGIN_CLASS.Instance = class ConverterColorJS_AiouteGaoInstance extends SDK.IInstanceBase
+	{
+		constructor(sdkType, inst)
+		{
+			super(sdkType, inst);
+		}
+		
+		Release()
+		{
+		}
+		
+		OnCreate()
+		{
+		}
+		
+		OnPropertyChanged(id, value)
+		{
+		}
+		
+		LoadC2Property(name, valueString)
+		{
+			return false;		// not handled
+		}
+	};
+}
+@@END INSTANCE_EDIT.JS
+
+@@START INSTANCE_RUN.JS
+"use strict";
+{
+	C3.Plugins.StraniAnelli_ConverterColorJS_AiouteGao.Instance = class ConverterColorJS_AiouteGaoInstance extends C3.SDKInstanceBase
+	{
+		constructor(inst, properties)
+		{
+			super(inst);
+			
+			
+			if (properties)
+			{
+			}
+		}
+		
+		Release()
+		{
+			super.Release();
+		}
+		
+		SaveToJson()
+		{
+			return {
+				// data to be saved for savegames
+			};
+		}
+		
+		LoadFromJson(o)
+		{
+			// load state for savegames
+		}
+	};
+}
+@@END INSTANCE_RUN.JS
+
+@@START LANG_PROP.JSON
+"properties": {}
+@@END LANG_PROP.JSON
+
+@@START LANG_CAT.JSON
+"aceCategories": {
+    "custom" : "Custom",
+    "singlecolor255" : "Get Single Color (RGB255)",
+    "singlecolorhex" : "Get Single Color (HEX)"
+}
+@@END LANG_CAT.JSON
+

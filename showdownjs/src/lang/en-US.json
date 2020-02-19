@@ -1,0 +1,68 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for MyCustomPlugin.",
+	"text": {
+		"plugins": {
+			"stranianelli_showdown": {
+				"name": "Showdown",
+				"description": "A Markdown to HTML converter written in Javascript.",
+				"help-url": "https://www.construct.net",
+				"properties": {
+					"flavor-property": {
+						"name": "Flavor",
+						"desc": "original, github or vanilla"
+					}
+				},
+				"aceCategories": {
+					"custom": "Custom"
+				},
+				"conditions": {},
+				"actions": {
+					"do-alert": {
+						"list-name": "Do alert",
+						"display-text": "Do alert",
+						"description": "Do a dummy alert."
+					},
+					"set-option": {
+						"list-name": "Set Option",
+						"display-text": "Set Option {0} to {1}",
+						"description": "Change some of showdown's default behavior.",
+						"params": {
+							"optionKey": {
+								"name": "optionKey",
+								"desc": "optionKey"
+							},
+							"value": {
+								"name": "value",
+								"desc": "value"
+							}
+						}
+					},
+					"set-flavor": {
+						"list-name": "Set Flavor",
+						"display-text": "Set Flavor {0}",
+						"description": "Change Markdown flavor (original, vanilla, github)",
+						"params": {
+							"flavor": {
+								"name": "flavor",
+								"desc": "original, vanilla or github"
+							}
+						}
+					}
+				},
+				"expressions": {
+					"make-html": {
+						"description": "Make HTML.",
+						"translated-name": "MakeHtml",
+						"params": {
+							"text": {
+								"name": "Text",
+								"desc": "Text."
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

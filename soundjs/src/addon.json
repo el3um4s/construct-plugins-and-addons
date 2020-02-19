@@ -1,0 +1,28 @@
+﻿{
+    "is-c3-addon": true,
+    "type": "behavior",
+    "name": "SASoundJS",
+    "id": "stranianelliSoundJS",
+    "version": "1.0.0",
+    "author": "Strani Anelli",
+    "website": "http://stranianelli.com",
+    "documentation": "http://stranianelli.com",
+    "description": "Example custom Construct 3 behavior.",
+    "editor-scripts": [
+						"behavior.js",
+						"type.js",
+						"instance.js"
+					],
+    "file-list": [
+		"c2runtime/runtime.js",
+		"lang/en-US.json",
+		"aces.json",
+		"addon.json",
+		"icon.svg",
+		"instance.js",
+		"behavior.js",
+		"type.js",
+        "altro/stranianelli_sound.js",
+        "altro/sound.js"
+	]
+}

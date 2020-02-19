@@ -1,0 +1,27 @@
+input[type="text"] {
+	text-align: center;
+	background-color: #566EB4;
+	border: 2px solid #566EB4;
+	color: #FEDFCD;
+	font-weight: bolder;
+}
+
+.button-css {
+	border: 4px solid #F9D368;
+	background-color: #566EB4;
+	color: #F9D368;
+	border-radius: 25% 10%;
+	box-sizing: content-box;
+}
+
+.change-style {
+	color: #6FCC9D;
+	border-color: #6FCC9D;
+	border-radius: 10% 30% 50% 70%;
+}
+
+.danger {
+	border: 4px solid #E04A3C;
+	color: #E04A3C;
+	text-transform: uppercase;
+}

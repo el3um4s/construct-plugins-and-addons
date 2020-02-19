@@ -1,0 +1,51 @@
+﻿{
+    "languageTag": "en-US",
+    "fileDescription": "Strings for MyCustomBehavior.",
+    "text": {
+        "behaviors": {
+            "stranianellisoundjs": {
+                "name": "SASoundJS",
+                "description": "An example third-party behavior.",
+                "help-url": "http://stranianelli.com",
+                "properties": {
+                    "prop_frequency": {
+                        "name": "Note/Frequency",
+                        "desc": "La nota in pitch notation o con il numero di frequenza."
+                    }
+                },
+                "aceCategories": {},
+                "conditions": {
+                    "is-moving": {
+                        "list-name": "Is moving",
+                        "display-text": "{my} is moving",
+                        "description": "An example condition for the behavior."
+                    }
+                },
+                "actions": {
+                    "play": {
+                        "list-name": "Play",
+                        "display-text": "Play {my}",
+                        "description": "An example action for the behavior."
+                    },
+                    "setnotefrequency": {
+                        "list-name": "Set Note/Frequency",
+                        "display-text": "Set note {0} in {my}",
+                        "description": "Imposta una nuova nota o frequenza.",
+                        "params": {
+                            "notefrequency": {
+                                "name": "Note/Frequency",
+                                "desc": "La nota o la frequenza."
+                            }
+                        }
+                    }
+                },
+                "expressions": {
+                    "leet": {
+                        "description": "Returns the number 1337.",
+                        "translated-name": "MyExpression"
+                    }
+                }
+            }
+        }
+    }
+}

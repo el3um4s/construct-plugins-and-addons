@@ -1,0 +1,33 @@
+﻿{
+	"is-c3-addon": true,
+	"type": "plugin",
+	"name": "Bubbly Background",
+	"id": "StraniAnelli_BubblyBackground",
+	"version": "1.0.0.0",
+	"author": "Strani Anelli",
+	"website": "https://el3um4s.github.io/c3-global-plugin-bubbly-background/",
+	"documentation": "https://el3um4s.github.io/c3-global-plugin-bubbly-background/",
+	"description": "Create a bubbly background",
+	"editor-scripts": [
+						"plugin.js",
+						"type.js",
+						"instance.js"
+					],
+	"file-list": [
+		"c2runtime/runtime.js",
+		"c3runtime/plugin.js",
+		"c3runtime/type.js",
+		"c3runtime/instance.js",
+		"c3runtime/conditions.js",
+		"c3runtime/actions.js",
+		"c3runtime/expressions.js",
+		"lang/en-US.json",
+		"bubbly/bubbly.js",
+		"aces.json",
+		"addon.json",
+		"icon.svg",
+		"instance.js",
+		"plugin.js",
+		"type.js"
+	]
+}

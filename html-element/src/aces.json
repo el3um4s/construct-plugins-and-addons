@@ -1,0 +1,1206 @@
+{
+  "appearance": {
+    "conditions": [{
+        "id": "appearance-is-visible",
+        "scriptName": "AppearanceIsVisible",
+        "highlight": true
+      },
+      {
+        "id": "appearance-compare-opacity",
+        "scriptName": "AppearanceCompareOpacity",
+        "highlight": false,
+        "params": [{
+            "id": "comparison",
+            "type": "cmp"
+          },
+          {
+            "id": "value",
+            "type": "number"
+          }
+        ]
+      }
+    ],
+    "actions": [{
+        "id": "appearance-toggle-visible",
+        "scriptName": "AppearanceToggleVisible",
+        "highlight": false
+      },
+      {
+        "id": "appearance-set-visible",
+        "scriptName": "AppearanceSetVisible",
+        "highlight": true,
+        "params": [{
+          "id": "set-visible",
+          "type": "combo",
+          "initialValue": "visible",
+          "items": ["invisible", "visible"]
+        }]
+      },
+      {
+        "id": "appearance-set-opacity",
+        "scriptName": "AppearanceSetOpacity",
+        "highlight": false,
+        "params": [{
+          "id": "set-opacity",
+          "type": "number",
+          "initialValue": 100
+        }]
+      }
+    ],
+    "expressions": [{
+      "id": "appearance-get-opacity",
+      "expressionName": "AppearanceGetOpacity",
+      "scriptName": "AppearanceGetOpacity",
+      "returnType": "number"
+    }]
+  },
+  "text": {
+    "conditions": [{
+        "id": "text-has-text",
+        "scriptName": "TextHasText",
+        "highlight": true
+      },
+      {
+        "id": "text-compare-text",
+        "scriptName": "TextCompareText",
+        "highlight": false,
+        "params": [{
+            "id": "value",
+            "type": "string"
+          },
+          {
+            "id": "case-sensitive",
+            "type": "combo",
+            "initialValue": "ignore-case",
+            "items": ["ignore-case", "case-sensitive"]
+          }
+        ]
+      }
+    ],
+    "actions": [{
+        "id": "text-set-text",
+        "scriptName": "TextSetText",
+        "highlight": true,
+        "params": [{
+          "id": "text",
+          "type": "string",
+          "initialValue": ""
+        }]
+      },
+      {
+        "id": "text-append-text",
+        "scriptName": "TextAppendText",
+        "highlight": false,
+        "params": [{
+          "id": "text",
+          "type": "string",
+          "initialValue": ""
+        }]
+      }
+    ],
+    "expressions": [{
+        "id": "text-get-text",
+        "expressionName": "TextGetText",
+        "scriptName": "TextGetText",
+        "returnType": "string"
+      },
+      {
+        "id": "text-get-inner-html",
+        "expressionName": "TextGetInnerHTML",
+        "scriptName": "TextGetInnerHTML",
+        "returnType": "string"
+      }
+    ]
+  },
+  "sizeetposition": {
+    "conditions": [{
+        "id": "size-compare-width",
+        "scriptName": "SizeCompareWidth",
+        "highlight": false,
+        "params": [{
+            "id": "comparison",
+            "type": "cmp"
+          },
+          {
+            "id": "value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "id": "size-compare-height",
+        "scriptName": "SizeCompareHeight",
+        "highlight": false,
+        "params": [{
+            "id": "comparison",
+            "type": "cmp"
+          },
+          {
+            "id": "value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "id": "position-compare-x",
+        "scriptName": "PositionCompareX",
+        "highlight": false,
+        "params": [{
+            "id": "comparison",
+            "type": "cmp"
+          },
+          {
+            "id": "value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "id": "position-compare-y",
+        "scriptName": "PositionCompareY",
+        "highlight": false,
+        "params": [{
+            "id": "comparison",
+            "type": "cmp"
+          },
+          {
+            "id": "value",
+            "type": "number"
+          }
+        ]
+      }
+    ],
+    "actions": [{
+        "id": "position-set-position",
+        "scriptName": "PositionSetPosition",
+        "highlight": true,
+        "params": [{
+          "id": "x",
+          "type": "number",
+          "initialValue": 0
+        }, {
+          "id": "y",
+          "type": "number",
+          "initialValue": 0
+        }]
+      },
+      {
+        "id": "position-set-x",
+        "scriptName": "PositionSetX",
+        "highlight": false,
+        "params": [{
+          "id": "x",
+          "type": "number",
+          "initialValue": 0
+        }]
+      },
+      {
+        "id": "position-set-y",
+        "scriptName": "PositionSetY",
+        "highlight": false,
+        "params": [{
+          "id": "y",
+          "type": "number",
+          "initialValue": 0
+        }]
+      },
+      {
+        "id": "size-set-size",
+        "scriptName": "SizeSetSize",
+        "highlight": true,
+        "params": [{
+            "id": "width",
+            "type": "number",
+            "initialValue": 0
+          },
+          {
+            "id": "height",
+            "type": "number",
+            "initialValue": 0
+          }
+        ]
+      },
+      {
+        "id": "size-set-height",
+        "scriptName": "SizeSetHeight",
+        "highlight": false,
+        "params": [{
+          "id": "height",
+          "type": "number",
+          "initialValue": 0
+        }]
+      },
+      {
+        "id": "size-set-width",
+        "scriptName": "SizeSetWidth",
+        "highlight": false,
+        "params": [{
+          "id": "width",
+          "type": "number",
+          "initialValue": 0
+        }]
+      }
+    ],
+    "expressions": [{
+        "id": "position-get-x",
+        "expressionName": "PositionGetX",
+        "scriptName": "PositionGetX",
+        "returnType": "number"
+      },
+      {
+        "id": "position-get-y",
+        "expressionName": "PositionGetY",
+        "scriptName": "PositionGetY",
+        "returnType": "number"
+      },
+      {
+        "id": "size-get-width",
+        "expressionName": "SizeGetWidth",
+        "scriptName": "SizeGetWidth",
+        "returnType": "number"
+      },
+      {
+        "id": "size-get-height",
+        "expressionName": "SizeGetHeight",
+        "scriptName": "SizeGetHeight",
+        "returnType": "number"
+      }
+    ]
+  },
+  "angle": {
+    "conditions": [{
+      "id": "angle-is-between-angles",
+      "scriptName": "AngleIsBetweenAngles",
+      "highlight": false,
+      "params": [{
+          "id": "first",
+          "type": "number"
+        },
+        {
+          "id": "second",
+          "type": "number"
+        }
+      ]
+    }],
+    "actions": [{
+        "id": "angle-set-angle",
+        "scriptName": "AngleSetAngle",
+        "highlight": true,
+        "params": [{
+          "id": "angle",
+          "type": "number",
+          "initialValue": 0
+        }]
+      },
+      {
+        "id": "angle-rotate-clockwise",
+        "scriptName": "AngleRotateClockwise",
+        "highlight": false,
+        "params": [{
+          "id": "angle",
+          "type": "number",
+          "initialValue": 0
+        }]
+      },
+      {
+        "id": "angle-rotate-counter-clockwise",
+        "scriptName": "AngleRotateCounterClockwise",
+        "highlight": false,
+        "params": [{
+          "id": "angle",
+          "type": "number",
+          "initialValue": 0
+        }]
+      }
+    ],
+    "expressions": [{
+        "id": "angle-get-angle",
+        "expressionName": "AngleGetAngle",
+        "scriptName": "AngleGetAngle",
+        "returnType": "number"
+      },
+      {
+        "id": "angle-get-angle-rad",
+        "expressionName": "AngleGetAngleRAD",
+        "scriptName": "AngleGetAngleRAD",
+        "returnType": "number"
+      }
+    ]
+  },
+  "origintransform": {
+    "conditions": [{
+        "id": "origin-transform-compare-vertical",
+        "scriptName": "OriginTransformCompareVertical",
+        "highlight": false,
+        "params": [{
+          "id": "vertical",
+          "type": "combo",
+          "initialValue": "top",
+          "items": ["top", "center", "bottom"]
+        }]
+      },
+      {
+        "id": "origin-transform-compare-horizontal",
+        "scriptName": "OriginTransformCompareHorizontal",
+        "highlight": false,
+        "params": [{
+          "id": "horizontal",
+          "type": "combo",
+          "initialValue": "left",
+          "items": ["left", "center", "right"]
+        }]
+      }
+    ],
+    "actions": [{
+        "id": "origin-transform-set-origin",
+        "scriptName": "OriginTransformSetOrigin",
+        "highlight": true,
+        "params": [{
+            "id": "set-vertical",
+            "type": "combo",
+            "initialValue": "top",
+            "items": ["top", "center", "bottom"]
+          },
+          {
+            "id": "set-horizontal",
+            "type": "combo",
+            "initialValue": "left",
+            "items": ["left", "center", "right"]
+          }
+        ]
+      },
+      {
+        "id": "origin-transform-set-vertical-origin",
+        "scriptName": "OriginTransformSetVerticalOrigin",
+        "highlight": false,
+        "params": [{
+          "id": "set-vertical",
+          "type": "combo",
+          "initialValue": "top",
+          "items": ["top", "center", "bottom"]
+        }]
+      },
+      {
+        "id": "origin-transform-set-horizontal-origin",
+        "scriptName": "OriginTransformSetHorizontalOrigin",
+        "highlight": false,
+        "params": [{
+          "id": "set-horizontal",
+          "type": "combo",
+          "initialValue": "left",
+          "items": ["left", "center", "right"]
+        }]
+      }
+    ],
+    "expressions": [{
+        "id": "origin-transform-get-vertical",
+        "expressionName": "OriginTransformGetVertical",
+        "scriptName": "OriginTransformGetVertical",
+        "returnType": "string"
+      },
+      {
+        "id": "origin-transform-get-horizontal",
+        "expressionName": "OriginTransformGetHorizontal",
+        "scriptName": "OriginTransformGetHorizontal",
+        "returnType": "string"
+      }
+    ]
+  },
+  "css": {
+    "conditions": [{
+        "id": "css-compare-class",
+        "scriptName": "CSSCompareClass",
+        "highlight": false,
+        "params": [{
+          "id": "classDaVerificare",
+          "type": "string",
+          "initialValue": "class"
+        }]
+      },
+      {
+        "id": "css-has-style-defined",
+        "scriptName": "CSSHasStyleDefinited",
+        "highlight": false,
+        "params": [{
+          "id": "style",
+          "type": "string",
+          "initialValue": "style"
+        }]
+      },
+      {
+        "id": "css-compare-style",
+        "scriptName": "CSSCompareStyle",
+        "highlight": false,
+        "params": [{
+            "id": "style",
+            "type": "string",
+            "initialValue": "style"
+          },
+          {
+            "id": "value",
+            "type": "any",
+            "initialValue": "value"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "css-add-class",
+        "scriptName": "CSSAddClass",
+        "highlight": false,
+        "params": [{
+          "id": "nameClass",
+          "type": "string",
+          "initialValue": "nameClass"
+        }]
+      },
+      {
+        "id": "css-remove-class",
+        "scriptName": "CSSRemoveClass",
+        "highlight": false,
+        "params": [{
+          "id": "nameClass",
+          "type": "string",
+          "initialValue": "nameClass"
+        }]
+      },
+      {
+        "id": "css-toggle-class",
+        "scriptName": "CSSToggleClass",
+        "highlight": false,
+        "params": [{
+          "id": "nameClass",
+          "type": "string",
+          "initialValue": "nameClass"
+        }]
+      },
+      {
+        "id": "css-replace-class",
+        "scriptName": "CSSReplaceClass",
+        "highlight": false,
+        "params": [{
+          "id": "oldClass",
+          "type": "string",
+          "initialValue": "oldClass"
+        },
+        {
+          "id": "newClass",
+          "type": "string",
+          "initialValue": "newClass"
+        }]
+      },
+      {
+        "id": "css-set-style",
+        "scriptName": "CSSSetStyle",
+        "highlight": false,
+        "params": [{
+          "id": "style",
+          "type": "string",
+          "initialValue": "style: val;"
+        }]
+      }
+    ],
+    "expressions": [{
+        "id": "css-get-classes-as-string-list",
+        "expressionName": "CSSGetClassesAsStringList",
+        "scriptName": "CSSGetClassesAsStringList",
+        "returnType": "string"
+      },
+      {
+        "id": "css-get-class-as-boolean",
+        "expressionName": "CSSGetClassAsBoolean",
+        "scriptName": "CSSGetClassAsBoolean",
+        "returnType": "number",
+        "params": [{
+          "id": "class",
+          "type": "string",
+          "initialValue": "class"
+        }]
+      },
+      {
+        "id": "css-get-CSS",
+        "expressionName": "CSSgetCSS",
+        "scriptName": "CSSgetCSS",
+        "returnType": "any",
+        "params": [{
+          "id": "style",
+          "type": "string",
+          "initialValue": "string"
+        }]
+      }
+    ]
+  },
+  "generic": {
+    "conditions": [],
+    "actions": [],
+    "expressions": [{
+        "id": "generic-html-get-value",
+        "expressionName": "GenericGetValue",
+        "scriptName": "GenericGetValue",
+        "returnType": "any",
+        "params": [{
+          "id": "id",
+          "type": "string",
+          "initialValue": "id"
+        }]
+      },
+      {
+        "id": "generic-html-get-attribute",
+        "expressionName": "GenericGetAttribute",
+        "scriptName": "GenericGetAttribute",
+        "returnType": "any",
+        "params": [{
+            "id": "id",
+            "type": "string",
+            "initialValue": "id"
+          },
+          {
+            "id": "attr",
+            "type": "string",
+            "initialValue": "attr"
+          }
+        ]
+      },
+      {
+        "id": "generic-html-get-value-with-query-selector",
+        "expressionName": "GenericGetValueWithQuerySelector",
+        "scriptName": "GenericGetValueWithQuerySelector",
+        "returnType": "any",
+        "params": [{
+          "id": "selectors",
+          "type": "string",
+          "initialValue": "selectors"
+        }]
+      },
+      {
+        "id": "generic-html-get-attribute-with-query-selector",
+        "expressionName": "GenericGetAttributeWithQuerySelector",
+        "scriptName": "GenericGetAttributeWithQuerySelector",
+        "returnType": "any",
+        "params": [{
+            "id": "selectors",
+            "type": "string",
+            "initialValue": "selectors"
+          },
+          {
+            "id": "attr",
+            "type": "string",
+            "initialValue": "attr"
+          }
+        ]
+      },
+      {
+        "id": "generic-html-get-checked-status",
+        "expressionName": "GenericGetCheckedStatus",
+        "scriptName": "GenericGetCheckedStatus",
+        "returnType": "any",
+        "params": [{
+          "id": "id",
+          "type": "string",
+          "initialValue": "id"
+        }]
+      },
+      {
+        "id": "generic-html-get-checked-status-with-query-selector",
+        "expressionName": "GenericGetCheckedStatusQuerySelector",
+        "scriptName": "GenericGetCheckedStatusQuerySelector",
+        "returnType": "any",
+        "params": [{
+          "id": "selectors",
+          "type": "string",
+          "initialValue": "selectors"
+        }]
+      },
+			{
+	        "id": "generic-html-get-value-radio",
+	        "expressionName": "GenericGetValueRadio",
+	        "scriptName": "GenericGetValueRadio",
+	        "returnType": "any",
+	        "params": [{
+	          "id": "radioName",
+	          "type": "string",
+	          "initialValue": "radioName"
+	        }]
+	      }]
+  },
+  "html": {
+    "conditions": [{
+        "id": "html-has-id",
+        "scriptName": "HTMLhasID",
+        "highlight": false
+      },
+      {
+        "id": "html-is-checked",
+        "scriptName": "HTMLisChecked",
+        "highlight": false,
+        "isInvertible": false
+      },
+      {
+        "id": "html-compare-id",
+        "scriptName": "HTMLcompareID",
+        "highlight": false,
+        "params": [{
+          "id": "id",
+          "type": "string",
+          "initialValue": "id"
+        }]
+      },
+      {
+        "id": "html-compare-tag",
+        "scriptName": "HTMLcompareTAG",
+        "highlight": false,
+        "params": [{
+          "id": "tag",
+          "type": "string",
+          "initialValue": "tag"
+        }]
+      },
+      {
+        "id": "html-has-attribute",
+        "scriptName": "HTMLhasAttribute",
+        "highlight": false,
+        "params": [{
+          "id": "attr",
+          "type": "string",
+          "initialValue": "attr"
+        }]
+      },
+      {
+        "id": "html-compare-value",
+        "scriptName": "HTMLcompareValue",
+        "highlight": false,
+        "params": [{
+            "id": "comparison",
+            "type": "cmp"
+          },
+          {
+            "id": "value",
+            "type": "any",
+            "initialValue": "value"
+          }
+        ]
+      },
+      {
+        "id": "html-compare-attribute",
+        "scriptName": "HTMLcompareAttribute",
+        "highlight": false,
+        "params": [{
+            "id": "attr",
+            "type": "string",
+            "initialValue": "attr"
+          },
+          {
+            "id": "comparison",
+            "type": "cmp"
+          },
+          {
+            "id": "value",
+            "type": "any",
+            "initialValue": "value"
+          }
+        ]
+      },
+      {
+        "id": "html-compare-value-radio",
+        "scriptName": "HTMLcompareValueRadio",
+        "highlight": false,
+        "params": [{
+            "id": "radioName",
+            "type": "string",
+            "initialValue": "radioName"
+          },
+          {
+            "id": "comparison",
+            "type": "cmp"
+          },
+          {
+            "id": "value",
+            "type": "any",
+            "initialValue": "value"
+          }
+        ]
+      },
+
+      {
+        "id": "html-compare-value-as-string",
+        "scriptName": "HTMLcompareValueAsString",
+        "highlight": false,
+        "params": [{
+            "id": "case-sensitive",
+            "type": "combo",
+            "initialValue": "ignore-case",
+            "items": ["ignore-case", "case-sensitive"]
+          },
+          {
+            "id": "value",
+            "type": "any",
+            "initialValue": "value"
+          }
+        ]
+      },
+      {
+        "id": "html-compare-attribute-as-string",
+        "scriptName": "HTMLcompareAttributeAsString",
+        "highlight": false,
+        "params": [{
+            "id": "attr",
+            "type": "string",
+            "initialValue": "attr"
+          },
+          {
+            "id": "case-sensitive",
+            "type": "combo",
+            "initialValue": "ignore-case",
+            "items": ["ignore-case", "case-sensitive"]
+          },
+          {
+            "id": "value",
+            "type": "any",
+            "initialValue": "value"
+          }
+        ]
+      },
+      {
+        "id": "html-compare-value-radio-as-string",
+        "scriptName": "HTMLcompareValueRadioAsString",
+        "highlight": false,
+        "params": [{
+            "id": "radioName",
+            "type": "string",
+            "initialValue": "radioName"
+          },
+          {
+            "id": "case-sensitive",
+            "type": "combo",
+            "initialValue": "ignore-case",
+            "items": ["ignore-case", "case-sensitive"]
+          },
+          {
+            "id": "value",
+            "type": "any",
+            "initialValue": "value"
+          }
+        ]
+      }
+    ],
+    "actions": [{
+        "id": "html-add-attribute",
+        "scriptName": "HTMLAddAttribute",
+        "highlight": false,
+        "params": [{
+            "id": "attr",
+            "type": "string",
+            "initialValue": "attr"
+          },
+          {
+            "id": "value",
+            "type": "any",
+            "initialValue": "value"
+          }
+        ]
+      },
+      {
+        "id": "html-remove-attribute",
+        "scriptName": "HTMLRemoveAttribute",
+        "highlight": false,
+        "params": [{
+          "id": "attr",
+          "type": "string",
+          "initialValue": "attr"
+        }]
+      },
+      {
+        "id": "html-change-attribute",
+        "scriptName": "HTMLChangeAttribute",
+        "highlight": false,
+        "params": [{
+            "id": "attr",
+            "type": "string",
+            "initialValue": "attr"
+          },
+          {
+            "id": "value",
+            "type": "any",
+            "initialValue": "value"
+          }
+        ]
+      },
+      {
+        "id": "html-set-id",
+        "scriptName": "HTMLSetID",
+        "highlight": false,
+        "params": [{
+          "id": "id",
+          "type": "string",
+          "initialValue": "ID"
+        }]
+      }
+    ],
+    "expressions": [{
+        "id": "html-get-id",
+        "expressionName": "HTMLgetID",
+        "scriptName": "HTMLgetID",
+        "returnType": "string"
+      },
+      {
+        "id": "html-get-uid",
+        "expressionName": "HTMLgetUID",
+        "scriptName": "HTMLgetUID",
+        "returnType": "string"
+      },
+      {
+        "id": "html-get-tag",
+        "expressionName": "HTMLgetTAG",
+        "scriptName": "HTMLgetTAG",
+        "returnType": "string"
+      },
+      {
+        "id": "html-get-attribute",
+        "expressionName": "HTMLgetAttribute",
+        "scriptName": "HTMLgetAttribute",
+        "returnType": "any",
+        "params": [{
+          "id": "attr",
+          "type": "string",
+          "initialValue": "attr"
+        }]
+      },
+      {
+        "id": "html-get-value",
+        "expressionName": "HTMLgetVALUE",
+        "scriptName": "HTMLgetVALUE",
+        "returnType": "any"
+      },
+      {
+        "id": "html-get-value-radio",
+        "expressionName": "HTMLgetValueRadio",
+        "scriptName": "HTMLgetValueRadio",
+        "returnType": "any",
+        "params": [{
+          "id": "radioName",
+          "type": "string",
+          "initialValue": "radioName"
+        }]
+      },
+      {
+        "id": "html-get-checked-status",
+        "expressionName": "HTMLgetCheckedStatus",
+        "scriptName": "HTMLgetCheckedStatus",
+        "returnType": "number"
+      }
+    ]
+  },
+  "event": {
+    "conditions": [],
+    "actions": [],
+    "expressions": [{
+        "id": "event-get-last-event-as-json",
+        "expressionName": "GetLastEventAsJSON",
+        "scriptName": "GetLastEventAsJSON",
+        "returnType": "string"
+      },
+      {
+        "id": "event-get-last-event-type",
+        "expressionName": "GetLastEventType",
+        "scriptName": "GetLastEventType",
+        "returnType": "string"
+      },
+      {
+        "id": "event-get-last-event-property",
+        "expressionName": "GetLastEventProperty",
+        "scriptName": "GetLastEventProperty",
+        "returnType": "string",
+        "params": [{
+          "id": "property",
+          "type": "string",
+          "initialValue": "type"
+        }]
+      }
+    ]
+  },
+  "eventmouse": {
+    "conditions": [{
+        "id": "event-mouse-on-click",
+        "scriptName": "EventMouseOnClick",
+        "isTrigger": true,
+        "highlight": true
+      },
+      {
+        "id": "event-mouse-on-dbl-click",
+        "scriptName": "EventMouseOnDblClick",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-context-menu",
+        "scriptName": "EventMouseOnContextMenu",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-aux-click",
+        "scriptName": "EventMouseOnAuxClick",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-wheel",
+        "scriptName": "EventMouseOnWheel",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-mouse-over",
+        "scriptName": "EventMouseOnMouseOver",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-mouse-out",
+        "scriptName": "EventMouseOnMouseOut",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-mouse-down",
+        "scriptName": "EventMouseOnMouseDown",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-mouse-up",
+        "scriptName": "EventMouseOnMouseUp",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-mouse-enter",
+        "scriptName": "EventMouseOnMouseEnter",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-mouse-leave",
+        "scriptName": "EventMouseOnMouseLeave",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-mouse-move",
+        "scriptName": "EventMouseOnMouseMove",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-mouse-on-mouse-select",
+        "scriptName": "EventMouseOnMouseSelect",
+        "isTrigger": true,
+        "highlight": false
+      }
+    ],
+    "actions": [],
+    "expressions": []
+  },
+  "eventfocus": {
+    "conditions": [{
+        "id": "event-focus-on-focus",
+        "scriptName": "EventFocusOnFocus",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-focus-on-blur",
+        "scriptName": "EventFocusOnBlur",
+        "isTrigger": true,
+        "highlight": false
+      }
+    ],
+    "actions": [],
+    "expressions": []
+  },
+  "eventkeyboard": {
+    "conditions": [{
+        "id": "event-keyboard-on-key-down",
+        "scriptName": "EventKeyboardOnKeyDown",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-keyboard-on-key-press",
+        "scriptName": "EventKeyboardOnKeyPress",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-keyboard-on-key-up",
+        "scriptName": "EventKeyboardOnKeyUp",
+        "isTrigger": true,
+        "highlight": false
+      }
+    ],
+    "actions": [],
+    "expressions": []
+  },
+  "eventvaluechange": {
+    "conditions": [{
+        "id": "event-value-change-on-checkbox-state-change",
+        "scriptName": "EventValueChangeCheckboxStateChange",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-value-change-on-input",
+        "scriptName": "EventValueChangeInput",
+        "isTrigger": true,
+        "highlight": true
+      },
+      {
+        "id": "event-value-change-on-radio-state-change",
+        "scriptName": "EventValueChangeRadioStateChange",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-value-change-on-value-change",
+        "scriptName": "EventValueChangeValueChange",
+        "isTrigger": true,
+        "highlight": true
+      }
+    ],
+    "actions": [],
+    "expressions": []
+  },
+  "eventform": {
+    "conditions": [{
+        "id": "event-form-reset",
+        "scriptName": "EventFormReset",
+        "isTrigger": true,
+        "highlight": false
+      },
+      {
+        "id": "event-form-submit",
+        "scriptName": "EventFormSubmit",
+        "isTrigger": true,
+        "highlight": false
+      }
+    ],
+    "actions": [],
+    "expressions": []
+  },
+  "customjs": {
+    "conditions": [{
+        "id": "js-on-get-file-url",
+        "scriptName": "JSOnGetFileURL",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "js-on-get-blob",
+        "scriptName": "JSOnGetBLOB",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "js-on-get-url-blob",
+        "scriptName": "JSOnGetUrlBLOB",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "js-on-get-base64img-from-url",
+        "scriptName": "JSOnGetBase64ImgFromURL",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "js-on-get-base64img-from-file",
+        "scriptName": "JSOnGetBase64ImgFromFILE",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [{
+        "id": "custom-js-get-file-url",
+        "scriptName": "CustomJSGetFileURL",
+        "highlight": false,
+        "params": [{
+          "id": "nameFile",
+          "type": "string",
+          "initialValue": "nameFile"
+        }]
+      },
+      {
+        "id": "custom-js-get-file-blob",
+        "scriptName": "CustomJSGetFileBLOB",
+        "highlight": false,
+        "params": [{
+          "id": "nameFile",
+          "type": "string",
+          "initialValue": "nameFile"
+        }]
+      },
+      {
+        "id": "custom-js-get-url-blob",
+        "scriptName": "CustomJSGetUrlBLOB",
+        "highlight": false,
+        "params": [{
+          "id": "url",
+          "type": "string",
+          "initialValue": "url"
+        }]
+      },
+      {
+        "id": "custom-js-get-base64img-from-url",
+        "scriptName": "CustomJSGetBase64ImgFromURL",
+        "highlight": false,
+        "params": [{
+          "id": "url",
+          "type": "string",
+          "initialValue": "url"
+        }]
+      },
+      {
+        "id": "custom-js-get-base64img-from-file",
+        "scriptName": "CustomJSGetBase64ImgFromFILE",
+        "highlight": false,
+        "params": [{
+          "id": "nameFile",
+          "type": "string",
+          "initialValue": "nameFile"
+        }]
+      }
+    ],
+    "expressions": [{
+        "id": "js-get-file-url",
+        "expressionName": "JSGetFileURL",
+        "scriptName": "JSGetFileURL",
+        "returnType": "string"
+      },
+      {
+        "id": "js-get-file-blob",
+        "expressionName": "JSGetFileBLOB",
+        "scriptName": "JSGetFileBLOB",
+        "returnType": "string"
+      },
+      {
+        "id": "js-get-url-blob",
+        "expressionName": "JSGetUrlBLOB",
+        "scriptName": "JSGetUrlBLOB",
+        "returnType": "string"
+      },
+      {
+        "id": "js-get-base64img-from-url",
+        "expressionName": "JSGetBase64ImgFromURL",
+        "scriptName": "JSGetBase64ImgFromURL",
+        "returnType": "string"
+      },
+      {
+        "id": "js-get-base64img-from-file",
+        "expressionName": "JSGetBase64ImgFromFILE",
+        "scriptName": "JSGetBase64ImgFromFILE",
+        "returnType": "string"
+      }
+    ]
+  }
+}

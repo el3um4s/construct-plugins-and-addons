@@ -1,0 +1,121 @@
+{
+  "custom": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "add-css",
+        "scriptName": "AddCss",
+        "highlight": false,
+        "isAsync": true
+      },
+      {
+        "id": "delete-css",
+        "scriptName": "DeleteCss",
+        "highlight": false,
+        "isAsync": true
+      },
+      {
+        "id": "change-css",
+        "scriptName": "ChangeCss",
+        "highlight": false,
+        "isAsync": true,
+        "params": [
+          {
+            "id": "new-css",
+            "type": "string",
+            "initialValue": "\"personalStyle.css\""
+          },
+          {
+            "id": "is-local-css",
+            "type": "boolean",
+            "initialValue": "true"
+          }
+        ]
+      }
+    ],
+    "expressions": []
+  },
+  "classlist": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "add-class",
+        "scriptName": "AddClass",
+        "highlight": false,
+        "isAsync": true,
+        "params": [
+          {
+            "id": "selector",
+            "type": "string",
+            "initialValue": "\"#id\""
+          },
+          {
+            "id": "classe",
+            "type": "string",
+            "initialValue": "\"class-name\""
+          }
+        ]
+      },
+      {
+        "id": "remove-class",
+        "scriptName": "RemoveClass",
+        "highlight": false,
+        "isAsync": true,
+        "params": [
+          {
+            "id": "selector",
+            "type": "string",
+            "initialValue": "\"#id\""
+          },
+          {
+            "id": "classe",
+            "type": "string",
+            "initialValue": "\"class-name\""
+          }
+        ]
+      },
+      {
+        "id": "toggle-class",
+        "scriptName": "ToggleClass",
+        "highlight": false,
+        "isAsync": true,
+        "params": [
+          {
+            "id": "selector",
+            "type": "string",
+            "initialValue": "\"#id\""
+          },
+          {
+            "id": "classe",
+            "type": "string",
+            "initialValue": "\"class-name\""
+          }
+        ]
+      },
+      {
+        "id": "replace-class",
+        "scriptName": "ReplaceClass",
+        "highlight": false,
+        "isAsync": true,
+        "params": [
+          {
+            "id": "selector",
+            "type": "string",
+            "initialValue": "\"#id\""
+          },
+          {
+            "id": "oldclasse",
+            "type": "string",
+            "initialValue": "\"old-class-name\""
+          },
+          {
+            "id": "newclasse",
+            "type": "string",
+            "initialValue": "\"old-class-name\""
+          }
+        ]
+      }
+    ],
+    "expressions": []
+  }
+}

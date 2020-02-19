@@ -1,0 +1,171 @@
+﻿{
+	"default": {
+		"conditions": [],
+		"actions": [],
+		"expressions": [
+			{
+				"id": "getquotejson",
+				"expressionName": "GetQuoteJSON",
+				"scriptName": "GetQuoteJSON",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"id": "getquotefromjson",
+				"expressionName": "GetQuoteFromJSON",
+				"scriptName": "GetQuoteFromJSON",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{
+						"id": "json",
+						"type": "string"
+					}
+				]
+			},
+			{
+				"id": "getauthorfromjson",
+				"expressionName": "GetAuthorFromJSON",
+				"scriptName": "GetAuthorFromJSON",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{
+						"id": "json",
+						"type": "string"
+					}
+				]
+			}
+		]
+	},
+	"local": {
+		"conditions": [],
+		"actions": [
+			{
+				"id": "initializelocaljson",
+				"scriptName": "InitializeLocalJson",
+				"highlight": false,
+				"params": [
+					{
+						"id": "namefile",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"expressions":[
+			{
+				"id": "getquotefromlocaljson",
+				"expressionName": "GetQuoteFromLocalJSON",
+				"scriptName": "GetQuoteFromLocalJSON",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{
+						"id": "namefile",
+						"type": "string"
+					},
+					{
+						"id": "category",
+						"type": "string"
+					}
+				]
+			},
+			{
+				"id": "getpropertyfromlocaljson",
+				"expressionName": "GetPropertyFromJSON",
+				"scriptName": "GetPropertyFromJSON",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{
+						"id": "json",
+						"type": "string"
+					},
+					{
+						"id": "property",
+						"type": "string"
+					}
+				]
+			}
+		]
+	},
+	"others": {
+		"conditions": [],
+		"actions": [
+			{
+				"id": "intializeexternaljson",
+				"scriptName": "IntializeExternalJson",
+				"highlight": false,
+				"params": [
+					{
+						"id": "alias",
+						"type": "string"
+					},
+					{
+						"id": "url",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"expressions":[
+			{
+				"id": "getquotefromexternaljson",
+				"expressionName": "GetQuoteFromExternalJSON",
+				"scriptName": "GetQuoteFromLocalJSON",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{
+						"id": "alias",
+						"type": "string"
+					},
+					{
+						"id": "category",
+						"type": "string"
+					}
+				]
+			},
+			{
+				"id": "getpropertyfromexternaljson",
+				"expressionName": "GetPropertyFromJSON",
+				"scriptName": "GetPropertyFromJSON",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{
+						"id": "json",
+						"type": "string"
+					},
+					{
+						"id": "property",
+						"type": "string"
+					}
+				]
+			}
+		]
+	},
+	"remove": {
+		"conditions": [],
+		"actions": [
+			{
+				"id": "removejsonfrommemory",
+				"scriptName": "RemoveJSONFromMemory",
+				"highlight": false,
+				"params": [
+					{
+						"id": "namefile",
+						"type": "string"
+					}
+				]
+			},
+			{
+				"id": "removealljsonfrommemory",
+				"scriptName": "RemoveAllJSONFromMemory",
+				"highlight": false
+			}
+		],
+		"expressions": []
+	}
+}

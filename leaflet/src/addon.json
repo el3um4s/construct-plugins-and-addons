@@ -1,0 +1,31 @@
+﻿{
+	"is-c3-addon": true,
+	"type": "plugin",
+	"name": "My text plugin",
+	"id": "StraniAnelli_Leaflet",
+	"version": "0.0.0.1",
+	"author": "Scirra",
+	"website": "https://www.construct.net",
+	"documentation": "https://www.construct.net",
+	"description": "Example custom text drawing Construct 3 plugin.",
+	"editor-scripts": [
+						"plugin.js",
+						"type.js",
+						"instance.js",
+						"detojs/detoGeometry.js"
+					],
+	"file-list": [
+		"c2runtime/runtime.js",
+		"lang/en-US.json",
+		"detojs/detoLeafletJSsupporter.js",
+		"detojs/detoGeometry.js",
+		"leaflet/leaflet.css",
+		"leaflet/leaflet.js",
+		"aces.json",
+		"addon.json",
+		"icon.svg",
+		"plugin.js",
+		"type.js",
+		"instance.js"
+	]
+}

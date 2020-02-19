@@ -1,0 +1,32 @@
+{
+  "is-c3-addon": true,
+  "type": "plugin",
+  "name": "ConverterColorJS (Aioutate Gao)",
+  "id": "StraniAnelli_ConverterColorJS_AiouteGao",
+  "version": "1.0.0.0",
+  "author": "StraniAnelli",
+  "website": "https://www.construct.net",
+  "documentation": "https://www.construct.net",
+  "description": "A simple color converter.",
+  "editor-scripts": [
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ],
+  "file-list": [
+    "c3runtime/plugin.js",
+    "c3runtime/type.js",
+    "c3runtime/instance.js",
+    "c3runtime/conditions.js",
+    "c3runtime/actions.js",
+    "c3runtime/expressions.js",
+    "lang/en-US.json",
+    "aces.json",
+    "addon.json",
+    "icon.svg",
+    "instance.js",
+    "plugin.js",
+    "type.js",
+    "c3runtime/ConverterColorJS.js"
+  ]
+}

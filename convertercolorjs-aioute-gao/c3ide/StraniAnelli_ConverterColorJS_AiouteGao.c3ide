@@ -1,0 +1,16 @@
+@@METADATA
+Id|40335b16-97fb-4f0f-9569-5f076260f2dc
+Name|ConverterColorJS (Aioute Gao)
+Class|ConverterColorJS_AiouteGao
+Company|StraniAnelli
+Author|StraniAnelli
+MajorVersion|1
+MinorVersion|0
+RevisionVersion|0
+BuildVersion|0
+Description|A simple color converter.
+Category|other
+Type|SingleGlobalPlugin
+CreateDate|11/05/2019 15:21:08
+DateModified|12/05/2019 11:07:24
+AddonId|StraniAnelli_ConverterColorJS_AiouteGao

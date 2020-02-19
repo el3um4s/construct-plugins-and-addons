@@ -1,0 +1,374 @@
+{
+  "one color": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "generateRandomColor",
+        "scriptName": "generateRandomColor",
+        "highlight": false
+      }
+    ],
+    "expressions": [
+      {
+        "id": "getRandomColor",
+        "expressionName": "getRandomColor",
+        "returnType": "any"
+      },
+      {
+        "id": "getLastColor",
+        "expressionName": "getLastColor",
+        "returnType": "any"
+      }
+    ]
+  },
+  "color array": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "generateRandomColorArray",
+        "scriptName": "generateRandomColorArray",
+        "highlight": true
+      }
+    ],
+    "expressions": [
+      {
+        "id": "getRandomColorArray",
+        "expressionName": "getRandomColorArray",
+        "returnType": "any"
+      },
+      {
+        "id": "getLastRandomColorArray",
+        "expressionName": "getLastRandomColorArray",
+        "returnType": "any"
+      },
+      {
+        "id": "getColorFromLastArray",
+        "expressionName": "getColorFromLastArray",
+        "returnType": "any",
+        "params": [
+          {
+            "id": "index",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      },
+      {
+        "id": "getLengthArrayRandomColor",
+        "expressionName": "getLengthArrayRandomColor",
+        "returnType": "any"
+      }
+    ]
+  },
+  "set properties": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "setPropertyHue",
+        "scriptName": "setPropertyHue",
+        "highlight": false,
+        "params": [
+          {
+            "id": "prop",
+            "type": "string",
+            "initialValue": "random"
+          }
+        ]
+      },
+      {
+        "id": "setPropertyCount",
+        "scriptName": "setPropertyCount",
+        "highlight": false,
+        "params": [
+          {
+            "id": "prop",
+            "type": "number",
+            "initialValue": "1"
+          }
+        ]
+      },
+      {
+        "id": "setPropertyLuminosity",
+        "scriptName": "setPropertyLuminosity",
+        "highlight": false,
+        "params": [
+          {
+            "id": "prop",
+            "type": "combo",
+            "initialValue": "random",
+            "items": [
+              "random",
+              "bright",
+              "light",
+              "dark"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "setPropertySeed",
+        "scriptName": "setPropertySeed",
+        "highlight": false,
+        "params": [
+          {
+            "id": "prop",
+            "type": "string",
+            "initialValue": "Hello World!"
+          }
+        ]
+      },
+      {
+        "id": "setPropertyAlpha",
+        "scriptName": "setPropertyAlpha",
+        "highlight": false,
+        "params": [
+          {
+            "id": "prop",
+            "type": "number",
+            "initialValue": "1"
+          }
+        ]
+      },
+      {
+        "id": "setPropertyFormat",
+        "scriptName": "setPropertyFormat",
+        "highlight": false,
+        "params": [
+          {
+            "id": "prop",
+            "type": "combo",
+            "initialValue": "hex",
+            "items": [
+              "rgb",
+              "rgba",
+              "rgbArray",
+              "hsl",
+              "hsla",
+              "hslArray",
+              "hex"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "setAllProperties",
+        "scriptName": "setAllProperties",
+        "highlight": false,
+        "params": [
+          {
+            "id": "hue",
+            "type": "string",
+            "initialValue": "random"
+          },
+          {
+            "id": "luminosity",
+            "type": "combo",
+            "initialValue": "random",
+            "items": [
+              "random",
+              "bright",
+              "light",
+              "dark"
+            ]
+          },
+          {
+            "id": "count",
+            "type": "number",
+            "initialValue": "1"
+          },
+          {
+            "id": "seed",
+            "type": "string",
+            "initialValue": "Hello World!"
+          },
+          {
+            "id": "format",
+            "type": "combo",
+            "initialValue": "hex",
+            "items": [
+              "rgb",
+              "rgba",
+              "rgbArray",
+              "hsl",
+              "hsla",
+              "hslArray",
+              "hex"
+            ]
+          },
+          {
+            "id": "alpha",
+            "type": "number",
+            "initialValue": "1"
+          }
+        ]
+      },
+      {
+        "id": "setAllPropertiesViaString",
+        "scriptName": "setAllPropertiesViaString",
+        "highlight": false,
+        "params": [
+          {
+            "id": "hue",
+            "type": "string",
+            "initialValue": "random"
+          },
+          {
+            "id": "luminosity",
+            "type": "string",
+            "initialValue": "random"
+          },
+          {
+            "id": "count",
+            "type": "number",
+            "initialValue": "1"
+          },
+          {
+            "id": "seed",
+            "type": "string",
+            "initialValue": "Hello World!"
+          },
+          {
+            "id": "format",
+            "type": "string",
+            "initialValue": "hex"
+          },
+          {
+            "id": "alpha",
+            "type": "number",
+            "initialValue": "1"
+          }
+        ]
+      },
+      {
+        "id": "setPropertyLuminosityViaString",
+        "scriptName": "setPropertyLuminosityViaString",
+        "highlight": false,
+        "params": [
+          {
+            "id": "luminosity",
+            "type": "string",
+            "initialValue": "random"
+          }
+        ]
+      },
+      {
+        "id": "setPropertyFormatViaString",
+        "scriptName": "setPropertyFormatViaString",
+        "highlight": false,
+        "params": [
+          {
+            "id": "format",
+            "type": "string",
+            "initialValue": "hex"
+          }
+        ]
+      }
+    ],
+    "expressions": []
+  },
+  "c3array": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "copyRandomColorsToC3Array",
+        "scriptName": "copyRandomColorsToC3Array",
+        "highlight": false,
+        "params": [
+          {
+            "id": "c3array",
+            "type": "object",
+            "allowedPluginIds": [
+              "Arr"
+            ]
+          }
+        ]
+      }
+    ],
+    "expressions": []
+  },
+  "c3 sprite": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "applyLastRandomColorToSprite",
+        "scriptName": "applyLastRandomColorToSprite",
+        "highlight": false,
+        "params": [
+          {
+            "id": "c3sprite",
+            "type": "object",
+            "allowedPluginIds": [
+              "Sprite"
+            ]
+          },
+          {
+            "id": "alpha",
+            "type": "boolean",
+            "initialValue": "true"
+          }
+        ]
+      },
+      {
+        "id": "applyRandomColorToSpriteFromArray",
+        "scriptName": "applyRandomColorToSpriteFromArray",
+        "highlight": false,
+        "params": [
+          {
+            "id": "c3sprite",
+            "type": "object",
+            "allowedPluginIds": [
+              "Sprite"
+            ]
+          },
+          {
+            "id": "alpha",
+            "type": "boolean",
+            "initialValue": "true"
+          },
+          {
+            "id": "index",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      }
+    ],
+    "expressions": []
+  },
+  "get properties": {
+    "conditions": [],
+    "actions": [],
+    "expressions": [
+      {
+        "id": "getPropertyHue",
+        "expressionName": "getPropertyHue",
+        "returnType": "any"
+      },
+      {
+        "id": "getPropertyLuminosity",
+        "expressionName": "getPropertyLuminosity",
+        "returnType": "any"
+      },
+      {
+        "id": "getPropertyCount",
+        "expressionName": "getPropertyCount",
+        "returnType": "number"
+      },
+      {
+        "id": "getPropertySeed",
+        "expressionName": "getPropertySeed",
+        "returnType": "any"
+      },
+      {
+        "id": "getPropertyFormat",
+        "expressionName": "getPropertyFormat",
+        "returnType": "any"
+      },
+      {
+        "id": "getPropertyAlpha",
+        "expressionName": "getPropertyAlpha",
+        "returnType": "number"
+      }
+    ]
+  }
+}

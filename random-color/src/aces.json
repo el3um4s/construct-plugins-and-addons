@@ -1,0 +1,91 @@
+{
+    "custom": {
+        "actions": [
+            {
+                "id": "set_properties",
+                "scriptName": "setRandomColorProperties",
+                "params": [
+                    {
+                        "id": "hue",
+                        "type": "string"
+                    },
+                    {
+                        "id": "luminosity",
+                        "type": "string"
+                    },
+                    {
+                        "id": "format",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "id": "set_properties_alpha",
+                "scriptName": "setRandomColorProperties_Alpha",
+                "params": [
+                    {
+                        "id": "alpha",
+                        "type": "number"
+                    }
+                ]
+            },
+            {
+                "id": "set_properties_seed",
+                "scriptName": "setRandomColorProperties_Seed",
+                "params": [
+                    {
+                        "id": "seed",
+                        "type": "any"
+                    }
+                ]
+            }
+        ],
+        "expressions": [
+            {
+                "id": "random_color",
+                "expressionName": "getRandomColor",
+                "scriptName": "getRandomColor",
+                "highlight": true,
+                "returnType": "any"
+			},
+            {
+                "id": "random_color_with_text_setting",
+                "expressionName": "getRandomColor_TextSetting",
+                "scriptName": "getRandomColor_TextSetting",
+                "highlight": false,
+                "returnType": "any",
+                "params": [
+                    {
+                        "id": "hue",
+                        "type": "string"
+                    },
+                    {
+                        "id": "luminosity",
+                        "type": "string"
+                    },
+                    {
+                        "id": "format",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "id": "random_color_with_seed",
+                "expressionName": "getRandomColor_Seed",
+                "scriptName": "getRandomColor_Seed",
+                "highlight": false,
+                "returnType": "any",
+                "params": [
+                    {
+                        "id": "seed",
+                        "type": "any"
+                    },
+                    {
+                        "id": "format",
+                        "type": "string"
+                    }
+                ]
+            }
+		]
+    }
+}

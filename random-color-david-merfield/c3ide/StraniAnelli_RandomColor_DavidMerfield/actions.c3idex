@@ -1,0 +1,777 @@
+@@START generaterandomcolor|one color
+@@ACE
+{
+	"id": "generateRandomColor",
+	"scriptName": "generateRandomColor",
+	"highlight": false
+}
+
+@@LANG
+"generateRandomColor": {
+	"list-name": "generateRandomColor",
+	"display-text": "Generate a random color",
+	"description": "Generate a random color"
+}
+
+@@CODE
+generateRandomColor()
+{
+	this.options.count = 1;
+	
+	let constantSeed = null;
+	
+	if (this.options.hasOwnProperty("seed") && !this.options.seed.replace(/\s/g, '').length) {
+		delete this.options.seed;
+	} else {
+		constantSeed = this.options.seed;
+	}
+	
+	const color = randomColor(this.options);
+	this.lastColor = color[0];
+	this.lastColorsArray = color;
+	
+	if (this.options.hasOwnProperty("seed")) {
+		this.options.seed = constantSeed;
+	}
+}
+
+@@END generaterandomcolor
+
+@@START generaterandomcolorarray|color array
+@@ACE
+{
+	"id": "generateRandomColorArray",
+	"scriptName": "generateRandomColorArray",
+	"highlight": true
+}
+
+@@LANG
+"generateRandomColorArray": {
+	"list-name": "generateRandomColorArray",
+	"display-text": "Generate an array of random colors",
+	"description": "Generate an array of random colors."
+}
+
+@@CODE
+generateRandomColorArray()
+{
+	this.options.count = this.options.count <= 1 ? 1 : this.options.count;
+	
+	let constantSeed = null;
+	
+	if (this.options.hasOwnProperty("seed") && !this.options.seed.replace(/\s/g, '').length) {
+		delete this.options.seed;
+	} else {
+		constantSeed = this.options.seed;
+	}
+	
+	const colors = randomColor(this.options);
+	
+	this.lastColor = colors[0];
+	this.lastColorsArray = colors;
+	
+	if (this.options.hasOwnProperty("seed")) {
+		this.options.seed = constantSeed;
+	}
+}
+
+@@END generaterandomcolorarray
+
+@@START setpropertyhue|set properties
+@@ACE
+{
+  "id": "setPropertyHue",
+  "scriptName": "setPropertyHue",
+  "highlight": false,
+  "params": [
+    {
+      "id": "prop",
+      "type": "string",
+      "initialValue": "random"
+    }
+  ]
+}
+
+@@LANG
+"setPropertyHue": {
+	"list-name": "setPropertyHue",
+	"display-text": "Set hue to {0}",
+	"description": "Set the hue of the generated color",
+	"params": {
+        "prop": {
+            "name": "Hue",
+            "desc": "Controls the hue of the generated color."
+        }
+    }
+}
+
+@@CODE
+setPropertyHue(prop)
+{
+	this.options.hue = prop;
+}
+
+@@END setpropertyhue
+
+@@START setpropertycount|set properties
+@@ACE
+{
+  "id": "setPropertyCount",
+  "scriptName": "setPropertyCount",
+  "highlight": false,
+  "params": [
+    {
+      "id": "prop",
+      "type": "number",
+      "initialValue": "1"
+    }
+  ]
+}
+
+@@LANG
+"setPropertyCount": {
+	"list-name": "setPropertyCount",
+	"display-text": "Set count to {0}",
+	"description": "Set the number of colors to generate.",
+	"params": {
+        "prop": {
+            "name": "Count",
+            "desc": "An integer which specifies the number of colors to generate."
+        }
+    }
+}
+
+@@CODE
+setPropertyCount(prop)
+{
+	this.options.count = prop;
+}
+
+@@END setpropertycount
+
+@@START setpropertyluminosity|set properties
+@@ACE
+{
+  "id": "setPropertyLuminosity",
+  "scriptName": "setPropertyLuminosity",
+  "highlight": false,
+  "params": [
+    {
+      "id": "prop",
+      "type": "combo",
+      "initialValue": "random",
+      "items": [
+        "random",
+        "bright",
+        "light",
+        "dark"
+      ]
+    }
+  ]
+}
+
+@@LANG
+"setPropertyLuminosity": {
+    "list-name": "setPropertyLuminosity",
+    "display-text": "Set luminosity to {0}",
+    "description": "Set the luminosity of the generated color",
+    "params": {
+      "prop": {
+        "name": "Luminosity",
+        "desc": "The luminosity of the generated color.",
+        "items": {
+          "random": "random",
+          "bright": "bright",
+          "light": "light",
+          "dark": "dark"
+        }
+      }
+    }
+  }
+
+@@CODE
+setPropertyLuminosity(prop)
+{
+	this.options.luminosity = getComboLuminosity(prop);
+}
+
+@@END setpropertyluminosity
+
+@@START setpropertyseed|set properties
+@@ACE
+{
+  "id": "setPropertySeed",
+  "scriptName": "setPropertySeed",
+  "highlight": false,
+  "params": [
+    {
+      "id": "prop",
+      "type": "string",
+      "initialValue": "Hello World!"
+    }
+  ]
+}
+
+@@LANG
+"setPropertySeed": {
+	"list-name": "setPropertySeed",
+	"display-text": "Set seed to {0}",
+	"description": "Set the seed of colors to generate.",
+	"params": {
+        "prop": {
+            "name": "Seed",
+            "desc": "A string which when passed will cause randomColor to return the same color each time."
+        }
+    }
+}
+
+@@CODE
+setPropertySeed(prop)
+{
+	this.options.seed = prop;
+}
+
+@@END setpropertyseed
+
+@@START setpropertyalpha|set properties
+@@ACE
+{
+  "id": "setPropertyAlpha",
+  "scriptName": "setPropertyAlpha",
+  "highlight": false,
+  "params": [
+    {
+      "id": "prop",
+      "type": "number",
+      "initialValue": "1"
+    }
+  ]
+}
+
+@@LANG
+"setPropertyAlpha": {
+	"list-name": "setPropertyAlpha",
+	"display-text": "Set alpha to {0}",
+	"description": "Set the alpha of color to generate",
+	"params": {
+        "prop": {
+            "name": "Alpha",
+            "desc": "A decimal between 0 and 1. Only relevant when using a format with an alpha channel (rgba and hsla)."
+        }
+    }
+}
+
+@@CODE
+setPropertyAlpha(prop)
+{
+	this.options.alpha = prop;
+}
+
+@@END setpropertyalpha
+
+@@START setpropertyformat|set properties
+@@ACE
+{
+  "id": "setPropertyFormat",
+  "scriptName": "setPropertyFormat",
+  "highlight": false,
+  "params": [
+    {
+      "id": "prop",
+      "type": "combo",
+      "initialValue": "hex",
+      "items": [
+        "rgb",
+        "rgba",
+        "rgbArray",
+        "hsl",
+        "hsla",
+        "hslArray",
+        "hex"
+      ]
+    }
+  ]
+}
+
+@@LANG
+"setPropertyFormat": {
+    "list-name": "setPropertyFormat",
+    "display-text": "Set format to {0}",
+    "description": "Set the format of the generated color",
+    "params": {
+      "prop": {
+        "name": "Format",
+        "desc": "The format of the generated color.",
+        "items": {
+          "rgb": "rgb",
+          "rgba": "rgba",
+          "rgbArray": "rgbArray",
+          "hsl": "hsl",
+          "hsla": "hsla",
+          "hslArray": "hslArray",
+          "hex": "hex"
+        }
+      }
+    }
+  }
+
+@@CODE
+setPropertyFormat(prop)
+{
+	this.options.format = getComboFormat(prop);
+	this.lastFormat = this.options.format;
+}
+
+@@END setpropertyformat
+
+@@START setallproperties|set properties
+@@ACE
+{
+  "id": "setAllProperties",
+  "scriptName": "setAllProperties",
+  "highlight": false,
+  "params": [
+    {
+      "id": "hue",
+      "type": "string",
+      "initialValue": "random"
+    },
+    {
+      "id": "luminosity",
+      "type": "combo",
+      "initialValue": "random",
+      "items": [
+        "random",
+        "bright",
+        "light",
+        "dark"
+      ]
+    },
+    {
+      "id": "count",
+      "type": "number",
+      "initialValue": "1"
+    },
+    {
+      "id": "seed",
+      "type": "string",
+      "initialValue": "Hello World!"
+    },
+    {
+      "id": "format",
+      "type": "combo",
+      "initialValue": "hex",
+      "items": [
+        "rgb",
+        "rgba",
+        "rgbArray",
+        "hsl",
+        "hsla",
+        "hslArray",
+        "hex"
+      ]
+    },
+    {
+      "id": "alpha",
+      "type": "number",
+      "initialValue": "1"
+    }
+  ]
+}
+
+@@LANG
+"setAllProperties": {
+    "list-name": "setAllProperties",
+    "display-text": "Set properties to hue = {0}, luminosity = {1}, count = {2}, seed = {3}, format = {4}, alpha = {5}",
+    "description": "Set all properties",
+    "params": {
+      "hue": {
+        "name": "Hue",
+        "desc": "Controls the hue of the generated color."
+      },
+      "luminosity": {
+        "name": "Luminosity",
+        "desc": "Controls the hue of the generated color.",
+        "items": {
+          "random": "random",
+          "bright": "bright",
+          "light": "light",
+          "dark": "dark"
+        }
+      },
+      "count": {
+        "name": "Count",
+        "desc": "An integer which specifies the number of colors to generate."
+      },
+      "seed": {
+        "name": "Seed",
+        "desc": "A string which when passed will cause randomColor to return the same color each time."
+      },
+      "format": {
+        "name": "Format",
+        "desc": "The format of the generated color.",
+        "items": {
+          "rgb": "rgb",
+          "rgba": "rgba",
+          "rgbArray": "rgbArray",
+          "hsl": "hsl",
+          "hsla": "hsla",
+          "hslArray": "hslArray",
+          "hex": "hex"
+        }
+      },
+      "alpha": {
+        "name": "Alpha",
+        "desc": "A decimal between 0 and 1. Only relevant when using a format with an alpha channel (rgba and hsla)."
+      }
+    }
+  }
+
+@@CODE
+setAllProperties(hue, luminosity, count, seed, format, alpha)
+{
+ 	this.options.hue = hue;
+ 	this.options.luminosity = getComboLuminosity(luminosity);
+ 	this.options.count = count;
+ 	this.options.seed = seed;
+ 	this.options.format = getComboFormat(format);
+ 	this.options.alpha = alpha;
+ 	
+ 	this.lastFormat = this.options.format;
+}
+
+@@END setallproperties
+
+@@START setallpropertiesviastring|set properties
+@@ACE
+{
+  "id": "setAllPropertiesViaString",
+  "scriptName": "setAllPropertiesViaString",
+  "highlight": false,
+  "params": [
+    {
+      "id": "hue",
+      "type": "string",
+      "initialValue": "random"
+    },
+    {
+      "id": "luminosity",
+      "type": "string",
+      "initialValue": "random"
+    },
+    {
+      "id": "count",
+      "type": "number",
+      "initialValue": "1"
+    },
+    {
+      "id": "seed",
+      "type": "string",
+      "initialValue": "Hello World!"
+    },
+    {
+      "id": "format",
+      "type": "string",
+      "initialValue": "hex"
+    },
+    {
+      "id": "alpha",
+      "type": "number",
+      "initialValue": "1"
+    }
+  ]
+}
+
+@@LANG
+"setAllPropertiesViaString": {
+    "list-name": "setAllPropertiesViaString",
+    "display-text": "Set properties to hue = {0}, luminosity = {1}, count = {2}, seed = {3}, format = {4}, alpha = {5}",
+    "description": "Set all properties via String",
+    "params": {
+      "hue": {
+        "name": "Hue",
+        "desc": "Controls the hue of the generated color."
+      },
+      "luminosity": {
+        "name": "Luminosity",
+        "desc": "Controls the hue of the generated color."
+      },
+      "count": {
+        "name": "Count",
+        "desc": "An integer which specifies the number of colors to generate."
+      },
+      "seed": {
+        "name": "Seed",
+        "desc": "A string which when passed will cause randomColor to return the same color each time."
+      },
+      "format": {
+        "name": "Format",
+        "desc": "The format of the generated color."
+      },
+      "alpha": {
+        "name": "Alpha",
+        "desc": "A decimal between 0 and 1. Only relevant when using a format with an alpha channel (rgba and hsla)."
+      }
+    }
+  }
+
+@@CODE
+setAllPropertiesViaString(hue, luminosity, count, seed, format, alpha)
+{
+ 	this.options.hue = hue;
+ 	this.options.luminosity = getComboLuminosity(luminosity);
+ 	this.options.count = count;
+ 	this.options.seed = seed;
+ 	this.options.format = getComboFormat(format);
+ 	this.options.alpha = alpha;
+}
+
+@@END setallpropertiesviastring
+
+@@START copyrandomcolorstoc3array|c3array
+@@ACE
+{
+  "id": "copyRandomColorsToC3Array",
+  "scriptName": "copyRandomColorsToC3Array",
+  "highlight": false,
+  "params": [
+    {
+      "id": "c3array",
+      "type": "object",
+      "allowedPluginIds": [
+        "Arr"
+      ]
+    }
+  ]
+}
+
+@@LANG
+"copyRandomColorsToC3Array": {
+	"list-name": "copyRandomColorsToC3Array",
+	"display-text": "Copy random colors to {0}",
+	"description": "Copy random colors to a C3Array",
+	"params": {
+        "c3array": {
+            "name": "c3array",
+            "desc": "A C3 Array"
+        }
+    }
+}
+
+@@CODE
+copyRandomColorsToC3Array(c3array)
+{
+	let arr = c3array.GetInstances()[0].GetSdkInstance();
+	const colors = this.lastColorsArray;
+	
+	arr.SetSize(colors.length, 1, 1);
+	
+	colors.forEach(function(currentValue, index) {
+    	arr.Set(index, 0, 0, currentValue.toString());
+	});
+}
+
+@@END copyrandomcolorstoc3array
+
+@@START applyrandomcolortosprite|c3 sprite
+@@ACE
+{
+  "id": "applyLastRandomColorToSprite",
+  "scriptName": "applyLastRandomColorToSprite",
+  "highlight": false,
+  "params": [
+    {
+      "id": "c3sprite",
+      "type": "object",
+      "allowedPluginIds": [
+        "Sprite"
+      ]
+    },
+    {
+      "id": "alpha",
+      "type": "boolean",
+      "initialValue": "true"
+    }
+  ]
+}
+
+@@LANG
+"applyLastRandomColorToSprite": {
+	"list-name": "applyLastRandomColorToSprite",
+	"display-text": "Apply last random color to {0} (alpha = {1})",
+	"description": "Apply last random color to a Sprite",
+	"params": {
+        "c3sprite": {
+            "name": "c3sprite",
+            "desc": "Sprite"
+        },
+        "alpha": {
+            "name": "alpha",
+            "desc": "Apply the alpha (opacity)"
+        }
+    }
+}
+
+@@CODE
+applyLastRandomColorToSprite(c3sprite, alpha)
+{
+
+	//let spr = c3sprite.GetInstances()[0].GetSdkInstance();
+	let spr = c3sprite.GetFirstPicked().GetSdkInstance();
+	
+    const c3color = convertColorToC3Color(this.lastFormat, this.lastColor);
+    const worldInfo = spr.GetWorldInfo();
+   	worldInfo.GetUnpremultipliedColor().equalsIgnoringAlpha(c3color) || ( worldInfo.SetUnpremultipliedColor(c3color), spr._runtime.UpdateRender() );
+   	
+   	if (!!alpha) {
+	    worldInfo.GetUnpremultipliedColor().getA() == c3color.getA() || ( worldInfo.SetOpacity(c3color.getA()), spr._runtime.UpdateRender() );
+    } 
+}
+
+@@END applyrandomcolortosprite
+
+@@START applyrandomcolortospritefromarray|c3 sprite
+@@ACE
+{
+  "id": "applyRandomColorToSpriteFromArray",
+  "scriptName": "applyRandomColorToSpriteFromArray",
+  "highlight": false,
+  "params": [
+    {
+      "id": "c3sprite",
+      "type": "object",
+      "allowedPluginIds": [
+        "Sprite"
+      ]
+    },
+    {
+      "id": "alpha",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "id": "index",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ]
+}
+
+@@LANG
+"applyRandomColorToSpriteFromArray": {
+    "list-name": "applyRandomColorToSpriteFromArray",
+    "display-text": "Apply color to {0} (Alpha = {1}) from index {2} (last array)",
+    "description": "Apply random color to sprite from last array of random colors.",
+    "params": {
+      "c3sprite": {
+        "name": "c3sprite",
+        "desc": "Sprite"
+      },
+      "alpha": {
+        "name": "alpha",
+        "desc": "Apply the alpha (opacity)"
+      },
+      "index": {
+            "name": "Index",
+            "desc": "Index Array"
+        }
+    }
+  }
+
+@@CODE
+applyRandomColorToSpriteFromArray(c3sprite, alpha, index)
+{
+	let i = index;
+	
+	if (i >= this.lastColorsArray.length) { i = this.lastColorsArray.length-1;}
+	if (i < 0 ) { i = 0;}
+
+	//let spr = c3sprite.GetInstances()[0].GetSdkInstance();
+	let spr = c3sprite.GetFirstPicked().GetSdkInstance();
+	
+    const c3color = convertColorToC3Color(this.lastFormat, this.lastColorsArray[i]);
+    const worldInfo = spr.GetWorldInfo();
+   	worldInfo.GetUnpremultipliedColor().equalsIgnoringAlpha(c3color) || ( worldInfo.SetUnpremultipliedColor(c3color), spr._runtime.UpdateRender() );
+   	
+   	if (!!alpha) {
+	    worldInfo.GetUnpremultipliedColor().getA() == c3color.getA() || ( worldInfo.SetOpacity(c3color.getA()), spr._runtime.UpdateRender() );
+	}
+}
+
+@@END applyrandomcolortospritefromarray
+
+@@START setpropertyluminosityviastring|set properties
+@@ACE
+{
+  "id": "setPropertyLuminosityViaString",
+  "scriptName": "setPropertyLuminosityViaString",
+  "highlight": false,
+  "params": [
+    {
+      "id": "luminosity",
+      "type": "string",
+      "initialValue": "random"
+    }
+  ]
+}
+
+@@LANG
+"setPropertyLuminosityViaString": {
+	"list-name": "setPropertyLuminosityViaString",
+	"display-text": "Set the luminosity to {0}",
+	"description": "Set the luminosity of the generated color.",
+	"params": {
+        "luminosity": {
+            "name": "Luminosity",
+            "desc": "The luminosity of the generated color (random, bright, light, dark)."
+        }
+    }
+}
+
+
+@@CODE
+setPropertyLuminosityViaString(luminosity)
+{
+	this.options.luminosity = luminosity.toLowerCase();
+}
+
+@@END setpropertyluminosityviastring
+
+@@START setpropertyformatviastring|set properties
+@@ACE
+{
+  "id": "setPropertyFormatViaString",
+  "scriptName": "setPropertyFormatViaString",
+  "highlight": false,
+  "params": [
+    {
+      "id": "format",
+      "type": "string",
+      "initialValue": "hex"
+    }
+  ]
+}
+
+@@LANG
+"setPropertyFormatViaString": {
+	"list-name": "setPropertyFormatViaString",
+	"display-text": "Set the format to {0}",
+	"description": "Set the format of the generated color.",
+	"params": {
+        "format": {
+            "name": "Format",
+            "desc": "The luminosity of the generated color (rgb, rgba, rgbArray, hsl, hsla, hslArray, hex)."
+        }
+    }
+}
+
+
+@@CODE
+setPropertyFormatViaString(format)
+{
+	this.options.format = format;
+	this.lastFormat = this.options.format;
+}
+
+@@END setpropertyformatviastring
+

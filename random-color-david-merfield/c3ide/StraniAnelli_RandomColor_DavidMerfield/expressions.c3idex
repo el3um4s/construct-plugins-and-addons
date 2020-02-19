@@ -1,0 +1,321 @@
+@@START getrandomcolor|one color
+@@ACE
+{
+	"id": "getRandomColor",
+	"expressionName": "getRandomColor",
+	"returnType": "any"
+}
+
+@@LANG
+"getRandomColor": { 
+	"translated-name": "getRandomColor",
+	"description": "Returns a code for an attractive color"
+}
+
+@@CODE
+getRandomColor()
+{
+	this.options.count = 1;
+	
+	let constantSeed = null;
+	
+	if (this.options.hasOwnProperty("seed") && !this.options.seed.replace(/\s/g, '').length) {
+		delete this.options.seed;
+	}  else {
+		constantSeed = this.options.seed;
+	}
+	
+	const color = randomColor(this.options);
+	this.lastColor = color[0];
+	this.lastColorsArray = color;
+	
+	this.lastFormat = this.options.format;
+	
+	if (this.options.hasOwnProperty("seed")) {
+		this.options.seed = constantSeed;
+	}
+	
+	return color[0];
+}
+
+@@END getrandomcolor
+
+@@START getlastcolor|one color
+@@ACE
+{
+	"id": "getLastColor",
+	"expressionName": "getLastColor",
+	"returnType": "any"
+}
+
+@@LANG
+"getLastColor": { 
+	"translated-name": "getLastColor",
+	"description": "Get the last random color."
+}
+
+@@CODE
+getLastColor()
+{	
+	const color = this.lastColor;
+	return color;
+}
+
+@@END getlastcolor
+
+@@START getrandomcolorarray|color array
+@@ACE
+{
+	"id": "getRandomColorArray",
+	"expressionName": "getRandomColorArray",
+	"returnType": "any"
+}
+
+@@LANG
+"getRandomColorArray": { 
+	"translated-name": "getRandomColorArray",
+	"description": "Get an array of random colors (as String)."
+}
+
+@@CODE
+getRandomColorArray()
+{
+	this.options.count = this.options.count <= 1 ? 1 : this.options.count;
+	
+	let constantSeed = null;
+	
+	if (this.options.hasOwnProperty("seed") && !this.options.seed.replace(/\s/g, '').length) {
+		delete this.options.seed;
+	} else {
+		constantSeed = this.options.seed;
+	}
+	
+	const colors = randomColor(this.options);
+	this.lastColor = colors[0];
+	this.lastColorsArray = colors;
+	
+	this.lastFormat = this.options.format;
+	
+	if (this.options.hasOwnProperty("seed")) {
+		this.options.seed = constantSeed;
+	}
+	
+	return colors.toString();
+}
+
+@@END getrandomcolorarray
+
+@@START getlastrandomcolorarray|color array
+@@ACE
+{
+	"id": "getLastRandomColorArray",
+	"expressionName": "getLastRandomColorArray",
+	"returnType": "any"
+}
+
+@@LANG
+"getLastRandomColorArray": { 
+	"translated-name": "getLastRandomColorArray",
+	"description": "Get the last array of random colors (as String)."
+}
+
+@@CODE
+getLastRandomColorArray()
+{
+	const colors = this.lastColorsArray;
+	return colors.toString();
+}
+
+@@END getlastrandomcolorarray
+
+@@START getcolorfromlastarray|color array
+@@ACE
+{
+  "id": "getColorFromLastArray",
+  "expressionName": "getColorFromLastArray",
+  "returnType": "any",
+  "params": [
+    {
+      "id": "index",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ]
+}
+
+@@LANG
+"getColorFromLastArray": { 
+	"translated-name": "getColorFromLastArray",
+	"description": "Get a color from last array of random colors.",
+	"params": {
+        "index": {
+            "name": "Index",
+            "desc": "Index"
+        }
+    }
+}
+
+@@CODE
+getColorFromLastArray(index)
+{
+	const colors = this.lastColorsArray;
+	return colors[index];
+}
+
+@@END getcolorfromlastarray
+
+@@START getlengtharrayrandomcolor|color array
+@@ACE
+{
+	"id": "getLengthArrayRandomColor",
+	"expressionName": "getLengthArrayRandomColor",
+	"returnType": "any"
+}
+
+@@LANG
+"getLengthArrayRandomColor": { 
+	"translated-name": "getLengthArrayRandomColor",
+	"description": "Get the length of array of random color"
+}
+
+@@CODE
+getLengthArrayRandomColor()
+{
+	const colors = this.lastColorsArray;
+	return colors.length;
+}
+
+@@END getlengtharrayrandomcolor
+
+@@START getpropertyhue|get properties
+@@ACE
+{
+	"id": "getPropertyHue",
+	"expressionName": "getPropertyHue",
+	"returnType": "any"
+}
+
+@@LANG
+"getPropertyHue": { 
+	"translated-name": "getPropertyHue",
+	"description": "Get the Hue (property)"
+}
+
+@@CODE
+getPropertyHue()
+{
+	return this.options.hue;
+}
+
+@@END getpropertyhue
+
+@@START getpropertyluminosity|get properties
+@@ACE
+{
+	"id": "getPropertyLuminosity",
+	"expressionName": "getPropertyLuminosity",
+	"returnType": "any"
+}
+
+@@LANG
+"getPropertyLuminosity": { 
+	"translated-name": "getPropertyLuminosity",
+	"description": "Get the Luminosity (property)"
+}
+
+@@CODE
+getPropertyLuminosity()
+{
+	return this.options.luminosity;
+}
+
+@@END getpropertyluminosity
+
+@@START getpropertycount|get properties
+@@ACE
+{
+	"id": "getPropertyCount",
+	"expressionName": "getPropertyCount",
+	"returnType": "number"
+}
+
+@@LANG
+"getPropertyCount": { 
+	"translated-name": "getPropertyCount",
+	"description": "Get the Count (property)"
+}
+
+@@CODE
+getPropertyCount()
+{
+	return this.options.count;
+}
+
+@@END getpropertycount
+
+@@START getpropertyseed|get properties
+@@ACE
+{
+	"id": "getPropertySeed",
+	"expressionName": "getPropertySeed",
+	"returnType": "any"
+}
+
+@@LANG
+"getPropertySeed": { 
+	"translated-name": "getPropertySeed",
+	"description": "Get the Seed (property)"
+}
+
+@@CODE
+getPropertySeed()
+{
+	return this.options.seed;
+}
+
+@@END getpropertyseed
+
+@@START getpropertyformat|get properties
+@@ACE
+{
+	"id": "getPropertyFormat",
+	"expressionName": "getPropertyFormat",
+	"returnType": "any"
+}
+
+@@LANG
+"getPropertyFormat": { 
+	"translated-name": "getPropertyFormat",
+	"description": "Get the Hue (property)"
+}
+
+@@CODE
+getPropertyFormat()
+{
+	return this.options.format;
+}
+
+@@END getpropertyformat
+
+@@START getpropertyalpha|get properties
+@@ACE
+{
+	"id": "getPropertyAlpha",
+	"expressionName": "getPropertyAlpha",
+	"returnType": "number"
+}
+
+@@LANG
+"getPropertyAlpha": { 
+	"translated-name": "getPropertyAlpha",
+	"description": "Get the Alpha (property)"
+}
+
+@@CODE
+getPropertyAlpha()
+{
+	return this.options.alpha;
+}
+
+@@END getpropertyalpha
+

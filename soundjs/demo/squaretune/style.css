@@ -1,0 +1,19 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	
+	background: #ffffff;
+	color: white;
+}
+
+html, body, canvas {
+	touch-action: none;
+	touch-action-delay: none;
+}
+
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('fonts/opensans-regular.ttf') format('truetype');
+}
+

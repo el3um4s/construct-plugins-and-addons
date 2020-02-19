@@ -1,0 +1,279 @@
+﻿{
+	"main": {
+		"conditions": [
+			{
+				"id": "is-animate",
+				"scriptName": "IsAnimate",
+				"highlight": false
+			},
+			{
+				"id": "is-compose-lighter",
+				"scriptName": "IsComposeLighter",
+				"highlight": false
+			}
+		],
+		"actions": [
+			{ "id": "reset-property",
+				"scriptName": "resetProperty",
+				"highlight": false
+			},
+			{ "id": "redraw-background",
+				"scriptName": "redrawBackground",
+				"highlight": false
+			}
+		],
+		"expressions": []
+	},
+	"setproperty": {
+		"actions": [
+			{	"id": "change-style-background",
+				"scriptName": "changeStyleBackground",
+				"highlight": false,
+				"params": [
+						{	"id": "set-style",
+							"type": "combo",
+							"initialValue": "bubbly",
+							"items": ["solid","gradient","bubbly"]
+						}
+					]
+			},
+			{	"id": "change-preset-bubbly",
+				"scriptName": "changePresetBubbly",
+				"highlight": false,
+				"params": [
+					{	"id": "set-preset",
+						"type": "combo",
+						"initialValue": "blueWithWhiteBubbles",
+						"items": ["custom",
+										"blueWithWhiteBubbles",
+										"blackRedWithRedBubbles",
+										"purpleWithMulticoloredBubbles",
+										"yellowPinkWithRedOrangeYellowBubbles"]
+					}
+				]
+			},
+			{ "id": "set-animate",
+				"scriptName": "setAnimate",
+				"highlight": false,
+				"params": [
+					{	"id": "animate",
+						"type": "combo",
+						"initialValue": "animate",
+						"items": [ "notAnimate", "animate"	]
+					}
+				]
+			},
+			{ "id": "set-compose",
+				"scriptName": "setCompose",
+				"highlight": false,
+				"params": [
+					{	"id": "compose",
+						"type": "combo",
+						"initialValue": "lighter",
+						"items": [ "sourceOver", "lighter"	]
+					}
+				]
+			},
+			{ "id": "set-blur",
+				"scriptName": "setBlur",
+				"highlight": false,
+				"params": [
+					{	"id": "number",
+						"type": "number",
+						"initialValue": 4
+					}
+				]
+			},
+			{ "id": "set-bubbles",
+				"scriptName": "setBubbles",
+				"highlight": false,
+				"params": [
+					{	"id": "string",
+						"type": "string",
+						"initialValue": "\"Math.floor((canvas.width + canvas.height) * 0.02)\""
+					}
+				]
+			},
+			{ "id": "set-bubble-func",
+				"scriptName": "setBubbleFunc",
+				"highlight": false,
+				"params": [
+					{	"id": "string",
+						"type": "string",
+						"initialValue": "\"() => `hsla(0, 0%, 100%, ${r() * 0.1})`\""
+					}
+				]
+			},
+			{ "id": "set-angle-func",
+				"scriptName": "setAngleFunc",
+				"highlight": false,
+				"params": [
+					{	"id": "string",
+						"type": "string",
+						"initialValue": "\"() => Math.random() * Math.PI * 2\""
+					}
+				]
+			},
+			{ "id": "set-velocity-func",
+				"scriptName": "setVelocityFunc",
+				"highlight": false,
+				"params": [
+					{	"id": "string",
+						"type": "string",
+						"initialValue": "\"() => 0.1 + Math.random() * 0.5\""
+					}
+				]
+			},
+			{ "id": "set-radius-func",
+				"scriptName": "setRadiusFunc",
+				"highlight": false,
+				"params": [
+					{	"id": "string",
+						"type": "string",
+						"initialValue": "\"() => 4 + Math.random() * canvas.width / 25\""
+					}
+				]
+			},
+			{ "id": "set-color-start",
+				"scriptName": "setColorStart",
+				"highlight": false,
+				"params": [
+					{	"id": "string",
+						"type": "string",
+						"initialValue": "\"#2AE\""
+					}
+				]
+			},
+			{ "id": "set-color-stop",
+				"scriptName": "setColorStop",
+				"highlight": false,
+				"params": [
+					{	"id": "string",
+						"type": "string",
+						"initialValue": "\"#17B\""
+					}
+				]
+			},
+			{ "id": "set-color-shadow",
+				"scriptName": "setColorShadow",
+				"highlight": false,
+				"params": [
+					{	"id": "string",
+						"type": "string",
+						"initialValue": "\"#FFF\""
+					}
+				]
+			}
+		]
+	},
+	"getproperty": {
+		"expressions": [
+			{	"id": "get-style-background",
+				"expressionName": "getStyleBackground",
+				"scriptName": "getStyleBackground",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-preset-bubbly",
+				"expressionName": "getPresetBubbly",
+				"scriptName": "getPresetBubbly",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-blur",
+				"expressionName": "getBlur",
+				"scriptName": "getBlur",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{	"id": "is-animate",
+				"expressionName": "isAnimate",
+				"scriptName": "isAnimate",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{	"id": "get-compose",
+				"expressionName": "getCompose",
+				"scriptName": "getCompose",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-bubbles",
+				"expressionName": "getBubbles",
+				"scriptName": "getBubbles",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-bubble-func",
+				"expressionName": "getBubbleFunc",
+				"scriptName": "getBubbleFunc",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-angle-func",
+				"expressionName": "getAngleFunc",
+				"scriptName": "getAngleFunc",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-velocity-func",
+				"expressionName": "getVelocityFunc",
+				"scriptName": "getVelocityFunc",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-radius-func",
+				"expressionName": "getRadiusFunc",
+				"scriptName": "getRadiusFunc",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-color-start",
+				"expressionName": "getColorStart",
+				"scriptName": "getColorStart",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-color-stop",
+				"expressionName": "getColorStop",
+				"scriptName": "getColorStop",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-color-shadow",
+				"expressionName": "getColorShadow",
+				"scriptName": "getColorShadow",
+				"highlight": false,
+				"returnType": "string"
+			}
+		]
+	},
+	"json": {
+		"expressions": [
+			{	"id": "get-as-json",
+				"expressionName": "getAsJSON",
+				"scriptName": "getAsJSON",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{	"id": "get-as-string-json",
+				"expressionName": "getAsStringJSON",
+				"scriptName": "getAsStringJSON",
+				"highlight": false,
+				"returnType": "string"
+			}
+		],
+		"actions": [
+			{ "id": "load-from-json",
+				"scriptName": "loadBackgroundFromJSON",
+				"highlight": false,
+				"params": [
+					{	"id": "string",
+						"type": "string",
+						"initialValue": "\"{}\""
+					}
+				]
+			}
+		]
+	}
+}

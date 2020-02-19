@@ -1,0 +1,75 @@
+html {
+	overflow-y: auto;
+	overflow-x: auto;
+}
+
+html, body, canvas {
+	touch-action: manipulation;
+}
+
+/*
+@media screen and (max-width: 350px) {
+  #tag-made-with-love-and-c3 {
+    display:none;
+  }
+}*/
+
+.center {
+	text-align: center;
+}
+
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.rightTab {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.input-field {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+.userRatings, input[type="checkbox"] {
+  float: left;
+  margin-right: 5px;
+}
+/*
+@media screen and (max-width: 833px) {
+  .input-field {
+    width: 80%;
+  }
+  select {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+  .rightTab {
+    width: 80%;
+    float: left;
+  }
+  .input-field {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+}*/
