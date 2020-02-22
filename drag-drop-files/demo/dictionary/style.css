@@ -3,7 +3,7 @@ html, body {
 	margin: 0;
 	overflow: hidden;
 	
-	background: #3f51b5;
+	background: #1b343b;
 	color: white;
 }
 
@@ -36,4 +36,9 @@ html, body, canvas {
 	color: #888;
 }
 
+
+@font-face {
+	font-family: 'orbitron-regular';
+	src: url('fonts/orbitron-regular.ttf') format('truetype');
+}
 

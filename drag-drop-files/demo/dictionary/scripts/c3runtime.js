@@ -1204,13 +1204,17 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.SVGPicture,
 		C3.Behaviors.Tween,
 		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.StraniAnelli_DragAndDropFiles.Acts.SetAppaerance,
+		C3.Plugins.StraniAnelli_DragAndDropFiles.Acts.SetFontFace,
+		C3.Plugins.StraniAnelli_DragAndDropFiles.Acts.SetTooltip,
 		C3.Plugins.StraniAnelli_DragAndDropFiles.Acts.SetCssStyle,
-		C3.ScriptsInEvents.EventSheet1_Event1_Act5,
+		C3.ScriptsInEvents.EventSheet1_Event1_Act6,
+		C3.Plugins.TextBox.Acts.SetText,
+		C3.Plugins.List.Acts.AddItem,
 		C3.Plugins.StraniAnelli_DragAndDropFiles.Cnds.OnDrop,
 		C3.Plugins.StraniAnelli_DragAndDropFiles.Cnds.HasFileSelected,
 		C3.Plugins.Dictionary.Acts.Clear,
 		C3.Plugins.List.Acts.Clear,
-		C3.Plugins.TextBox.Acts.SetText,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.StraniAnelli_DragAndDropFiles.Exps.FileNameAt,
 		C3.Plugins.AJAX.Acts.Request,
@@ -1218,7 +1222,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.WaitForPreviousActions,
 		C3.Plugins.Dictionary.Acts.JSONLoad,
 		C3.Plugins.AJAX.Exps.LastData,
-		C3.Plugins.List.Acts.AddItem,
 		C3.Plugins.Dictionary.Cnds.ForEachKey,
 		C3.Plugins.Dictionary.Exps.CurrentKey,
 		C3.Plugins.List.Cnds.OnSelectionChanged,
@@ -1351,14 +1354,17 @@ self.C3_JsPropNameTable = [
 	}
 
 	self.C3_ExpressionFuncs = [
-		() => "color",
-		() => "#FFEB3B",
-		() => "border-color",
-		() => "background-color",
-		() => "transparent",
+		() => "#1B343B",
+		() => "#FF9800",
+		() => "4px dashed #FF9800",
+		() => "Orbitron-Regular",
+		() => "Drag & Drop files here",
+		() => "box-sizing",
+		() => "border-box",
 		() => "text-transform",
 		() => "uppercase",
 		() => "",
+		() => "Select the word",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (("Dictionary: [b]" + n0.ExpObject(0)) + "[/b]");
@@ -1371,7 +1377,6 @@ self.C3_JsPropNameTable = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
 		},
-		() => "Select the word",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
@@ -1400,31 +1405,35 @@ self.C3_JsPropNameTable = [
 {
 	const scriptsInEvents = {
 
-		async EventSheet1_Event1_Act5(runtime, localVars)
+		async EventSheet1_Event1_Act6(runtime, localVars)
 		{
 			let word_to_translate = document.getElementById("word-to-translate");
-			
-			word_to_translate.style.backgroundColor = "#3F51B5";
-			word_to_translate.style.color = "#FFEB3B";
+			word_to_translate.style.backgroundColor = "#1B343B";
+			word_to_translate.style.fontFamily = "Orbitron-Regular";
+			word_to_translate.style.color = "#FF9800";
 			word_to_translate.style.border = "none"
-			word_to_translate.style.borderBottom = "4px dashed #FFEB3B"
+			word_to_translate.style.borderBottom = "4px dashed #FF9800"
 			word_to_translate.style.borderRadius = "0";
 			
+			
 			let word_translated = document.getElementById("word-translated");
+			word_translated.style.fontFamily = "Orbitron-Regular";
 			word_translated.style.backgroundColor = "transparent";
 			word_translated.style.color = "#FF9800";
 			word_translated.style.border = 'none';
 			word_translated.style.borderBottom = '1px solid';
-			
+			word_translated.style.borderRadius = "0";
+			word_translated.style.paddingLeft = "16px";
 		},
 
 		async EventSheet1_Event8_Act2(runtime, localVars)
 		{
 			let word_translated = document.getElementById("word-translated");
-			word_translated.style.backgroundColor = "#FF9800";
-			word_translated.style.color = "#3F51B5";
+			word_translated.style.backgroundColor = "#11616A";
+			word_translated.style.color = "#FF9800";
 			word_translated.style.border = 'none';
-			word_translated.style.borderBottom = '1px solid';
+			word_translated.style.border = '4px dashed';
+			word_translated.style.borderRadius = "16px 0";
 		},
 
 		async EventSheet1_Event9_Act2(runtime, localVars)
@@ -1434,7 +1443,7 @@ self.C3_JsPropNameTable = [
 			word_translated.style.color = "#FF9800";
 			word_translated.style.border = 'none';
 			word_translated.style.borderBottom = '1px solid';
-			
+			word_translated.style.borderRadius = "0";
 		}
 
 	};
