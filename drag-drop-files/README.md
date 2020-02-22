@@ -7,12 +7,14 @@
 - [C3Addon](download/current/drag-drop-files.c3addon)
 - Demo:
   - [drag-drop-files](download/demo/drag-drop-files.c3p)
+  - [dictionary](download/demo/dictionary.c3p) (with a [demo json file](download/demo/dictionary-from-it-to-fr.json))
 
 ### Link
 
 - Link to [c3addon](https://www.construct.net/en/make-games/addons/316/drag-drop-files)
 - Demo:
   - [drag-drop-files](https://c3plugins.stranianelli.com/drag-drop-files/demo/drag-drop-files/)
+  - [dictionary](https://c3plugins.stranianelli.com/drag-drop-files/demo/dictionary/)
 
 
 ### Short Description
