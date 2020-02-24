@@ -1,0 +1,16 @@
+@@METADATA
+Id|3edb6719-01d3-48df-b5f3-ee012addb56a
+Name|Custom INDEX.HTML
+Class|CustomINDEX
+Company|StraniAnelli
+Author|StraniAnelli
+MajorVersion|1
+MinorVersion|0
+RevisionVersion|0
+BuildVersion|0
+Description|Add custom html code in index.html (head, before body, before canvas, after canvas, after body)
+Category|web
+Type|SingleGlobalPlugin
+CreateDate|24/02/2020 10:12:08
+DateModified|24/02/2020 19:37:50
+AddonId|StraniAnelli_CustomINDEX

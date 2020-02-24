@@ -1,0 +1,32 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for Custom INDEX.HTML Plugin",
+  "text": {
+    "plugins": {
+      "stranianelli_customindex": {
+        "name": "Custom INDEX.HTML",
+        "description": "Add custom html code in index.html (head, before body, before canvas, after canvas, after body)",
+        "help-url": "https://github.com/armandoalonso/c3IDE",
+        "properties": {},
+        "aceCategories": {
+          "configure": "Configure"
+        },
+        "conditions": {},
+        "actions": {
+          "configure": {
+            "list-name": "Configure",
+            "display-text": "Configure with {0}",
+            "description": "Configure INDEX.HTML",
+            "params": {
+              "config": {
+                "name": "Config",
+                "desc": "Config file"
+              }
+            }
+          }
+        },
+        "expressions": {}
+      }
+    }
+  }
+}
