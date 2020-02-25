@@ -2,13 +2,13 @@
 {
   "is-c3-addon": true,
   "type": "plugin",
-  "name": "Custom INDEX.HTML",
-  "id": "StraniAnelli_CustomINDEX",
-  "version": "1.0.0.0",
+  "name": "Custom HEAD (WEB)",
+  "id": "StraniAnelli_CustomHEAD_WEB",
+  "version": "20.2.24.1",
   "author": "StraniAnelli",
   "website": "https://www.construct.net",
   "documentation": "https://www.construct.net",
-  "description": "Add custom html code in index.html (head, before body, before canvas, after canvas, after body)",
+  "description": "Add custom html code in index.html's head (for meta elements, script links, stylesheets etc)",
   "editor-scripts": [
     "plugin.js",
     "type.js",
@@ -36,11 +36,11 @@
 "use strict";
 {
 
-	const PLUGIN_ID = "StraniAnelli_CustomINDEX";	
-	const PLUGIN_VERSION = "1.0.0.0";
+	const PLUGIN_ID = "StraniAnelli_CustomHEAD_WEB";	
+	const PLUGIN_VERSION = "20.2.24.1";
 	const PLUGIN_CATEGORY = "web";
 	
-	const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_CustomINDEX = class CustomINDEXPlugin extends SDK.IPluginBase
+	const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_CustomHEAD_WEB = class CustomINDEXPlugin extends SDK.IPluginBase
 	{
 		constructor()
 		{
@@ -74,7 +74,7 @@
 @@START PLUGIN_RUN.JS
 "use strict";
 {
-	C3.Plugins.StraniAnelli_CustomINDEX = class CustomINDEXPlugin extends C3.SDKPluginBase
+	C3.Plugins.StraniAnelli_CustomHEAD_WEB = class CustomINDEXPlugin extends C3.SDKPluginBase
 	{
 		constructor(opts)
 		{
@@ -92,7 +92,7 @@
 @@START TYPE_EDIT.JS
 "use strict";
 {
-	const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_CustomINDEX;
+	const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_CustomHEAD_WEB;
 	
 	PLUGIN_CLASS.Type = class CustomINDEXType extends SDK.ITypeBase
 	{
@@ -107,7 +107,7 @@
 @@START TYPE_RUN.JS
 "use strict";
 {
-	C3.Plugins.StraniAnelli_CustomINDEX.Type = class CustomINDEXType extends C3.SDKTypeBase
+	C3.Plugins.StraniAnelli_CustomHEAD_WEB.Type = class CustomINDEXType extends C3.SDKTypeBase
 	{
 		constructor(objectClass)
 		{
@@ -129,7 +129,7 @@
 @@START INSTANCE_EDIT.JS
 "use strict";
 {
-	const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_CustomINDEX;
+	const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_CustomHEAD_WEB;
 	
 	PLUGIN_CLASS.Instance = class CustomINDEXInstance extends SDK.IInstanceBase
 	{
@@ -161,45 +161,56 @@
 @@START INSTANCE_RUN.JS
 "use strict";
 {
-	C3.Plugins.StraniAnelli_CustomINDEX.Instance = class CustomINDEXInstance extends C3.SDKInstanceBase
-	{
-		constructor(inst, properties)
-		{
-			super(inst);
-			
-			
-			if (properties)
-			{
-			}
-		}
-		
-		Release()
-		{
-			super.Release();
-		}
-		
-		SaveToJson()
-		{
-			return {
-				// data to be saved for savegames
-			};
-		}
-		
-		LoadFromJson(o)
-		{
-			// load state for savegames
-		}
+    C3.Plugins.StraniAnelli_CustomHEAD_WEB.Instance = class CustomINDEXInstance extends C3.SDKInstanceBase
+    {
+        constructor(inst, properties)
+        {
+            super(inst);
+
+
+            if (properties)
+            {}
+        }
+
+        Release()
+        {
+            super.Release();
+        }
+
+        SaveToJson()
+        {
+            return {
+                // data to be saved for savegames
+            };
+        }
+
+        LoadFromJson(o)
+        {
+            // load state for savegames
+        }
 
         GetDebuggerProperties()
-		{
-			return [{
-				title: "CustomINDEX",
-				properties: [
-					//{name: ".current-animation",	value: this._currentAnimation.GetName(),	onedit: v => this.CallAction(Acts.SetAnim, v, 0) },
-				]
-			}];
-		}
-	};
+        {
+            return [
+            {
+                title: "CustomINDEX",
+                properties: [
+                    //{name: ".current-animation",	value: this._currentAnimation.GetName(),	onedit: v => this.CallAction(Acts.SetAnim, v, 0) },
+                ]
+            }];
+        }
+        
+//        GetStringHTMLFromObject(tag, obj) {
+//        	let stringHTML = `<${tag} `;
+//        	Object.entries(obj).forEach(([key, value]) => {
+//    			stringHTML += ` ${key}="${value}" `;
+//    		})
+//    		stringHTML += ` />`;
+//    		return stringHTML;
+//        }
+        
+//        InsertBeforeEndHead(stringHtml) { document.head.insertAdjacentHTML('beforeend', stringHtml); }
+    };
 }
 @@END INSTANCE_RUN.JS
 

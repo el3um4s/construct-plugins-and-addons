@@ -1,6 +1,6 @@
 "use strict";
 {
-    C3.Plugins.StraniAnelli_CustomINDEX.Type = class CustomINDEXType extends C3.SDKTypeBase
+    C3.Plugins.StraniAnelli_CustomHEAD_WEB.Type = class CustomINDEXType extends C3.SDKTypeBase
     {
         constructor(objectClass)
         {

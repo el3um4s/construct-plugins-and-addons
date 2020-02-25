@@ -1,13 +1,13 @@
 {
   "is-c3-addon": true,
   "type": "plugin",
-  "name": "Custom INDEX.HTML",
-  "id": "StraniAnelli_CustomINDEX",
-  "version": "1.0.0.0",
+  "name": "Custom HEAD (WEB)",
+  "id": "StraniAnelli_CustomHEAD_WEB",
+  "version": "20.2.24.1",
   "author": "StraniAnelli",
   "website": "https://www.construct.net",
   "documentation": "https://www.construct.net",
-  "description": "Add custom html code in index.html (head, before body, before canvas, after canvas, after body)",
+  "description": "Add custom html code in index.html's head (for meta elements, script links, stylesheets etc)",
   "editor-scripts": [
     "plugin.js",
     "type.js",

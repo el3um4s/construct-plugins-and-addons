@@ -1,0 +1,57 @@
+@@START configure|configure
+@@ACE
+{
+  "id": "configure",
+  "scriptName": "Configure",
+  "highlight": true,
+  "isAsync": true,
+  "params": [
+    {
+      "id": "config",
+      "type": "string",
+      "initialValue": "\"config.json\""
+    }
+  ]
+}
+@@LANG
+"configure": {
+	"list-name": "Configure",
+	"display-text": "Configure with {0}",
+	"description": "Configure INDEX.HTML",
+	"params": {
+        "config": {
+            "name": "Config",
+            "desc": "Config file"
+        }
+    }
+}
+@@CODE
+async Configure(config)
+{
+    const fileURL = await this._runtime.GetAssetManager().LoadProjectFileUrl(config);
+    const response = await fetch(fileURL);
+    const configJSON = await response.json();
+
+    //console.log(configJSON);
+    Object.entries(configJSON).forEach(([tag, value]) => {
+        //console.log(key);
+        //value.forEach(element => console.log(element));
+        console.log(tag);
+        value.forEach(function(el)
+        {
+            console.log(tag, el);
+            //console.log(this.GetStringHTMLFromObject(key, el));
+            let stringHTML = '<'+tag;
+            Object.entries(el).forEach(([k, v]) => {
+                stringHTML += ' ' + k + '="' + v +'"';
+            });
+            stringHTML += ' />';
+            document.head.insertAdjacentHTML('beforeend', stringHTML);
+//            console.log(stringHTML);
+        });
+    })
+
+    //this.InsertBeforeEndHead();
+}
+@@END configure
+

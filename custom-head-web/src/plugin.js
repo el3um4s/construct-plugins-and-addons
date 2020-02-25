@@ -1,11 +1,11 @@
 "use strict";
 {
 
-    const PLUGIN_ID = "StraniAnelli_CustomINDEX";
-    const PLUGIN_VERSION = "1.0.0.0";
+    const PLUGIN_ID = "StraniAnelli_CustomHEAD_WEB";
+    const PLUGIN_VERSION = "20.2.24.1";
     const PLUGIN_CATEGORY = "web";
 
-    const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_CustomINDEX = class CustomINDEXPlugin extends SDK.IPluginBase
+    const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_CustomHEAD_WEB = class CustomINDEXPlugin extends SDK.IPluginBase
     {
         constructor()
         {

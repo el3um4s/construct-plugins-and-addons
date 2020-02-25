@@ -1,0 +1,38 @@
+{
+	"meta": [
+		{
+			"name": "description",
+			"content": "Demo Plugin - Construct 3"
+		},
+		{
+			"name": "keywords",
+			"content": "c3,Construct3,Plugin,GameDev,IndieDev,Demo,Test"
+		},
+		{
+			"name": "author",
+			"content": "Strani Anelli"
+		},
+		{
+			"name": "twitter:card",
+			"content": "summary_large_image"
+		},
+		{
+			"name": "twitter:image",
+			"content": "https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2020/2020-02-23-apantahisa-e-cose-senza-senso/olga.webp"
+		},
+		{
+			"name": "twitter:creator",
+			"content": "@el3um4s"
+		},
+		{
+			"name":"twitter:url",
+			"content":"https://blog.stranianelli.com/apantahisa-e-cose-senza-senso/"
+		}
+	],
+	"base": [
+		{
+			"href": "https://c3plugins.stranianelli.com/"
+		}
+	]
+}
+

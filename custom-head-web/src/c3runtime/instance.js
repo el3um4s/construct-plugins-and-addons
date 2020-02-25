@@ -1,6 +1,6 @@
 "use strict";
 {
-    C3.Plugins.StraniAnelli_CustomINDEX.Instance = class CustomINDEXInstance extends C3.SDKInstanceBase
+    C3.Plugins.StraniAnelli_CustomHEAD_WEB.Instance = class CustomINDEXInstance extends C3.SDKInstanceBase
     {
         constructor(inst, properties)
         {
@@ -38,5 +38,16 @@
                 ]
             }];
         }
+
+        //        GetStringHTMLFromObject(tag, obj) {
+        //        	let stringHTML = `<${tag} `;
+        //        	Object.entries(obj).forEach(([key, value]) => {
+        //    			stringHTML += ` ${key}="${value}" `;
+        //    		})
+        //    		stringHTML += ` />`;
+        //    		return stringHTML;
+        //        }
+
+        //        InsertBeforeEndHead(stringHtml) { document.head.insertAdjacentHTML('beforeend', stringHtml); }
     };
 }

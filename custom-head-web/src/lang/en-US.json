@@ -1,10 +1,10 @@
 {
   "languageTag": "en-US",
-  "fileDescription": "Strings for Custom INDEX.HTML Plugin",
+  "fileDescription": "Strings for Custom HEAD (WEB) Plugin",
   "text": {
     "plugins": {
-      "stranianelli_customindex": {
-        "name": "Custom INDEX.HTML",
+      "stranianelli_customhead_web": {
+        "name": "Custom HEAD (WEB)",
         "description": "Add custom html code in index.html (head, before body, before canvas, after canvas, after body)",
         "help-url": "https://github.com/armandoalonso/c3IDE",
         "properties": {},
