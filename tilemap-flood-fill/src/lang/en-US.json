@@ -6,7 +6,7 @@
 			"stranianelli_tilemapfloodfill": {
 				"name": "TilemapFloodFill",
 				"description": "Flood fill for Tilemaps.",
-				"help-url": "https://github.com/el3um4s/construct-tilemap-flood-fill",
+				"help-url": "https://c3plugins.stranianelli.com/tilemap-flood-fill/",
 				"properties": {},
 				"aceCategories": {},
 				"conditions": {},
@@ -38,7 +38,7 @@
 					"forestfire": {
 						"list-name": "Forest Fire",
 						"display-text": "Forest Fire: replace {2} with {3} from ({0},{1})",
-						"description": "Forest Fire algorithm.",
+						"description": "Forest Fire algorithm - fill an area replacing a selected tile type.",
 						"params": {
 							"x": {
 								"name": "X",
@@ -57,7 +57,32 @@
 								"desc": "Replacement Color"
 							}
 						}
+					},
+					"forestfireborder": {
+						"list-name": "Forest Fire Border",
+						"display-text": "Forest Fire: fill borders {2} with {3} from ({0},{1})",
+						"description": "Fill an area with selected border tiles.",
+						"params": {
+							"x": {
+								"name": "X",
+								"desc": "Start Node: X"
+							},
+							"y": {
+								"name": "Y",
+								"desc": "Start Node: Y"
+							},
+							"bordercolor": {
+								"name": "Border Color",
+								"desc": "Border Color"
+							},
+							"replacementcolor": {
+								"name": "Replacement Color",
+								"desc": "Replacement Color"
+							}
+						}
 					}
+
+
 				},
 				"expressions": {}
 			}

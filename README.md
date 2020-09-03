@@ -12,7 +12,7 @@ These are my free [Construct 3](https://www.construct.net) plugins.
 | [![logo][r2]][r2r] | **Motivational Quotes**           | 1.0.0   | Get and create motivational quotes                   | [readme][r2r] <br> [download][r2c] <br> [c3][r2s] |
 | [![logo][r3]][r3r] | **HTML Element**                  | 0.0.2.7 | The power of the HTML5 inside Construct3             | [readme][r3r] <br> [download][r3c] <br> [c3][r3s] |
 | [![logo][r4]][r4r] | **Showdownjs**                    | 1.0.0   | A Markdown to HTML converter                         | [readme][r4r] <br> [download][r4c] <br> [c3][r4s] |
-| [![logo][r5]][r5r] | **Tilemap Flood Fill**            | 1.0.0   | Flood fill for Tilemaps                              | [readme][r5r] <br> [download][r5c] <br> [c3][r5s] |
+| [![logo][r5]][r5r] | **Tilemap Flood Fill**            | 1.1.1   | Flood fill for Tilemaps                              | [readme][r5r] <br> [download][r5c] <br> [c3][r5s] |
 | [![logo][r6]][r6r] | **ConverterColorJS (Aioute Gao)** | 1.0.0   | A simple color converter                             | [readme][r6r] <br> [download][r6c] <br> [c3][r6s] |
 | [![logo][r7]][r7r] | **Random Color (David Merfield)** | 1.0.0   | Generate attractive colors                           | [readme][r7r] <br> [download][r7c] <br> [c3][r7s] |
 | [![logo][r8]][r8r] | **Drag and Drop Files**           | 1.0.1   | Drag and drop files in Construct 3                   | [readme][r8r] <br> [download][r8c] <br> [c3][r8s] |

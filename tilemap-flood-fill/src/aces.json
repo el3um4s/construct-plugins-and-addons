@@ -11,6 +11,17 @@
 					{"id": "targetcolor", "type": "number", "initialValue": 1},
 					{"id": "replacementcolor", "type": "number", "initialValue": 2}
 				]
+			},
+
+			{
+				"id": "forestfireborder",
+				"scriptName": "ForestFireBorder",
+				"params" : [
+					{"id": "x", "type": "number", "initialValue": 0},
+					{"id": "y", "type": "number", "initialValue": 0},
+					{"id": "bordercolor", "type": "number", "initialValue": 1},
+					{"id": "replacementcolor", "type": "number", "initialValue": 2}
+				]
 			}
 		],
 		"expressions": []

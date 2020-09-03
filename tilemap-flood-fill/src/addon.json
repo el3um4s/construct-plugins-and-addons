@@ -3,10 +3,10 @@
 	"type": "behavior",
 	"name": "Tilemap Flood Fill",
 	"id": "StraniAnelli_TilemapFloodFill",
-	"version": "1.0.0",
+	"version": "1.1.1",
 	"author": "Strani Anelli",
-	"website": "https://github.com/el3um4s/construct-tilemap-flood-fill",
-	"documentation": "https://github.com/el3um4s/construct-tilemap-flood-fill",
+	"website": "https://c3plugins.stranianelli.com/tilemap-flood-fill/",
+	"documentation": "https://c3plugins.stranianelli.com/tilemap-flood-fill/",
 	"description": "Flood fill for Tilemaps.",
 	"editor-scripts": [
 						"behavior.js",

@@ -13,7 +13,7 @@
 	const BEHAVIOR_ID = "StraniAnelli_TilemapFloodFill";
 	////////////////////////////////////////////
 	
-	const BEHAVIOR_VERSION = "1.0.0";
+	const BEHAVIOR_VERSION = "1.1.1";
 	const BEHAVIOR_CATEGORY = "other";
 	
 	// const BEHAVIOR_CLASS = SDK.Behaviors.MyCompany_MyBehavior = class MyCustomBehavior extends SDK.IBehaviorBase
