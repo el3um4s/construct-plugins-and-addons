@@ -13,7 +13,7 @@
 - Link to [c3addon](https://www.construct.net/en/make-games/addons/317/css)
 - Demo:
   - [css](https://c3plugins.stranianelli.com/css/demo/css/)
-- Link to [~~old version~~]https://c3plugins.stranianelli.com/inject-css/)
+- Link to [~~old version~~](https://c3plugins.stranianelli.com/inject-css/)
 
 ### Short Description
 

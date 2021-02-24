@@ -70,7 +70,7 @@
 	}
 	
 	
-	const HANDLER_CLASS = class InjectCSS_v2Handler extends DOMElementHandler
+	const HANDLER_CLASS = class InjectCSS_v2Handler extends self.DOMElementHandler
 	{
 		constructor(iRuntime)
 		{
@@ -127,6 +127,6 @@
 	};
 	
 	
-	RuntimeInterface.AddDOMHandlerClass(HANDLER_CLASS);
+	self.RuntimeInterface.AddDOMHandlerClass(HANDLER_CLASS);
 
 }

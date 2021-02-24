@@ -1,6 +1,6 @@
 "use strict";
 {
-    C3.Plugins.StraniAnelli_InjectCSS_v2.Acts = {
+    self.C3.Plugins.StraniAnelli_InjectCSS_v2.Acts = {
         async AddCss()
         {
             this._action = "ADD";

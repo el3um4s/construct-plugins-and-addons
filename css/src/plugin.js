@@ -2,7 +2,7 @@
 {
 
     const PLUGIN_ID = "StraniAnelli_InjectCSS_v2";
-    const PLUGIN_VERSION = "0.0.0.2";
+    const PLUGIN_VERSION = "0.0.0.3";
     const PLUGIN_CATEGORY = "form-controls";
 
     const PLUGIN_CLASS = SDK.Plugins.StraniAnelli_InjectCSS_v2 = class InjectCSS_v2Plugin extends SDK.IPluginBase

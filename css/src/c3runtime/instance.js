@@ -1,9 +1,8 @@
 "use strict";
 {
-
+    const C3 = self.C3;
     const DOM_COMPONENT_ID = "StraniAnelli_InjectCSS_v2";
 
-    //C3.Plugins.StraniAnelli_InjectCSS_v2.Instance = class InjectCSS_v2Instance extends C3.SDKInstanceBase
     C3.Plugins.StraniAnelli_InjectCSS_v2.Instance = class InjectCSS_v2Instance extends C3.SDKDOMInstanceBase
     {
         constructor(inst, properties)

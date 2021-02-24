@@ -16,7 +16,7 @@ These are my free [Construct 3](https://www.construct.net) plugins.
 | [![logo][r6]][r6r] | **ConverterColorJS (Aioute Gao)** | 1.0.0   | A simple color converter                             | [readme][r6r] <br> [download][r6c] <br> [c3][r6s] |
 | [![logo][r7]][r7r] | **Random Color (David Merfield)** | 1.0.0   | Generate attractive colors                           | [readme][r7r] <br> [download][r7c] <br> [c3][r7s] |
 | [![logo][r8]][r8r] | **Drag and Drop Files**           | 1.0.1   | Drag and drop files in Construct 3                   | [readme][r8r] <br> [download][r8c] <br> [c3][r8s] |
-| [![logo][r9]][r9r] | **CSS**                           | 0.0.2   | Use CSS stylesheet in Construct 3                    | [readme][r9r] <br> [download][r9c] <br> [c3][r9s] |
+| [![logo][r9]][r9r] | **CSS**                           | 0.0.3   | Use CSS stylesheet in Construct 3                    | [readme][r9r] <br> [download][r9c] <br> [c3][r9s] |
 
 
   [r1]: bubbly-background/icon64.svg
