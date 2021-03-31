@@ -3,10 +3,10 @@
 	"type": "plugin",
 	"name": "HTMLElement",
 	"id": "StraniAnelli_HTMLElement",
-	"version": "0.0.2.8",
+	"version": "0.0.3.1",
 	"author": "Strani Anelli",
-	"website": "https://github.com/el3um4s/construct-html-element-plugin",
-	"documentation": "https://github.com/el3um4s/construct-html-element-plugin",
+	"website": "https://github.com/el3um4s/construct-plugins-and-addons",
+	"documentation": "https://github.com/el3um4s/construct-plugins-and-addons",
 	"description": "The power of the HTML5 inside Construct3. Create HTMLElements, handle events and manage CSS style.",
 	"editor-scripts": [
 						"plugin.js",

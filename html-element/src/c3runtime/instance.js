@@ -1,7 +1,8 @@
 "use strict";
 
 {
-  C3.Plugins.StraniAnelli_HTMLElement.Instance = class StraniAnelli_HTMLElementInstance extends C3.SDKWorldInstanceBase {
+  const C3 = self.C3;
+ C3.Plugins.StraniAnelli_HTMLElement.Instance = class StraniAnelli_HTMLElementInstance extends C3.SDKWorldInstanceBase {
     constructor(inst, properties) {
       super(inst, "stranianelli_htmlelement");
 

@@ -1,6 +1,8 @@
 "use strict";
 
 {
+
+	const C3 = self.C3;
 	C3.Plugins.StraniAnelli_HTMLElement.Type = class StraniAnelli_HTMLElementType extends C3.SDKTypeBase
 	{
 		constructor(objectClass)

@@ -9,5 +9,5 @@
             console.log(a);
         }
     };
-    RuntimeInterface.AddDOMHandlerClass(a)
+    self.RuntimeInterface.AddDOMHandlerClass(a)
 }

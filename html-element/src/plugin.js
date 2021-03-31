@@ -12,7 +12,7 @@
 	const PLUGIN_ID = "StraniAnelli_HTMLElement";
 	////////////////////////////////////////////
 
-	const PLUGIN_VERSION = "0.0.2.8";
+	const PLUGIN_VERSION = "0.0.3.1";
 	const PLUGIN_CATEGORY = "form-controls";
 
 	let app = null;

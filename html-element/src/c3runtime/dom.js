@@ -1,22 +1,21 @@
 /**
  * DOM.js is a lightweight & fast cross browser library for
  * dom traversal and manipulation.
- *
+ * https://raw.githubusercontent.com/dkraczkowski/dom.js/master/src/dom.js
  * Supports
  *
  * @author Dawid Kraczowski <Krac>
  * @license MIT
- *
- * https://github.com/dkraczkowski/dom.js
  */
-;(function (window, document, undefined) {
+ ;(function (window, document, undefined) {
 
     /**
      * DOM global object
      * @type {{}}
      */
-    var Dom = {};
 
+    var Dom = {};
+    var window = globalThis;
     /**
      * Array.indexOf support
      * @param {Array} array
@@ -2015,6 +2014,7 @@
 
     //export dom
     window.Dom = Dom;
+    // globalThis.Dom = Dom;
 
 
 })(this, document);

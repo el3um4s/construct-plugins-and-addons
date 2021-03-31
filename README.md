@@ -10,7 +10,7 @@ These are my free [Construct 3](https://www.construct.net) plugins.
 |--------------------|-----------------------------------|---------|------------------------------------------------------|---------------------------------------------------|
 | [![logo][r1]][r1r] | **Bubbly Background**             | 1.0.0   | Beautiful bubbly backgrounds for Construct 3 project | [readme][r1r] <br> [download][r1c] <br> [c3][r1s] |
 | [![logo][r2]][r2r] | **Motivational Quotes**           | 1.0.0   | Get and create motivational quotes                   | [readme][r2r] <br> [download][r2c] <br> [c3][r2s] |
-| [![logo][r3]][r3r] | **HTML Element**                  | 0.0.2.7 | The power of the HTML5 inside Construct3             | [readme][r3r] <br> [download][r3c] <br> [c3][r3s] |
+| [![logo][r3]][r3r] | **HTML Element**                  | 0.0.3.0 | The power of the HTML5 inside Construct3             | [readme][r3r] <br> [download][r3c] <br> [c3][r3s] |
 | [![logo][r4]][r4r] | **Showdownjs**                    | 1.0.0   | A Markdown to HTML converter                         | [readme][r4r] <br> [download][r4c] <br> [c3][r4s] |
 | [![logo][r5]][r5r] | **Tilemap Flood Fill**            | 1.1.1   | Flood fill for Tilemaps                              | [readme][r5r] <br> [download][r5c] <br> [c3][r5s] |
 | [![logo][r6]][r6r] | **ConverterColorJS (Aioute Gao)** | 1.0.0   | A simple color converter                             | [readme][r6r] <br> [download][r6c] <br> [c3][r6s] |
